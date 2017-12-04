@@ -1,0 +1,42 @@
+<div class="ext-bb-manage-payment-orders-ng" data-ng-controller="ManagePaymentOrderController as $ctrl">
+  <div class="empty-element-placeholder-relative" data-ng-if="state.initialLoading"></div>
+  <ui-bb-substitute-error-ng data-message="state.error | i18n"
+    data-ng-if="!state.initialLoading">
+    <div class="panel clearfix" x-ms-format-detection="none">
+      <div class="panel-body-no-padding">
+        <ui-bb-empty-state-ng
+          data-icon-classes="fa fa-4x fa-money text-muted"
+          data-title="{{ 'label.noItems.title' | i18n }}"
+          data-subtitle="{{ 'label.noItems.description' | i18n }}"
+          data-is-empty="!state.paymentOrders.rawData.length">
+          <ui-bb-loading-overlay-ng data-is-loading="state.paymentOrders.loading">
+            <div class="list-group">
+              <div data-ng-repeat="(date, paymentOrders) in state.paymentOrders.data track by date">
+                <div data-ng-if="!$first" class="hidden list-item"></div>
+                <div class="panel-line-header" data-ng-bind="ext.helpers.dateLabel(date | date: 'mediumDate' | dateLabel)"></div>
+                <div class="list-group-item"
+                  data-ng-repeat="paymentOrder in paymentOrders track by paymentOrder.id">
+                  <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between">
+                    <div class="d-inline-block">
+                      <div><strong data-ng-bind="paymentOrder.transactionInformation.creditor.name"></strong></div>
+                      <div class="text-muted" data-ng-bind="ext.helpers.statusLabel[paymentOrder.paymentMode]"></div>
+                    </div>
+                    <div class="d-inline-block">
+                      <span data-ng-bind="paymentOrder.transactionInformation.instructedAmount.currencyCode"></span>
+                      <span data-ng-bind="paymentOrder.transactionInformation.instructedAmount.amount | currency: ''"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ui-bb-load-more-ng data-ng-show="!state.paymentOrders.loadedAll"
+              class="d-block mb-4"
+              data-label="{{ 'label.loadMore' | i18n }}"
+              data-on-load-more="$ctrl.loadMore(done)">
+            </ui-bb-load-more-ng>
+          </ui-bb-loading-overlay-ng>
+        </ui-bb-empty-state-ng>
+      </div>
+    </div>
+  </ui-bb-substitute-error-ng>
+</div>

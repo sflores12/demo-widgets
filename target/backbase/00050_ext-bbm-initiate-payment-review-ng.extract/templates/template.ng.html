@@ -1,0 +1,168 @@
+<div
+  class="ext-bbm-initiate-payment-review-ng"
+  data-ng-controller="ReviewController as $ctrl">
+  <div class="bbm-layout bbm-layout-scroll bbm-layout-with-sticky-footer">
+    <!-- Layout body -->
+    <div class="bbm-layout-body">
+      <div class="bbm-form-view">
+        <div class="bbm-form-view-group">
+          <ul class="bbm-form-view-group-items">
+            <!-- Debit account-->
+            <li
+              class="bbm-form-view-item bbm-form-view-item-account"
+              data-ng-if="$ctrl.state.payment.data.debitAccount">
+              <div class="bbm-account bbm-account-compact">
+                <div class="bbm-account-compact-primary-information">
+                  <h3
+                    class="bbm-account-compact-name"
+                    data-ng-bind="$ctrl.state.payment.data.debitAccount.name">
+                  </h3>
+                  <div class="bbm-account-compact-primary-amount">
+                    <ui-bb-format-amount
+                      data-amount="ext.helpers.getAccountDisplayAmount($ctrl.state.payment.data.debitAccount)"
+                      data-currency="$ctrl.state.payment.data.debitAccount.currency"
+                      data-wrap>
+                    </ui-bb-format-amount>
+                  </div>
+                </div>
+                <div class="bbm-account-compact-secondary-information">
+                  <div class="bbm-account-compact-identifier">
+                    <span
+                      class="prevent-ios-click"
+                      data-role="product-id"
+                      data-ng-bind="$ctrl.state.payment.data.debitAccount.identifier">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Amount and currency -->
+            <li class="bbm-form-view-item bbm-form-view-item-amount">
+              <div class="bbm-amount bbm-amount-md">
+                <div
+                  class="bbm-amount-currency"
+                  data-ng-bind="$ctrl.state.payment.data.amount.currency">
+                </div>
+                <div class="bbm-amount-value">
+                  <ui-bb-format-amount
+                    data-amount="$ctrl.state.payment.data.amount.value"
+                    data-role="payment-review-amount"
+                    data-wrap>
+                  </ui-bb-format-amount>
+                </div>
+              </div>
+            </li>
+
+            <!-- Beneficiary name -->
+            <li
+              class="bbm-form-view-item"
+              data-ng-if="$ctrl.state.payment.data.beneficiary.name">
+              <div class="bbm-data">
+                <div class="bbm-data-content">
+                  <div
+                    class="bbm-data-label"
+                    data-i18n-key="label.beneficiaryName">
+                  </div>
+                  <div
+                    class="bbm-data-value"
+                    data-role="payment-review-to-account-name"
+                    data-ng-bind="$ctrl.state.payment.data.beneficiary.name">
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Beneficiary identifier -->
+            <li
+              class="bbm-form-view-item"
+              data-ng-if="$ctrl.state.payment.data.beneficiary.identifier">
+              <div class="bbm-data">
+                <div class="bbm-data-content">
+                  <div
+                    class="bbm-data-label"
+                    data-i18n-key="label.beneficiaryAccountNumber">
+                  </div>
+                  <div class="bbm-data-value">
+                    <span
+                      class="prevent-ios-click"
+                      data-role="payment-review-to-account-iban"
+                      data-ng-bind="$ctrl.state.payment.data.beneficiary.identifier">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Description -->
+            <li
+              class="bbm-form-view-item"
+              data-ng-if="$ctrl.state.payment.data.description">
+              <div class="bbm-data">
+                <div class="bbm-data-content">
+                  <div
+                    class="bbm-data-label"
+                    data-i18n-key="label.description">
+                  </div>
+                  <div
+                    class="bbm-data-value"
+                    data-ng-bind="$ctrl.state.payment.data.description"
+                    data-role="payment-review-description">
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Schedule -->
+            <li class="bbm-form-view-item">
+              <div class="bbm-data">
+                <div class="bbm-data-content">
+                  <div
+                    class="bbm-data-label"
+                    data-i18n-key="label.schedule">
+                  </div>
+                  <div class="bbm-data-value">
+                    <span
+                      class="prevent-ios-click"
+                      data-role="payment-review-schedule"
+                      data-ng-bind="ext.helpers.getScheduleSummary($ctrl.state.payment.data.schedule)">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Save contact -->
+      <div class="bbm-footnote" data-ng-if="$ctrl.state.saveContact">
+        <p
+          class="bbm-footnote-paragraph"
+          data-i18n-key="message.contactSave"
+          data-role="payment-review-contact-save">
+        </p>
+      </div>
+
+      <!-- Urgent payment -->
+      <div class="bbm-footnote" data-ng-if="$ctrl.state.payment.data.urgent">
+        <p
+          class="bbm-footnote-paragraph"
+          data-i18n-key="message.urgentPayment"
+          data-role="payment-review-urgent">
+        </p>
+      </div>
+    </div>
+
+    <!-- Layout footer -->
+    <div class="bbm-layout-footer">
+      <!-- Save button -->
+      <button
+        class="btn btn-primary btn-block"
+        data-i18n-key="label.submit"
+        data-role="payment-review-pay-button"
+        data-ng-click="$ctrl.submitPayment()">
+      </button>
+    </div>
+  </div>
+</div>

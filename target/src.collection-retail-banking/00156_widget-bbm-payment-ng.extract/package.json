@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.widget-bbm-payment-ng@1.0.102",
+        "scope": null,
+        "escapedName": "src.widget-bbm-payment-ng",
+        "name": "src.widget-bbm-payment-ng",
+        "rawSpec": "1.0.102",
+        "spec": "1.0.102",
+        "type": "version"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.widget-bbm-payment-ng@1.0.102",
+  "_id": "src.widget-bbm-payment-ng@1.0.102",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.widget-bbm-payment-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.widget-bbm-payment-ng@1.0.102",
+    "scope": null,
+    "escapedName": "src.widget-bbm-payment-ng",
+    "name": "src.widget-bbm-payment-ng",
+    "rawSpec": "1.0.102",
+    "spec": "1.0.102",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bbm-payment-ng/-/src.widget-bbm-payment-ng-1.0.102.tgz",
+  "_shasum": "8792ee964f8963d600a4f62ea8ff354f07324685",
+  "_shrinkwrap": null,
+  "_spec": "src.widget-bbm-payment-ng@1.0.102",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bbm-payment-ng/-/src.widget-bbm-payment-ng-1.0.102.tgz",
+    "shasum": "8792ee964f8963d600a4f62ea8ff354f07324685"
+  },
+  "name": "src.widget-bbm-payment-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.102"
+}

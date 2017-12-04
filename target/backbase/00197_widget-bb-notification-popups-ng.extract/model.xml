@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <widget>
+        <name>widget-bb-notification-popups-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="TemplateName">
+                <value type="string">Standard_Widget</value>
+            </property>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Widget Notification Popups</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/assets/icon.png</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+            <property name="extension" label="Extension name" viewHint="text-input,admin">
+                <value type="string">ext-bb-notification-popups-ng</value>
+            </property>
+            <property label="Ability to dismiss sticky notifications" name="dismissSticky" viewHint="checkbox,admin">
+                <value type="boolean">false</value>
+            </property>
+            <property label="Listen to frontend notifications" name="feNotifications" viewHint="checkbox,admin">
+                <value type="boolean">true</value>
+            </property>
+            <property label="Polling interval (ms)" name="pollingInterval" viewHint="text-input,admin">
+                <value type="long">15000</value>
+            </property>
+            <property label="Popup display duration for alerts (ms)" name="alertHidingTimeout" viewHint="text-input,admin">
+                <value type="long">5000</value>
+            </property>
+            <property label="Popup display duration for warnings (ms)" name="warningHidingTimeout" viewHint="text-input,admin">
+                <value type="long">5000</value>
+            </property>
+            <property label="Popup display duration for info (ms)" name="infoHidingTimeout" viewHint="text-input,admin">
+                <value type="long">5000</value>
+            </property>
+            <property label="Popup display duration for success (ms)" name="successHidingTimeout" viewHint="text-input,admin">
+                <value type="long">5000</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="text-input,admin,designModeOnly">
+                <value type="string">1.1.90</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/widget-bb-notification-popups-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-angular" label="Feature Vendor Bb Angular" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular</value>
+            </property>
+            <property name="feature.lib-bb-event-bus-ng" label="Feature Lib Bb Event Bus Ng" readonly="true" viewHint="">
+                <value type="string">lib-bb-event-bus-ng</value>
+            </property>
+            <property name="feature.model-bb-notifications-ng" label="Feature Model Bb Notifications Ng" readonly="true" viewHint="">
+                <value type="string">model-bb-notifications-ng</value>
+            </property>
+            <property name="feature.lib-bb-intent-ng" label="Feature Lib Bb Intent Ng" readonly="true" viewHint="">
+                <value type="string">lib-bb-intent-ng</value>
+            </property>
+            <property name="feature.ext-bb-notification-popups-ng" label="Feature Ext Bb Notification Popups Ng" readonly="true" viewHint="">
+                <value type="string">ext-bb-notification-popups-ng</value>
+            </property>
+            <property name="feature.vendor-bb-systemjs" label="Feature Vendor Bb Systemjs" readonly="true" viewHint="">
+                <value type="string">vendor-bb-systemjs</value>
+            </property>
+            <property name="feature.config-bb-module-loader" label="Feature Config Bb Module Loader" readonly="true" viewHint="">
+                <value type="string">config-bb-module-loader</value>
+            </property>
+            <property name="feature.lib-bb-start" label="Feature Lib Bb Start" readonly="true" viewHint="">
+                <value type="string">lib-bb-start</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

@@ -1,0 +1,17 @@
+{
+  "en-US": {
+    "message.notification.delete.start": "Deleting notification",
+    "message.notification.delete.done": "Notification successfully deleted",
+    "message.notification.delete.failed": "Unable to delete the notification, please try again",
+
+    "message.notification.delete.confirm.title": "Delete notification?",
+    "message.notification.delete.confirm.message": "Notification will be deleted from your list",
+    "message.notification.delete.confirm.button.ok": "Delete",
+    "message.notification.delete.confirm.button.cancel": "Cancel",
+
+    "calendar.label.now": "Now",
+    "calendar.label.today": "Today",
+    "calendar.label.yesterday": "Yesterday",
+    "calendar.label.at": " at "
+  }
+}

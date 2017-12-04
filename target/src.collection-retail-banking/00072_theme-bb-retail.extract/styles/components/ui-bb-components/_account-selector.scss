@@ -1,0 +1,255 @@
+/**
+ * --------------------------------------------------------------------------
+ * UI BB Selector component
+ * --------------------------------------------------------------------------
+ * @name ui-bb-account-selector
+ * @description
+ * UI component for creating dropdown accounts selector.
+ * It can display initials based on a name if image is not available.
+ *
+ * @example
+ * <ui-bb-account-selector class="bb-account-selector drop-shadow" data-placeholder="Select account" data-select-all="true">
+ *  <ui-bb-dropdown-select >
+ *    <div class="dropdown-select" uib-dropdown data-keyboard-nav>
+ *      <button type="button" class="btn btn-default btn-dropdown-toggle" uib-dropdown-toggle>
+ *        <span class="dropdown-option dropdown-selected" ui-bb-dropdown-selected></span>
+ *        <span class="dropdown-option placeholder">Select account</span>
+ *        <span class="fa chevron-icon fa-chevron-down chevron-down"></span>
+ *      </button>
+ *
+ *      <ul class="uib-dropdown-menu dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+ *       <li role="menuitem" class="dropdown-option">
+ *         <a href="">
+ *         <div class="pull-left account-detail">
+ *           <div class="select-all-label">All Accounts</div>
+ *         </div>
+ *         <div class="pull-right text-right">
+ *           <div class="select-all-quantity">7 accounts</div>
+ *         </div>
+ *         </a>
+ *       </li>
+ *      </ul>
+ *    </div>
+ *  </ui-bb-dropdown-select>
+ * </ui-bb-account-selector>
+ *
+ * <ui-bb-account-selector class="bb-account-selector drop-shadow">
+ *   <div class="bb-account-selector">
+ *     <ui-bb-dropdown-select>
+ *       <div class="dropdown-select dropdown selected open" uib-dropdown="">
+ * 
+ *         <button type="button" class="btn btn-default btn-dropdown-toggle bb-account-selector-toggle drop-shadow dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="true">
+ *           <span class="dropdown-option dropdown-selected">
+ *             <a href="" tabindex="0" class="d-block pl-3 py-4 pr-10 bb-account-selector-option">
+ *               <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between bb-account-selector-option-content row-fluid">
+ *                 <div class="d-inline-block col-xs-12 pl-0">
+ *                   <div class="col-xs-12 p-0">
+ *                     <strong>2 Accounts Selected</strong>
+ *                   </div>
+ *                   <div class="col-xs-12 col-sm-6 bb-ellipsis p-0">
+ *                     <span>Mr and Mrs J. Smith, </span>
+ *                     <span>Jason Smith</span>
+ *                   </div>
+ *                 </div>
+ *               </div>
+ *             </a>
+ *           </span>
+ *           <span class="dropdown-option placeholder">Select Accounts</span>
+ *           <i class="fa chevron-icon fa-chevron-down chevron-down" data-role="select-account-button"></i>
+ *         </button>
+ * 
+ *         <ul class="uib-dropdown-menu dropdown-menu" uib-dropdown-menu="" role="menu" aria-labelledby="single-button">
+ *           <ui-bb-list class="d-block bb-account-selector-scrollable-area">
+ *             <li role="menuitem" class="dropdown-option active" tabindex="-1">
+ *               <a href="" tabindex="0" class="d-block pl-3 py-3 pr-7 bb-account-selector-option active">
+ *                 <div class="absolute-center-y ng-scope">
+ *                   <input type="checkbox" value="1" tabindex="-1">
+ *                 </div>
+ *                 <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between bb-account-selector-option-content ml-6">
+ *                   <div class="d-inline-block">
+ *                     <div>
+ *                       <strong>Mr and Mrs J. Smith</strong>
+ *                     </div>
+ *                     <div>FR188388353832IH3CAWFYXAA36</div>
+ *                   </div>
+ *                   <div class="d-inline-block">
+ *                     <div>
+ *                       <ui-bb-format-amount>
+ *                         <span class="amount amount-positive" data-role="amount">
+ *                           <span class="amount-currency">€</span>
+ *                           <span class="amount-whole-number">1,000</span>
+ *                           <span class="amount-decimal-points">.</span>
+ *                           <span class="amount-decimals">00</span>
+ *                         </span>
+ *                       </ui-bb-format-amount>
+ *                     </div>
+ *                   </div>
+ *                 </div>
+ *               </a>
+ *             </li>
+ *             <li role="menuitem" class="dropdown-option active" tabindex="-1">
+ *               <a href="" tabindex="0" class="d-block pl-3 py-3 pr-7 bb-account-selector-option active">
+ *                 <div class="absolute-center-y">
+ *                   <input type="checkbox" value="2" tabindex="-1" checked="checked">
+ *                 </div>
+ *                 <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between bb-account-selector-option-content ml-6">
+ *                   <div class="d-inline-block">
+ *                     <div>
+ *                       <strong>Jason Smith</strong>
+ *                     </div>
+ *                     <div>PK76FBGRHWSUBJF4QBMQ9FV0</div>
+ *                   </div>
+ *                   <div class="d-inline-block">
+ *                     <div>
+ *                       <ui-bb-format-amount>
+ *                         <span class="amount amount-positive" data-role="amount">
+ *                           <span class="amount-currency">€</span>
+ *                           <span class="amount-whole-number">1,250</span>
+ *                           <span class="amount-decimal-points">.</span>
+ *                           <span class="amount-decimals">00</span>
+ *                         </span>
+ *                       </ui-bb-format-amount>
+ *                     </div>
+ *                   </div>
+ *                 </div>
+ *               </a>
+ *             </li>
+ *           </ui-bb-list>
+ *         </ul>
+ *       </div>
+ * 		</ui-bb-dropdown-select>
+ *   </div>
+ * </ui-bb-account-selector>
+ */
+
+.dropdown-select {
+  .dropdown-selected {
+    color: $text-color;
+  }
+}
+
+.bb-account-selector {
+  .dropdown-menu {
+    padding: 0;
+    border: none;
+    border-radius: $border-radius-medium;
+    max-height: none;
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .dropdown-option {
+      &:not(:last-child) {
+        margin-bottom: $account-selector-options-margin-bottom;
+        border-top: $default-border;
+        border-bottom: $default-border;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &[disabled] {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.bb-account-selector-toggle {
+  height: auto;
+
+  &.drop-shadow {
+    @include box-shadow($default-box-shadow);
+  }
+
+  &.dropdown-toggle {
+    padding: 0;
+    border: none;
+    border-radius: $border-radius-medium;
+    background-color: $white;
+
+    .dropdown-option {
+      margin: 0;
+
+      &.placeholder {
+        @extend .px-3;
+        @extend .py-4;
+        @extend .double-line;
+      }
+    }
+
+    .chevron-icon {
+      right: $account-selector-chevron-position-right;
+      color: $gray-dark;
+      pointer-events: none;
+    }
+
+    &:focus .placeholder {
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+}
+
+.bb-account-selector-option {
+  color: $text-color;
+  position: relative;
+
+  .dropdown-toggle & {
+    min-height: $account-selector-height;
+  }
+
+  &:hover,
+  &.active,
+  &:active,
+  &.focus,
+  &:focus {
+    color: $text-color;
+    background-color: $dropdown-link-hover-bg;
+    text-decoration: none;
+  }
+
+  &:hover input[type="checkbox"]::before {
+    border-color: $brand-primary;
+  }
+
+  &[disabled] {
+    color: $gray;
+    cursor: not-allowed;
+
+    &:hover,
+    &.active,
+    &:active,
+    &.focus,
+    &:focus {
+      color: $gray;
+      background-color: transparent;
+    }
+  
+    &:hover input[type="checkbox"]::before {
+      border-color: $gray;
+    }
+
+    .amount-positive {
+      color: $brand-primary-lighter;
+    }
+
+    .amount-negative {
+      color: $brand-danger-lighter;
+    }
+  }
+}
+
+.bb-account-selector-option-content {
+  min-height: $account-selector-option-content-height;
+}
+
+.bb-account-selector-scrollable-area {
+  max-height: $account-selector-scrollbar-height;
+}
+
+.bb-account-selector-spinner {
+  @include spinner($account-selector-spinner-size);
+}

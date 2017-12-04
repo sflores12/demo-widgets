@@ -1,0 +1,20 @@
+{
+  "name": "bb-serve-template-blank",
+  "version": "2.3.0",
+  "description": "Default standlone blank template with theme default.",
+  "main": "index.html",
+  "templates": {
+    "default": "index.hbs"
+  },
+  "private": "true",
+  "dependencies": {
+    "backbase-widget-engine": "6.0.0-b230",
+    "portal5-support": "6.0.0-b6",
+    "theme-bb-default": "^1.0.0"
+  },
+  "bundledDependencies": [
+    "backbase-widget-engine",
+    "portal5-support",
+    "theme-bb-default"
+  ]
+}

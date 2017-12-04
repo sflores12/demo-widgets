@@ -1,0 +1,170 @@
+<div data-ng-controller="NotificationsBadgeController as $ctrl"
+  class="notification-badge">
+
+  <button class="btn notification-badge-btn"
+    type="button"
+    title="{{ 'notification.badge.title' | i18n }}"
+    data-uib-popover-template="'#ext-bb-notification-badge-ng/popover-template.html'"
+    data-popover-placement="auto bottom-right"
+    data-popover-is-open="$ctrl.state.popover.isOpen"
+    data-popover-trigger="outsideClick"
+    data-popover-class="notification-badge-popover popover-md"
+    data-ng-click="$ctrl.togglePopover()">
+    <i class="fa fa-bell notification-badge-btn-bell" aria-hidden="true"></i>
+    <span data-ng-if="$ctrl.state.badge.numberOfUnread"
+      class="notification-badge-btn-dot">
+      <span data-ng-if="$ctrl.state.badge.showUnreadCount"
+        data-ng-bind="$ctrl.state.badge.numberOfUnread">
+      </span>
+    </span>
+  </button>
+
+</div>
+
+<script type="text/ng-template"
+  id="#ext-bb-notification-badge-ng/popover-template.html">
+  <ui-bb-substitute-error-ng data-error="$ctrl.state.popover.error"
+    data-message="$ctrl.state.popover.error.message | i18n">
+
+    <div data-ng-switch="$ctrl.state.page">
+      <div data-ng-switch-when="list">
+        <div data-ng-include="'#ext-bb-notification-badge-ng/badge-list.ng.html'"></div>
+      </div>
+      <div data-ng-switch-when="details">
+        <div data-ng-include="'#ext-bb-notification-badge-ng/badge-details.ng.html'"></div>
+      </div>
+    </div>
+
+  </ui-bb-substitute-error-ng>
+</script>
+
+<script type="text/ng-template"
+  id="#ext-bb-notification-badge-ng/badge-list.ng.html">
+  <div class="panel panel-no-offset">
+
+    <div class="panel-heading panel-heading-small notification-panel-header">
+      <h3 class="panel-title panel-title-smaller notification-panel-title"
+        data-i18n-key="notification.badge.popover.title">
+      </h3>
+    </div>
+
+    <div class="notification-panel-body">
+
+      <div class="empty-element-placeholder notification-badge-placeholder"
+        data-ng-if="$ctrl.state.popover.loading || $ctrl.state.notifications.loading"></div>
+
+      <div class="text-center notification-panel-empty-msg"
+        data-ng-if="!$ctrl.state.notifications.data.length && !$ctrl.state.notifications.loading">
+        <p data-i18n-key="notification.message.empty"></p>
+      </div>
+
+      <ul data-ng-if="$ctrl.state.notifications.data.length"
+        class="list-group notification-list">
+        <li class="list-group-item notification-list-item"
+          data-ng-repeat="item in $ctrl.state.notifications.data track by item.id">
+
+          <div class="notification notification-popover-view"
+            data-ng-class="{ 'notification-unread': !item.read }"
+            data-ng-click="$ctrl.viewNotificationDetails(item);$event.stopPropagation();">
+
+            <div class="notification-header">
+              <i class="notification-level fa"
+                data-ng-class="ext.helpers.getLevelIcon(item.level)"
+                title="{{ ext.helpers.getLevelTitle(item.level) }}">
+              </i>
+              <span class="notification-date"
+                data-ng-bind="ext.helpers.getDateLabel(item)">
+              </span>
+            </div>
+
+            <h5 data-ng-if="item.title"
+              class="notification-title ellipsis"
+              data-ng-bind="item.title">
+            </h5>
+
+            <ui-bb-message class="message"
+              data-template="item.message"
+              data-link="item.link"
+              data-visible-lines-length="ext.helpers.getVisibleLinesLength(item)">
+            </ui-bb-message>
+
+            <i class="fa fa-lg fa-angle-right notification-arrow" aria-hidden="true"></i>
+
+          </div>
+
+        </li>
+      </ul>
+
+    </div>
+
+    <div data-ng-show="$ctrl.state.notifications.hasMore"
+      class="panel-footer panel-footer-small panel-footer-white notification-panel-footer">
+      <ui-bb-load-more-ng data-ng-click="$event.stopPropagation()"
+        data-label="{{ 'label.load.more' | i18n }}"
+        data-on-load-more="$ctrl.loadMore(done)"
+        class="load-more-sm">
+      </ui-bb-load-more-ng>
+    </div>
+
+  </div>
+</script>
+
+<script type="text/ng-template"
+  id="#ext-bb-notification-badge-ng/badge-details.ng.html">
+  <div class="panel panel-no-offset">
+
+    <div class="panel-heading panel-heading-small clearfix notification-panel-header">
+      <h3 class="pull-left panel-title panel-title-smaller panel-title-normal panel-title-primary notification-panel-title">
+        <a title="{{ 'notification.badge.popover.view.list.title' | i18n }}"
+          data-ng-click="$ctrl.viewNotificationList();$event.stopPropagation();">
+          <i class="fa fa-lg fa-fw fa-angle-left pointer" aria-hidden="true"></i>
+          <span data-i18n-key="notification.badge.popover.back.title"></span>
+        </a>
+      </h3>
+      <button class="btn btn-default btn-xs pull-right"
+        data-ng-disabled="item.isUpdating"
+        data-ng-click="ext.deleteConfirmOpened = true">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="notification-panel-body">
+
+      <div class="empty-element-placeholder notification-badge-placeholder"
+        data-ng-if="$ctrl.state.notifications.active.isUpdating"></div>
+
+      <div class="notification notification-popover-details-view">
+        <div class="notification-header">
+          <i class="notification-level fa"
+            data-ng-class="ext.helpers.getLevelIcon($ctrl.state.notifications.active.level)"
+            title="{{ ext.helpers.getLevelTitle($ctrl.state.notifications.active.level) }}">
+          </i>
+          <span class="notification-date"
+            data-ng-bind="ext.helpers.getDateLabel($ctrl.state.notifications.active, 'medium')">
+          </span>
+        </div>
+        <h5 class="notification-title"
+          data-ng-if="$ctrl.state.notifications.active.title"
+          data-ng-bind="$ctrl.state.notifications.active.title">
+        </h5>
+        <ui-bb-message class="message"
+          data-template="$ctrl.state.notifications.active.message"
+          data-link="$ctrl.state.notifications.active.link">
+        </ui-bb-message>
+      </div>
+
+    </div>
+
+  </div>
+
+  <ui-bb-confirm
+    data-is-open="ext.deleteConfirmOpened"
+    data-on-confirm="$ctrl.deleteNotification($ctrl.state.notifications.active.id)"
+    data-labels="{
+      heading: ('notification.dialog.delete.title' | i18n),
+      bodyHtml: ('notification.dialog.delete.body' | i18n),
+      confirm: ('notification.dialog.delete.yes' | i18n),
+      cancel: ('notification.dialog.delete.no' | i18n)
+    }">
+  </ui-bb-confirm>
+</script>

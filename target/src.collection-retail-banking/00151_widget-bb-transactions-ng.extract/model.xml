@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <widget>
+        <name>widget-bb-transactions-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="title" label="Title" viewHint="text-input,admin">
+                <value type="string">Transactions</value>
+            </property>
+            <property name="TemplateName">
+                <value type="string">Standard_Widget</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/assets/icon.png</value>
+            </property>
+            <property name="transactionListSize" label="Number of transaction records per page (DEPRECATED)" viewHint="text-input,admin">
+                <value type="string">10</value>
+            </property>
+            <property name="bb.transaction.pageSize" label="Number of transaction records per page" viewHint="text-input,admin">
+                <value type="string">10</value>
+            </property>
+            <property label="Max. number of navigation pages" name="bb.transaction.maxNavPages" viewHint="text-input,admin">
+                <value type="long">3</value>
+            </property>
+            <property label="Pagination type (pagination, load-more)" name="bb.transaction.paginationType" viewHint="text-input,admin">
+                <value type="string">pagination</value>
+            </property>
+            <property name="bb.transaction.notificationDismissTime" label="Number of seconds to dismiss the notification" viewHint="text-input,manager">
+                <value type="string">3</value>
+            </property>
+            <property label="Show all transactions initially" name="bb.transaction.loadAllTransactionsOnInit" viewHint="text-input,admin,manager">
+                <value type="boolean">true</value>
+            </property>
+            <property name="extension" label="Extension name" viewHint="text-input,admin">
+                <value type="string">ext-bb-transactions-ng</value>
+            </property>
+            <property name="bb.product.selected" label="Sync preference for selected product" viewHint="text-input,admin">
+                <value type="string"/>
+            </property>
+            <property name="bb.transaction.initLoad" label="Load data on init" viewHint="designModeOnly">
+                <value type="boolean">true</value>
+            </property>
+            <property name="intents" viewHint="text-input,admin,designModeOnly">
+                <value type="string">view.account.transactions,view.account.category.transactions</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">1.13.10</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

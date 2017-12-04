@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>model-bb-notifications-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Notifications Model</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">1.2.78</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

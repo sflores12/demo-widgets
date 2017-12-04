@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ui-bb-format-amount component</title>
+    <script src="../../node_modules/vendor-bb-angular/scripts/vendor-bb-angular.js"></script>
+    <script src="../../node_modules/lib-bb-currency-ng/scripts/lib-bb-currency-ng.js"></script>
+    <script src="../dist/ui-bb-format-amount/scripts/ui-bb-format-amount.js"></script>
+    <script>
+        angular.module('ui-bb-component-demo', ['ui-bb-format-amount'])
+          .controller('DemoController', function() {
+            this.name = 'ui-bb-format-amount';
+            this.total = 123.7554;
+            this.currency = 'USD';
+        });
+
+        angular.element(document).ready(function() {
+          angular.bootstrap(document, ['ui-bb-component-demo']);
+        });
+    </script>
+    <style>
+        /* Example of style customization */
+        .amount-sign,
+        .amount-currency,
+        .amount-whole-number,
+        .amount-decimals,
+        .amount-decimal-points {
+            display: inline-block;
+            color: #666;
+        }
+    </style>
+</head>
+<body ng-controller="DemoController as demo">
+
+    <h1>ui-bb-format-amount</h1>
+
+    <hr>
+
+    <input type="text" ng-model="demo.total">
+    <select ng-model="demo.currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="KWD">KWD</option>
+        <option value="ISK">ISK</option>
+    </select>
+
+    <p><strong>Value:</strong> {{ demo.total }}</p>
+
+    <p>
+        <strong>Formatted value:</strong>
+        <ui-bb-format-amount amount="demo.total"></ui-bb-format-amount>
+    </p>
+
+    <p>
+        <strong>Currency {{ demo.currency }} (symbol):</strong>
+        <ui-bb-format-amount wrap amount="demo.total" currency="demo.currency"></ui-bb-format-amount>
+    </p>
+
+    <p>
+        <strong>Currency {{ demo.currency }} (ISO code):</strong>
+        <ui-bb-format-amount wrap amount="demo.total" currency="demo.currency" no-map></ui-bb-format-amount>
+    </p>
+
+    <p>
+        <strong>With plus sign:</strong>
+        <ui-bb-format-amount wrap amount="demo.total" currency="demo.currency" show-plus-sign></ui-bb-format-amount>
+    </p>
+
+    <h3>Usage example</h3>
+
+    <pre>&lt;ui-bb-format-amount wrap amount="demo.total" currency="demo.currency"&gt;&lt;/ui-bb-format-amount&gt;</pre>
+
+</body>
+</html>

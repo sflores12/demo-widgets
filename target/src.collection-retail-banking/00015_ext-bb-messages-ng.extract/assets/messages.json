@@ -1,0 +1,44 @@
+{
+  "en-US": {
+    "label.compose": "Compose",
+    "label.messages": "Messages",
+    "label.sent": "Sent",
+    "label.archived": "Archived",
+    "label.drafts": "Drafts",
+    "label.send": "Send",
+    "label.showMore": "Show more",
+    "label.openNewDraft": "Open new draft",
+
+    "label.confim.header": "Confirm removal",
+    "label.confim.text": "Do you really want to remove the selected conversations? This action is irreversable.",
+    "label.confim.remove": "Remove",
+    "label.confim.cancel": "Cancel",
+
+    "label.message.loading": "Loading...",
+    "label.messages.empty": "You currently have no messages",
+
+    "ui-bb-draft-ng.label.close": "Close",
+    "ui-bb-draft-ng.label.send": "Send",
+    "ui-bb-draft-ng.label.remove": "Remove",
+    "ui-bb-draft-ng.label.toggleImportance": "Toggle importance",
+    "ui-bb-draft-ng.form.header": "New message",
+    "ui-bb-draft-ng.form.subject": "Subject",
+    "ui-bb-draft-ng.form.topic": "Topic",
+    "ui-bb-draft-ng.form.message": "Message",
+    "ui-bb-draft-ng.form.send": "Send",
+    "ui-bb-draft-ng.error.send": "Unable to send the message. Please try again later.",
+
+    "ui-bb-conversation-view-ng.label.close": "Close",
+    "ui-bb-conversation-view-ng.label.send": "Send",
+
+    "error.auth": "You are not authorised to perform this action.",
+    "error.connection": "Connection error",
+    "error.unexpected": "An unexpected error occurred, we apologise for the inconvenience. Please try again later.",
+
+    "error.draft.save": "An error occured while saving your draft. Please try again later.",
+    "error.draft.send": "An error occured while sending your draft. Please try again later.",
+    "error.conversation.save-reply": "An error occured while replying to conversation. Your message has not been sent. Please try again later.",
+    "error.conversation.send-reply": "An error occured while replying to conversation. Your message has not been sent. Please try again later.",
+    "error.conversation.remove": "An error occured while removing some of selected conversations.",
+  }
+}

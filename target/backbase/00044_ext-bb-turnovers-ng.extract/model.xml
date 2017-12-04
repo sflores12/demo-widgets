@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>ext-bb-turnovers-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="version" label="Version" readonly="true" viewHint="text-input,admin,designModeOnly">
+                <value type="string">1.2.8</value>
+            </property>
+            <property name="title" label="Title" readonly="true" viewHint="admin,designModeOnly">
+                <value type="string">ext-bb-turnovers-ng</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/ext-bb-turnovers-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-angular-ng-aria" label="Feature Vendor Bb Angular Ng Aria" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-ng-aria</value>
+            </property>
+            <property name="feature.ui-bb-i18n-ng" label="Feature Ui Bb I 18 N Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-i18n-ng</value>
+            </property>
+            <property name="feature.ui-bb-substitute-error-ng" label="Feature Ui Bb Substitute Error Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-substitute-error-ng</value>
+            </property>
+            <property name="feature.ui-bb-format-amount" label="Feature Ui Bb Format Amount" readonly="true" viewHint="">
+                <value type="string">ui-bb-format-amount</value>
+            </property>
+            <property name="feature.ui-bb-chartjs-chart-bar-ng" label="Feature Ui Bb Chartjs Chart Bar Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-chartjs-chart-bar-ng</value>
+            </property>
+            <property name="feature.ui-bb-empty-state-ng" label="Feature Ui Bb Empty State Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-empty-state-ng</value>
+            </property>
+            <property name="feature.lib-bb-styles" label="Feature Lib Bb Styles" readonly="true" viewHint="">
+                <value type="string">lib-bb-styles</value>
+            </property>
+            <property name="feature.ui-bb-dropdown-select" label="Feature Ui Bb Dropdown Select" readonly="true" viewHint="">
+                <value type="string">ui-bb-dropdown-select</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

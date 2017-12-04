@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <widget>
+        <name>widget-bb-transaction-categories-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="TemplateName">
+                <value type="string">Standard_Widget</value>
+            </property>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Transaction Categories</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/assets/icon.png</value>
+            </property>
+            <property name="extension" viewHint="text-input,admin">
+                <value type="string">ext-bb-transaction-categories-ng</value>
+            </property>
+            <property name="intents" viewHint="text-input,admin">
+                <value type="string">intent.rb.categories.management.list.view</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="text-input,admin,designModeOnly">
+                <value type="string">1.1.4</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

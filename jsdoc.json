@@ -1,0 +1,22 @@
+{
+    "source": {
+        "include": ["README.md", "collection-myportal"],
+        "includePattern": ".+\\.js(doc)?$"
+    },
+    "opts": {
+        "recurse": true,
+        "destination": "./docs",
+        "template": "node_modules/tui-jsdoc-template",
+        "package": "package.json"
+    },
+    "templates": {
+        "name": "Accitrade Mobile",
+        "footerText": "MIT license Copyright (c) Anzen Digital",
+        "tabNames": {
+            "api": "API"
+        }
+    },
+    "plugins": [
+        "plugins/markdown"
+    ]
+}

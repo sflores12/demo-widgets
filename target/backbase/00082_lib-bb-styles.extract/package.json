@@ -1,0 +1,47 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "lib-bb-styles@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+        "scope": null,
+        "escapedName": "lib-bb-styles",
+        "name": "lib-bb-styles",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "lib-bb-styles@>=1.2.20 <2.0.0",
+  "_id": "lib-bb-styles@1.2.20",
+  "_inCache": true,
+  "_location": "/lib-bb-styles",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "lib-bb-styles@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+    "scope": null,
+    "escapedName": "lib-bb-styles",
+    "name": "lib-bb-styles",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/ext-bb-income-spending-analysis-category-ng",
+    "/ext-bb-turnovers-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+  "_shasum": "cf2589b1a283f61205d594520f0a11d1e70f2150",
+  "_shrinkwrap": null,
+  "_spec": "lib-bb-styles@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-styles/-/lib-bb-styles-1.2.20.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {},
+  "devDependencies": {},
+  "main": "scripts/lib-bb-styles.js",
+  "name": "lib-bb-styles",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.2.20"
+}

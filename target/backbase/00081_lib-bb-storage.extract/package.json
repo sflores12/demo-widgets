@@ -1,0 +1,48 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "lib-bb-storage@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+        "scope": null,
+        "escapedName": "lib-bb-storage",
+        "name": "lib-bb-storage",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "lib-bb-storage@1.0.7",
+  "_id": "lib-bb-storage@1.0.7",
+  "_inCache": true,
+  "_location": "/lib-bb-storage",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "lib-bb-storage@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+    "scope": null,
+    "escapedName": "lib-bb-storage",
+    "name": "lib-bb-storage",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/lib-bb-start-ng",
+    "/lib-bb-storage-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+  "_shasum": "c26d52ce192a8798b019f7237e5a0df9aa49bca1",
+  "_shrinkwrap": null,
+  "_spec": "lib-bb-storage@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-storage/-/lib-bb-storage-1.0.7.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {},
+  "devDependencies": {},
+  "main": "scripts/lib-bb-storage.js",
+  "name": "lib-bb-storage",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.7"
+}

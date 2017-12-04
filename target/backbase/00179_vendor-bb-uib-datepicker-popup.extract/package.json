@@ -1,0 +1,53 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-uib-datepicker-popup@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-uib-datepicker-popup",
+        "name": "vendor-bb-uib-datepicker-popup",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-uib-datepicker-popup@1.3.3-bb.3",
+  "_id": "vendor-bb-uib-datepicker-popup@1.3.3-bb.3",
+  "_inCache": true,
+  "_location": "/vendor-bb-uib-datepicker-popup",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-uib-datepicker-popup@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-uib-datepicker-popup",
+    "name": "vendor-bb-uib-datepicker-popup",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/ui-bb-calendar-popup-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+  "_shasum": "b408dd99b055ddd718772e91646709fbeffd2b2a",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-uib-datepicker-popup@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-datepicker-popup/-/vendor-bb-uib-datepicker-popup-1.3.3-bb.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "^1.5.8-bb.1",
+    "vendor-bb-uib-datepicker": "^1.3.3-bb.3",
+    "vendor-bb-uib-position": "^1.3.3-bb.3"
+  },
+  "description": "Angular UI Bootstrap datepickerPopup component written in pure AngularJS  based on Bootstrap's markup and CSS.",
+  "devDependencies": {},
+  "main": "scripts/vendor-bb-uib-datepicker-popup.js",
+  "name": "vendor-bb-uib-datepicker-popup",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-uib-datepicker-popup\n\nAngular UI Bootstrap datepickerPopup component written in pure AngularJS  based on Bootstrap's markup and CSS.\n\nThis component has been split from the complete\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/\">Angular UI\nBootstrap v1.3.3</a> and wrapped in a UMD block.\n\n## Imports\n\n* vendor-bb-angular\n* vendor-bb-uib-datepicker\n* vendor-bb-uib-position\n\n---\n\n## Exports\n\n### *default*\n\nThe angular module name\n\n**Type:** *string*\n\n---\n\n## Usage in Extensions\n\nUI Components must be declared as dependencies of extensions before they can be used:\n\n```javascript\n// extension scripts/index.js\nimport uibDatepickerPopupKey from 'vendor-bb-uib-datepicker-popup';\n\nexport const dependencyKeys = [\n  uibDatepickerPopupKey,\n];\n```\n\n## Directive Usage\n\n<usage>\nThe datepicker popup is meant to be used with an input element. To understand usage of the datepicker, please refer to its documentation [here](https://angular-ui.github.io/bootstrap/#/datepicker).\n\n### uib-datepicker-popup settings\n\nThe popup is a wrapper that you can use in an input to toggle a datepicker. To configure the datepicker, use `datepicker-options` as documented in the [inline datepicker](https://angular-ui.github.io/bootstrap/#/datepicker).\n\n* `alt-input-formats`\n<small class=\"badge\">$</small>\n<small class=\"badge\">C</small>\n_(Default: `[]`)_ -\nA list of alternate formats acceptable for manual entry.\n\n* `clear-text`\n<small class=\"badge\">C</small>\n_(Default: `Clear`)_ -\nThe text to display for the clear button.\n\n* `close-on-date-selection`\n<small class=\"badge\">$</small>\n<small class=\"badge\">C</small>\n_(Default: `true`)_ -\nWhether to close calendar when a date is chosen.\n\n* `close-text`\n<small class=\"badge\">C</small>\n_(Default: `Done`)_ -\nThe text to display for the close button.\n\n* `current-text`\n<small class=\"badge\">C</small>\n_(Default: `Today`)_ -\nThe text to display for the current day button.\n\n* `datepicker-append-to-body`\n<small class=\"badge\">$</small>\n<small class=\"badge\">C</small>\n_(Default: `false`, Config: `appendToBody`)_ -\nAppend the datepicker popup element to `body`, rather than inserting after `datepicker-popup`.\n\n* `datepicker-options`\n<small class=\"badge\">$</small> -\nAn object with any combination of the datepicker settings (in camelCase) used to configure the wrapped datepicker.\n\n* `datepicker-popup-template-url`\n<small class=\"badge\">C</small>\n_(Default: `uib/template/datepickerPopup/popup.html`)_ -\nAdd the ability to override the template used on the component.\n\n* `datepicker-template-url`\n<small class=\"badge\">C</small>\n_(Default: `uib/template/datepicker/datepicker.html`)_ -\nAdd the ability to override the template used on the component (inner uib-datepicker).\n\n* `is-open`\n<small class=\"badge\">$</small>\n<i class=\"glyphicon glyphicon-eye-open\"></i>\n_(Default: `false`)_ -\nWhether or not to show the datepicker.\n\n* `ng-model`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i> -\n  The date object. Must be a Javascript `Date` object. You may use the `uibDateParser` service to assist in string-to-object conversion.\n\n* `on-open-focus`\n<small class=\"badge\">$</small>\n<small class=\"badge\">C</small>\n_(Default: `true`)_ -\nWhether or not to focus the datepicker popup upon opening.\n\n* `show-button-bar`\n<small class=\"badge\">$</small>\n<small class=\"badge\">C</small>\n_(Default: `true`)_ -\nWhether or not to display a button bar underneath the uib-datepicker.\n\n* `type`\n<small class=\"badge\">C</small>\n_(Default: `text`, Config: `html5Types`)_ -\nYou can override the input type to be _(date|datetime-local|month)_. That will change the date format of the popup.\n\n* `popup-placement`\n <small class=\"badge\">C</small>\n _(Default: `auto bottom-left`, Config: 'placement')_ -\nPassing in 'auto' separated by a space before the placement will enable auto positioning, e.g: \"auto bottom-left\". The popup will attempt to position where it fits in the closest scrollable ancestor. Accepts:\n\n * `top` - popup on top, horizontally centered on input element.\n * `top-left` - popup on top, left edge aligned with input element left edge.\n * `top-right` - popup on top, right edge aligned with input element right edge.\n * `bottom` - popup on bottom, horizontally centered on input element.\n * `bottom-left` - popup on bottom, left edge aligned with input element left edge.\n * `bottom-right` - popup on bottom, right edge aligned with input element right edge.\n * `left` - popup on left, vertically centered on input element.\n * `left-top` - popup on left, top edge aligned with input element top edge.\n * `left-bottom` - popup on left, bottom edge aligned with input element bottom edge.\n * `right` - popup on right, vertically centered on input element.\n * `right-top` - popup on right, top edge aligned with input element top edge.\n * `right-bottom` - popup on right, bottom edge aligned with input element bottom edge.\n\n* `uib-datepicker-popup`\n<small class=\"badge\">C</small>\n_(Default: `yyyy-MM-dd`, Config: `datepickerConfig`)_ -\nThe format for displayed dates. This string can take string literals by surrounding the value with single quotes, i.e. `yyyy-MM-dd h 'o\\'clock'`.\n\n**Notes**\n\nIf using this directive on input type date, a native browser datepicker could also appear.\n\n---\n\n## Demo\n\nTo see all docs and a working demo, please refer to the\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/#/datepickerPopup\" target=\"_blank\">official\ndocumentation</a> for this component.\n",
+  "readmeFilename": "README.md",
+  "version": "1.3.3-bb.3"
+}

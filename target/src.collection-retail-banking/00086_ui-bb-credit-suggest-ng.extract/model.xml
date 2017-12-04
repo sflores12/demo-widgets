@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>ui-bb-credit-suggest-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Credit Suggest UI Component</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">1.6.38</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

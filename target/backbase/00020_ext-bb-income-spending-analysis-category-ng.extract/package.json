@@ -1,0 +1,57 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bb-income-spending-analysis-category-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+        "scope": null,
+        "escapedName": "ext-bb-income-spending-analysis-category-ng",
+        "name": "ext-bb-income-spending-analysis-category-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bb-income-spending-analysis-category-ng@>=1.6.5 <2.0.0",
+  "_id": "ext-bb-income-spending-analysis-category-ng@1.6.5",
+  "_inCache": true,
+  "_location": "/ext-bb-income-spending-analysis-category-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bb-income-spending-analysis-category-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+    "scope": null,
+    "escapedName": "ext-bb-income-spending-analysis-category-ng",
+    "name": "ext-bb-income-spending-analysis-category-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/widget-bb-income-spending-analysis-category-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+  "_shasum": "c12ee2f710973af8e6ecaee3e2fb8c833eb869b3",
+  "_shrinkwrap": null,
+  "_spec": "ext-bb-income-spending-analysis-category-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-income-spending-analysis-category-ng/-/ext-bb-income-spending-analysis-category-ng-1.6.5.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "lib-bb-styles": "^1.2.20",
+    "ui-bb-change-period-ng": "^1.2.9",
+    "ui-bb-chartjs-chart-bar-ng": "^1.0.131",
+    "ui-bb-chartjs-chart-donut-ng": "^1.0.127",
+    "ui-bb-empty-state-ng": "^1.0.130",
+    "ui-bb-format-amount": "^1.4.48",
+    "ui-bb-i18n-ng": "^1.0.33",
+    "ui-bb-substitute-error-ng": "^1.0.23",
+    "vendor-bb-angular-ng-aria": "1.5.8-bb.3",
+    "vendor-bb-uib-buttons": "1.3.3-bb.3"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bb-income-spending-analysis-category-ng.js",
+  "name": "ext-bb-income-spending-analysis-category-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.6.5"
+}

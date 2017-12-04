@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <widget>
+        <name>widget-bb-contact-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="TemplateName">
+                <value type="string">Standard_Widget</value>
+            </property>
+            <property name="title" label="Title" viewHint="text-input,admin">
+                <value type="string">Contact Manager</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/assets/icon.png</value>
+            </property>
+            <property name="showAvatar" label="Display avatars" viewHint="text-input,manager">
+                <value type="boolean">true</value>
+            </property>
+            <property name="bb.ext-bbm-contact-form-ng.newContact" label="Enable the creation of new contacts" viewHint="text-input,admin,manager">
+                <value type="boolean">false</value>
+            </property>
+            <property name="bb.contact.pageSize" label="Number of contacts per page" viewHint="text-input,manager">
+                <value type="string">50</value>
+            </property>
+            <property label="Max. number of navigation pages" name="bb.contact.maxNavPages" viewHint="text-input,admin">
+                <value type="long">3</value>
+            </property>
+            <property label="Pagination type (pagination, load-more)" name="bb.contact.paginationType" viewHint="text-input,admin">
+                <value type="string">pagination</value>
+            </property>
+            <property name="bb.contact.notificationDismissTime" label="Number of seconds to dismiss the notification" viewHint="text-input,manager">
+                <value type="string">3</value>
+            </property>
+            <property name="bb.contact.groupName" label="Group to listen and or/trigger bus events; if empty, events are treated as global" viewHint="text-input,manager">
+                <value type="string"/>
+            </property>
+            <property name="intents" viewHint="text-input,admin">
+                <value type="string">go.contact.create</value>
+            </property>
+            <property name="extension" label="Extension name" viewHint="text-input,manager">
+                <value type="string">ext-bb-contact-list-ng</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">2.3.56</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

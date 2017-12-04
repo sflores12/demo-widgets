@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ui-bb-text-ng directive</title>
+    <script src="../node_modules/vendor-bb-angular/scripts/vendor-bb-angular.js"></script>
+    <script src="../dist/scripts/ui-bb-text-ng.js"></script>
+    <script>
+        var demoModule = angular.module('ui-bb-directive-demo', ['ui-bb-text-ng'])
+            .controller('DemoController', function() {
+                this.name = 'ui-bb-text-ng';
+                this.REGEX = '^[ \\w_@./#!*()=+-]{0,140}$';
+                this.memo = '';
+            });
+
+        angular.element(document).ready(function() {
+            angular.bootstrap(document, ['ui-bb-directive-demo']);
+        });
+    </script>
+</head>
+<body ng-controller="DemoController as demo">
+
+    <h1>ui-bb-text-ng</h1>
+    <pre>{{ demo.name }}</pre>
+
+    <textarea name="description"
+              ng-model="demo.memo"
+              id="memo"
+              placeholder="Enter memo here"
+              rows="'3'"
+              regex="demo.REGEX"
+              ui-bb-text-ng="ui-bb-text-ng"></textarea>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <widget>
+        <name>widget-bb-messages-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="TemplateName">
+                <value type="string">Standard_Widget</value>
+            </property>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Message Center</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/assets/icon.png</value>
+            </property>
+            <property name="extension" label="Extension name" viewHint="text-input,admin">
+                <value type="string">ext-bb-messages-ng</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="text-input,admin,designModeOnly">
+                <value type="string">3.0.1</value>
+            </property>
+            <property name="subjectMaxLength" label="Subject max length" viewHint="text-input,admin,manager">
+                <value type="long">100</value>
+            </property>
+            <property name="showUnreadConversationsCount" label="Display amount of unread conversations" viewHint="text-input,admin,manager">
+                <value type="boolean">true</value>
+            </property>
+            <property name="pageSize" label="Number of messages per page" viewHint="text-input,admin,manager">
+                <value type="long">10</value>
+            </property>
+            <property name="intents" viewHint="text-input,admin">
+                <value type="string">go.message.create</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

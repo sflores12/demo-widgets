@@ -1,0 +1,58 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui-bb-date-label-filter-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+        "scope": null,
+        "escapedName": "ui-bb-date-label-filter-ng",
+        "name": "ui-bb-date-label-filter-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ui-bb-date-label-filter-ng@>=1.1.6 <2.0.0",
+  "_id": "ui-bb-date-label-filter-ng@1.1.6",
+  "_inCache": true,
+  "_location": "/ui-bb-date-label-filter-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui-bb-date-label-filter-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+    "scope": null,
+    "escapedName": "ui-bb-date-label-filter-ng",
+    "name": "ui-bb-date-label-filter-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/ext-bb-manage-payment-orders-ng",
+    "/ext-bb-notification-badge-ng",
+    "/ext-bb-notification-center-ng",
+    "/ext-bb-notification-popups-ng",
+    "/ext-bb-transactions-extended-ng",
+    "/ext-bb-transactions-list-ng",
+    "/ext-bb-transactions-ng",
+    "/ext-bbm-initiate-payment-schedule-ng",
+    "/ext-bbm-notification-center-details-ng",
+    "/ext-bbm-notification-center-list-ng",
+    "/ui-bbm-datepicker-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+  "_shasum": "d022db86b85ff0c5e5ef34807fc9e36803aae411",
+  "_shrinkwrap": null,
+  "_spec": "ui-bb-date-label-filter-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-date-label-filter-ng/-/ui-bb-date-label-filter-ng-1.1.6.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/ui-bb-date-label-filter-ng.js",
+  "name": "ui-bb-date-label-filter-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.1.6"
+}

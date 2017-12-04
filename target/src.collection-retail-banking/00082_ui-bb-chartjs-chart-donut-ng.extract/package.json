@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-chartjs-chart-donut-ng@^1.0.127",
+        "scope": null,
+        "escapedName": "src.ui-bb-chartjs-chart-donut-ng",
+        "name": "src.ui-bb-chartjs-chart-donut-ng",
+        "rawSpec": "^1.0.127",
+        "spec": ">=1.0.127 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-chartjs-chart-donut-ng@>=1.0.127 <2.0.0",
+  "_id": "src.ui-bb-chartjs-chart-donut-ng@1.0.127",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-chartjs-chart-donut-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-chartjs-chart-donut-ng@^1.0.127",
+    "scope": null,
+    "escapedName": "src.ui-bb-chartjs-chart-donut-ng",
+    "name": "src.ui-bb-chartjs-chart-donut-ng",
+    "rawSpec": "^1.0.127",
+    "spec": ">=1.0.127 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-chartjs-chart-donut-ng/-/src.ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+  "_shasum": "56474453e4ae61592330758c6efbf64a1f59fba1",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-chartjs-chart-donut-ng@^1.0.127",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-chartjs-chart-donut-ng/-/src.ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+    "shasum": "56474453e4ae61592330758c6efbf64a1f59fba1"
+  },
+  "name": "src.ui-bb-chartjs-chart-donut-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.127"
+}

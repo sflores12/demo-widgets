@@ -1,0 +1,124 @@
+<div data-ng-controller="MessagesController as $ctrl"
+  class="ext-bb-messages-ng ng-cloak"
+  data-ng-init="views = $ctrl.statics.views; $ctrl.fetchUnreadMessagesCount()">
+
+  <ui-bb-substitute-error-ng data-message="$ctrl.state.globalError.message | i18n">
+    <ui-bb-notification-stripe
+      data-ng-if="$ctrl.state.error"
+      data-message="{{ $ctrl.state.error | i18n }}"
+      data-on-close="$ctrl.state.error = null;"
+      data-type="bg-danger">
+    </ui-bb-notification-stripe>
+
+    <div data-ng-show="!$ctrl.state.currentFolder.loading && $ctrl.state.showMailbox">
+      <uib-tabset data-active="activeTab">
+        <uib-tab data-index="0" data-select="$ctrl.openFolder(views.inbox)">
+          <uib-tab-heading>
+            <span data-i18n-key="label.messages"></span>
+            <span data-ng-if="$ctrl.config.showUnreadConversationsCount && $ctrl.countUnreadItems() > 0">
+              ({{ $ctrl.countUnreadItems() }})
+            </span>
+          </uib-tab-heading>
+        </uib-tab>
+        <uib-tab
+          data-index="1"
+          data-heading="{{'label.sent' | i18n }}"
+          data-select="$ctrl.openFolder(views.sent)">
+        </uib-tab>
+        <div class="conversation-list-item-controls pull-right" data-ng-hide="$ctrl.state.newDraftOpened">
+          <button type="button"
+            aria-label="{{ 'label.confim.remove' | i18n }}"
+            class="btn btn-default conversation-list-item-remove-btn"
+            data-ng-click="ext.removeConfirmOpened = true"
+            data-ng-show="$ctrl.state.selectedConversations.length > 0">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+        </div>
+      </uib-tabset>
+
+      <ui-bb-conversation-list-ng
+        data-conversations="$ctrl.state.currentFolder.items"
+        data-topics="$ctrl.topics"
+        data-on-select="$ctrl.onItemSelected(conversation)"
+        data-on-deselect="$ctrl.onItemDeselected(conversation)"
+        data-on-click="$ctrl.openItem(conversation)">
+      </ui-bb-conversation-list-ng>
+
+      <div class="text-center" data-ng-if="$ctrl.state.currentFolder.items.length === 0 &&
+        $ctrl.state.currentFolder.totalCount === 0">
+        <div class="h4" data-i18n-key="label.messages.empty"></div>
+      </div>
+    </div>
+
+    <div data-ng-controller="DraftController as $draftCtrl"
+      data-ng-show="$ctrl.state.showMailbox || $draftCtrl.state.opened">
+      <div data-uib-collapse="!$draftCtrl.state.opened">
+        <ui-bb-draft-edit-ng
+          data-topics="$ctrl.topics"
+          data-config="$draftCtrl.config"
+          data-on-close="$draftCtrl.dismiss()"
+          data-on-send="$draftCtrl.send(draft)"
+          data-messages="{
+            labelClose: ('ui-bb-draft-ng.label.close' | i18n),
+            labelSend: ('ui-bb-draft-ng.label.send' | i18n),
+            labelRemove: ('ui-bb-draft-ng.label.remove' | i18n),
+            labelToggleImportance: ('ui-bb-draft-ng.label.toggleImportance' | i18n),
+            formHeader: ('ui-bb-draft-ng.form.header' | i18n),
+            formSubject: ('ui-bb-draft-ng.form.subject' | i18n),
+            formTopic: ('ui-bb-draft-ng.form.topic' | i18n),
+            formMessage: ('ui-bb-draft-ng.form.message' | i18n),
+            formSend: ('ui-bb-draft-ng.form.send' | i18n),
+            errorSend: ('ui-bb-draft-ng.error.send' | i18n),
+          }">
+        </ui-bb-draft-edit-ng>
+      </div>
+      <div class="pull-right" data-ng-hide="$draftCtrl.state.opened">
+        <button class="btn btn-primary"
+          data-ng-click="$draftCtrl.open();"
+          aria-label="{{ 'label.openNewDraft' | i18n }}"
+          data-i18n-key="label.compose">
+        </button>
+      </div>
+    </div>
+
+    <ui-bb-load-more-ng
+      data-ng-show="$ctrl.state.showMailbox && !$ctrl.state.currentFolder.loading &&
+        $ctrl.state.currentFolder.items.length < $ctrl.state.currentFolder.totalCount"
+      label="{{ 'label.showMore' | i18n }}"
+      data-on-load-more="$ctrl.loadItems($ctrl.state.currentView, $ctrl.state.currentFolder.items.length, done)">
+    </ui-bb-load-more-ng>
+
+    <div data-ng-controller="ConversationController as $conversationCtrl"
+      data-ng-show="$conversationCtrl.state.open">
+      <ui-bb-conversation-view-ng
+        data-on-click="$conversationCtrl.viewConversation(conversation)"
+        data-conversation="$conversationCtrl.conversation"
+        data-messages="$conversationCtrl.messages"
+        data-topics="$ctrl.topics"
+        data-draft="$conversationCtrl.draft"
+        data-on-close="$conversationCtrl.close()"
+        data-on-reply-send="$conversationCtrl.sendReply(conversationId, draft)"
+        data-labels="{
+          labelClose: ('ui-bb-conversation-view-ng.label.close' | i18n),
+          labelSend: ('ui-bb-conversation-view-ng.label.send' | i18n),
+        }">
+      </ui-bb-conversation-view-ng>
+    </div>
+
+    <div data-ng-if="$ctrl.state.currentFolder.loading && $ctrl.state.showMailbox"
+      class="h4 text-center" data-i18n-key="label.message.loading">
+    </div>
+
+  </ui-bb-substitute-error-ng>
+
+  <ui-bb-confirm
+    data-is-open="ext.removeConfirmOpened"
+    data-on-confirm="$ctrl.removeSelectedItems()"
+    data-labels="{
+      heading: ('label.confim.header' | i18n),
+      bodyText: ('label.confim.text' | i18n),
+      confirm: ('label.confim.remove' | i18n),
+      cancel: ('label.confim.cancel' | i18n)
+    }">
+  </ui-bb-confirm>
+</div>

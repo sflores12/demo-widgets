@@ -1,0 +1,30 @@
+{
+  "en-US": {
+    "message.personalProfile.phone.delete.start": "Deleting phone",
+    "message.personalProfile.phone.delete.done": "Phone successfully deleted",
+    "message.personalProfile.phone.delete.failed": "Unable to delete the phone, please try again",
+
+    "message.personalProfile.phone.create.start": "Creating phone",
+    "message.personalProfile.phone.create.done": "Phone successfully created",
+    "message.personalProfile.phone.create.failed": "Unable to create the phone, please try again",
+
+    "message.personalProfile.phone.edit.start": "Editing phone",
+    "message.personalProfile.phone.edit.done": "Phone successfully edited",
+    "message.personalProfile.phone.edit.failed": "Unable to edit the phone, please try again",
+
+    "message.personalProfile.phone.delete.confirm.title": "Delete",
+    "message.personalProfile.phone.delete.confirm.message": "Are you sure you want to delete this phone number?",
+    "message.personalProfile.phone.delete.confirm.button.ok": "OK",
+    "message.personalProfile.phone.delete.confirm.button.cancel": "Cancel",
+
+    "form.label.phone": "Phone",
+    "form.label.primaryPhone": "Primary Phone",
+    "form.label.additionalPhone": "Additional Phone",
+    "form.label.saveChanges": "Save",
+
+    "form.placeholder.phone": "+31 6 12345678",
+
+    "errors.invalidPhone": "Please input a valid phone number",
+    "errors.requiredPhone": "Please input a phone number"
+  }
+}

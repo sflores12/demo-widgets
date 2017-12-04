@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>ext-bb-initiate-payment-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Initiate Payment Extension</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="text-input,admin,designModeOnly">
+                <value type="string">2.2.15</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/ext-bb-initiate-payment-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-angular-ng-aria" label="Feature Vendor Bb Angular Ng Aria" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-ng-aria</value>
+            </property>
+            <property name="feature.vendor-bb-angular-ng-messages" label="Feature Vendor Bb Angular Ng Messages" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-ng-messages</value>
+            </property>
+            <property name="feature.vendor-bb-uib-popover" label="Feature Vendor Bb Uib Popover" readonly="true" viewHint="">
+                <value type="string">vendor-bb-uib-popover</value>
+            </property>
+            <property name="feature.vendor-bb-angular-sanitize" label="Feature Vendor Bb Angular Sanitize" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-sanitize</value>
+            </property>
+            <property name="feature.vendor-bb-uib-alert" label="Feature Vendor Bb Uib Alert" readonly="true" viewHint="">
+                <value type="string">vendor-bb-uib-alert</value>
+            </property>
+            <property name="feature.ui-bb-substitute-error-ng" label="Feature Ui Bb Substitute Error Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-substitute-error-ng</value>
+            </property>
+            <property name="feature.ui-bb-i18n-ng" label="Feature Ui Bb I 18 N Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-i18n-ng</value>
+            </property>
+            <property name="feature.ui-bb-account-selector" label="Feature Ui Bb Account Selector" readonly="true" viewHint="">
+                <value type="string">ui-bb-account-selector</value>
+            </property>
+            <property name="feature.ui-bb-currency-input-ng" label="Feature Ui Bb Currency Input Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-currency-input-ng</value>
+            </property>
+            <property name="feature.ui-bb-parent-responsiveness-ng" label="Feature Ui Bb Parent Responsiveness Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-parent-responsiveness-ng</value>
+            </property>
+            <property name="feature.ui-bb-credit-suggest-ng" label="Feature Ui Bb Credit Suggest Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-credit-suggest-ng</value>
+            </property>
+            <property name="feature.ui-bb-switcher-ng" label="Feature Ui Bb Switcher Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-switcher-ng</value>
+            </property>
+            <property name="feature.ui-bb-expandable-ng" label="Feature Ui Bb Expandable Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-expandable-ng</value>
+            </property>
+            <property name="feature.ui-bb-calendar-popup-ng" label="Feature Ui Bb Calendar Popup Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-calendar-popup-ng</value>
+            </property>
+            <property name="feature.ui-bb-number-input-ng" label="Feature Ui Bb Number Input Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-number-input-ng</value>
+            </property>
+            <property name="feature.ui-bb-account-card" label="Feature Ui Bb Account Card" readonly="true" viewHint="">
+                <value type="string">ui-bb-account-card</value>
+            </property>
+            <property name="feature.ui-bb-confirm-ng" label="Feature Ui Bb Confirm Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-confirm-ng</value>
+            </property>
+            <property name="feature.ui-bb-loading-overlay-ng" label="Feature Ui Bb Loading Overlay Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-loading-overlay-ng</value>
+            </property>
+            <property name="feature.ui-bb-char-counter-ng" label="Feature Ui Bb Char Counter Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-char-counter-ng</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ext-bbm-payment-select-account-ng@1.0.138",
+        "scope": null,
+        "escapedName": "src.ext-bbm-payment-select-account-ng",
+        "name": "src.ext-bbm-payment-select-account-ng",
+        "rawSpec": "1.0.138",
+        "spec": "1.0.138",
+        "type": "version"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ext-bbm-payment-select-account-ng@1.0.138",
+  "_id": "src.ext-bbm-payment-select-account-ng@1.0.138",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ext-bbm-payment-select-account-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ext-bbm-payment-select-account-ng@1.0.138",
+    "scope": null,
+    "escapedName": "src.ext-bbm-payment-select-account-ng",
+    "name": "src.ext-bbm-payment-select-account-ng",
+    "rawSpec": "1.0.138",
+    "spec": "1.0.138",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bbm-payment-select-account-ng/-/src.ext-bbm-payment-select-account-ng-1.0.138.tgz",
+  "_shasum": "8f76da6c763da813af32a209c6135399027ef115",
+  "_shrinkwrap": null,
+  "_spec": "src.ext-bbm-payment-select-account-ng@1.0.138",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bbm-payment-select-account-ng/-/src.ext-bbm-payment-select-account-ng-1.0.138.tgz",
+    "shasum": "8f76da6c763da813af32a209c6135399027ef115"
+  },
+  "name": "src.ext-bbm-payment-select-account-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.138"
+}

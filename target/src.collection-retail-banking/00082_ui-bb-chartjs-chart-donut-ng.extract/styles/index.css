@@ -1,0 +1,7 @@
+ui-bb-chartjs-chart-donut-ng {
+  display: block;
+}
+
+ui-bb-chartjs-chart-donut-ng .donut-chart-container {
+  position: relative;
+}

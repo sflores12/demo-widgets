@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.config-bb-providers-ng@1.0.106",
+        "scope": null,
+        "escapedName": "src.config-bb-providers-ng",
+        "name": "src.config-bb-providers-ng",
+        "rawSpec": "1.0.106",
+        "spec": "1.0.106",
+        "type": "version"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src/node_modules/src.collection-bb-blocks"
+    ]
+  ],
+  "_from": "src.config-bb-providers-ng@1.0.106",
+  "_id": "src.config-bb-providers-ng@1.0.106",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.collection-bb-blocks/src.config-bb-providers-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.config-bb-providers-ng@1.0.106",
+    "scope": null,
+    "escapedName": "src.config-bb-providers-ng",
+    "name": "src.config-bb-providers-ng",
+    "rawSpec": "1.0.106",
+    "spec": "1.0.106",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/src.collection-bb-blocks"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.config-bb-providers-ng/-/src.config-bb-providers-ng-1.0.106.tgz",
+  "_shasum": "3c7b08ad03f4340452fc14824fad31c2574d8371",
+  "_shrinkwrap": null,
+  "_spec": "src.config-bb-providers-ng@1.0.106",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src/node_modules/src.collection-bb-blocks",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.config-bb-providers-ng/-/src.config-bb-providers-ng-1.0.106.tgz",
+    "shasum": "3c7b08ad03f4340452fc14824fad31c2574d8371"
+  },
+  "name": "src.config-bb-providers-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.106"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <property name="zips.dir" value="C:\Users\AGSNASOFT\Desktop\Backbase\Widget\statics\target/src.collection-retail-banking-zips"/>
+  <property name="extract-backbase-source.dir" value="C:\Users\AGSNASOFT\Desktop\Backbase\Widget\statics\target/src.collection-retail-banking"/>
+  <ac:for xmlns:ac="antlib:net.sf.antcontrib" param="file">
+    <path>
+      <fileset includes="*.zip" dir="${zips.dir}"/>
+    </path>
+    <sequential>
+      <ac:propertyregex input="@{file}" regexp=".*[\\/]([^\\/]*).zip" property="componentName" replace="\1" override="yes"/>
+      <unzip src="@{file}" dest="${extract-backbase-source.dir}/${componentName}.extract"/>
+    </sequential>
+  </ac:for>
+</target>
+</project>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>ext-bbm-initiate-payment-form-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">1.0.115</value>
+            </property>
+            <property name="title" label="Title" readonly="true" viewHint="admin,designModeOnly">
+                <value type="string">ext-bbm-initiate-payment-form-ng</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/ext-bbm-initiate-payment-form-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-angular-ng-messages" label="Feature Vendor Bb Angular Ng Messages" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-ng-messages</value>
+            </property>
+            <property name="feature.ui-bb-i18n-ng" label="Feature Ui Bb I 18 N Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-i18n-ng</value>
+            </property>
+            <property name="feature.ui-bb-format-amount" label="Feature Ui Bb Format Amount" readonly="true" viewHint="">
+                <value type="string">ui-bb-format-amount</value>
+            </property>
+            <property name="feature.ui-bb-iban-ng" label="Feature Ui Bb Iban Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-iban-ng</value>
+            </property>
+            <property name="feature.ui-bbm-amount-field-ng" label="Feature Ui Bbm Amount Field Ng" readonly="true" viewHint="">
+                <value type="string">ui-bbm-amount-field-ng</value>
+            </property>
+            <property name="feature.ui-bbm-beneficiary-select-ng" label="Feature Ui Bbm Beneficiary Select Ng" readonly="true" viewHint="">
+                <value type="string">ui-bbm-beneficiary-select-ng</value>
+            </property>
+            <property name="feature.ui-bbm-switch-ng" label="Feature Ui Bbm Switch Ng" readonly="true" viewHint="">
+                <value type="string">ui-bbm-switch-ng</value>
+            </property>
+            <property name="feature.ui-bbm-textfield-ng" label="Feature Ui Bbm Textfield Ng" readonly="true" viewHint="">
+                <value type="string">ui-bbm-textfield-ng</value>
+            </property>
+            <property name="feature.lib-bbm-plugins" label="Feature Lib Bbm Plugins" readonly="true" viewHint="">
+                <value type="string">lib-bbm-plugins</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

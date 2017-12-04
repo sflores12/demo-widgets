@@ -1,0 +1,146 @@
+<div class="ext-bb-income-spending-analysis-category-ng" data-ng-init="monthsRange = 1" ng-controller="IncomeSpendingAnalysisCategoryController as $ctrl">
+  <ui-bb-loading-indicator-ng data-is-loading="$ctrl.loading"
+    data-loading-text="{{ 'message.label.loading' | i18n }}">
+    <ui-bb-substitute-error-ng data-message="$ctrl.error | i18n" class="list-items-wrapper">
+      <div class="panel panel-default list-item" data-ng-show="ext.helpers.isSeriesDataAvailable($ctrl.series) && $ctrl.selectedProducts.length">
+        <div class="panel-body">
+          <div class="btn-group pull-right">
+              <button
+                class="btn btn-default px-7"
+                data-ng-model="monthsRange"
+                uib-btn-radio="1"
+                data-ng-change="ext.helpers.updatePeriod($ctrl, monthsRange)">
+                {{ "analysis.label.period.one.month" | i18n }}
+              </button>
+              <button
+                class="btn btn-default px-7"
+                data-ng-model="monthsRange"
+                uib-btn-radio="6"
+                data-ng-change="ext.helpers.updatePeriod($ctrl, monthsRange)">
+                {{ "analysis.label.period.six.months" | i18n }}
+              </button>
+              <button
+                class="btn btn-default px-7"
+                data-ng-model="monthsRange"
+                uib-btn-radio="12"
+                data-ng-change="ext.helpers.updatePeriod($ctrl, monthsRange)">
+                {{ "analysis.label.period.twelve.months" | i18n }}
+              </button>
+          </div>
+          </div>
+        </div>
+        <div data-ng-if="$ctrl.selectedProducts.length && monthsRange === 1" class="panel panel-default list-item">
+          <div class="panel-body">
+            <ui-bb-change-period-ng
+              data-period-start="$ctrl.periodStartDate"
+              data-period-end="$ctrl.periodEndDate"
+              data-period-step="1"
+              data-on-period-start-change="ext.helpers.onPeriodStartChange($ctrl)"
+              data-on-period-end-change="ext.helpers.onPeriodEndChange($ctrl)"
+              data-period-start-formatter="ext.helpers.periodStartLabelFormatter"
+              data-period-end-formatter="ext.helpers.periodEndLabelFormatter"
+            ></ui-bb-change-period-ng>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-body panel-body-large">
+          <ui-bb-empty-state-ng
+            data-icon-classes="{{
+              !$ctrl.products.length ?
+                'fa fa-4x fa-credit-card text-muted' :
+                'fa fa-4x fa-bar-chart text-muted'
+            }}"
+            data-title="{{
+              (!$ctrl.products.length ?
+                'analysis.label.no.products.title' :
+                'analysis.label.empty.dataset.title')
+                | i18n
+            }}"
+            data-subtitle="{{
+              (!$ctrl.products.length ?
+                ($ctrl.isSpendingAnalysis() ? 'analysis.label.no.products.spending.subtitle' : 'analysis.label.no.products.income.subtitle') :
+                'analysis.label.empty.dataset.subtitle')
+                | i18n
+            }}"
+            data-is-empty="!ext.helpers.isSeriesDataAvailable($ctrl.series) || !$ctrl.selectedProducts.length">
+            <ui-bb-chartjs-chart-donut-ng
+              class="chart-donut"
+              data-ng-if="monthsRange === 1"
+              data-series="$ctrl.series"
+              data-tooltip="ext.helpers.customizeTooltip"
+              data-plugins="ext.helpers.chartPlugins"
+              data-options="ext.helpers.donutChartOptions($ctrl)"
+              data-click-getter="ext.helpers.getClickHandler($ctrl)"
+            >
+              <div class="absolute-center">
+                <div class="text-center"
+                  data-ng-bind="($ctrl.isSpendingAnalysis() ? 'analysis.label.spending.total' : 'analysis.label.income.total') | i18n">
+                </div>
+                <div class="h3 text-center">
+                  <ui-bb-format-amount
+                    class="amount-regular-color"
+                    data-amount="$ctrl.items.total.amount"
+                    data-currency="$ctrl.items.total.currencyCode"
+                    data-wrap
+                  ></ui-bb-format-amount>
+                </div>
+              </div>
+            </ui-bb-chartjs-chart-donut-ng>
+            <ui-bb-chartjs-chart-bar class="col-xs-12 col-md-offset-1 col-md-10"
+              data-ng-if="monthsRange > 1"
+              data-series="$ctrl.turnoversSeries"
+              data-category-percentage="0.6"
+              data-bar-percentage="1"
+              data-tooltip="ext.helpers.customizeTurnoversTooltip"
+              data-plugins="ext.helpers.chartPlugins"
+              data-options="ext.helpers.barChartOptions"
+              data-x-formatter="ext.helpers.formatX"
+              data-y-formatter="ext.helpers.formatY"
+            ></ui-bb-chartjs-chart-bar>
+          </ui-bb-empty-state-ng>
+        </div>
+        <div class="list-group" ng-if="monthsRange > 1">
+          <div class="transaction-group list-items-wrapper">
+            <div class="list-item list-item-transaction-accordion p-3">
+              <div class="transaction-item d-flex flex-row align-items-center" role="row">
+                <div class="col-xs-6">
+                  <span class="h4" data-ng-bind="($ctrl.isSpendingAnalysis() ? 'analysis.label.spending.category' : 'analysis.label.income.category') | i18n"></span>
+                </div>
+                <div class="col-xs-6">
+                  <div class="transaction-amount text-right h4">
+                    {{ "analysis.label.spending.total.amount" | i18n }}
+                    <ui-bb-format-amount
+                      class="amount-regular-color"
+                      data-amount="$ctrl.items.total.amount"
+                      data-wrap>
+                    </ui-bb-format-amount>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-item list-item-transaction-accordion p-3"
+              data-ng-repeat="item in $ctrl.items.items track by item.category">
+                <div class="transaction-item d-flex flex-row align-items-center" role="row">
+                  <div class="transaction-category-icon col-xs-6">
+                    <span aria-hidden="true"
+                      class="bb-transaction-category fa bb-transaction-category-{{ ext.helpers.categoryToIconClass(item.category) }}">
+                    </span>
+                    <strong><span class="bb-transaction-category-name px-3" data-ng-bind="item.category"></span></strong>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="transaction-amount text-right">
+                      <ui-bb-format-amount
+                        class="amount-regular-color"
+                        data-amount="item.totalAmount.amount"
+                        data-wrap>
+                      </ui-bb-format-amount>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </ui-bb-substitute-error-ng>
+  </ui-bb-loading-indicator-ng>
+</div>

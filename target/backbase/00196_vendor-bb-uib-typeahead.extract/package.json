@@ -1,0 +1,54 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-uib-typeahead@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-uib-typeahead",
+        "name": "vendor-bb-uib-typeahead",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-uib-typeahead@1.3.3-bb.3",
+  "_id": "vendor-bb-uib-typeahead@1.3.3-bb.3",
+  "_inCache": true,
+  "_location": "/vendor-bb-uib-typeahead",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-uib-typeahead@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-uib-typeahead",
+    "name": "vendor-bb-uib-typeahead",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/ui-bb-autocomplete-search-ng",
+    "/ui-bb-credit-suggest-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+  "_shasum": "e3a46f68cf46234654e3a78b4254b9e35ef6cb70",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-uib-typeahead@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-typeahead/-/vendor-bb-uib-typeahead-1.3.3-bb.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "^1.5.8-bb.1",
+    "vendor-bb-uib-debounce": "^1.3.3-bb.3",
+    "vendor-bb-uib-position": "^1.3.3-bb.3"
+  },
+  "description": "Angular UI Bootstrap typeahead component written in pure AngularJS  based on Bootstrap's markup and CSS.",
+  "devDependencies": {},
+  "main": "scripts/vendor-bb-uib-typeahead.js",
+  "name": "vendor-bb-uib-typeahead",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-uib-typeahead\n\nAngular UI Bootstrap typeahead component written in pure AngularJS  based on Bootstrap's markup and CSS.\n\nThis component has been split from the complete\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/\">Angular UI\nBootstrap v1.3.3</a> and wrapped in a UMD block.\n\n## Imports\n\n* vendor-bb-angular\n* vendor-bb-uib-debounce\n* vendor-bb-uib-position\n\n---\n\n## Exports\n\n### *default*\n\nThe angular module name\n\n**Type:** *string*\n\n---\n\n## Usage in Extensions\n\nUI Components must be declared as dependencies of extensions before they can be used:\n\n```javascript\n// extension scripts/index.js\nimport uibTypeaheadKey from 'vendor-bb-uib-typeahead';\n\nexport const dependencyKeys = [\n  uibTypeaheadKey,\n];\n```\n\n## Directive Usage\n\n<usage>\nTypeahead is a AngularJS version of [Bootstrap v2's typeahead plugin](http://getbootstrap.com/2.3.2/javascript.html#typeahead).\nThis directive can be used to quickly create elegant typeaheads with any form text input.\n\nIt is very well integrated into AngularJS as it uses a subset of the\n[select directive](http://docs.angularjs.org/api/ng.directive:select) syntax, which is very flexible. Supported expressions are:\n\n* _label_ for _value_ in _sourceArray_\n* _select_ as _label_ for _value_ in _sourceArray_\n\nThe `sourceArray` expression can use a special `$viewValue` variable that corresponds to the value entered inside the input.\n\nThis directive works with promises, meaning you can retrieve matches using the `$http` service with minimal effort.\n\n### uib-typeahead settings\n\n* `ng-model`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i> -\n  Assignable angular expression to data-bind to.\n\n* `ng-model-options`\n  <small class=\"badge\">$</small> -\n  Options for ng-model (see [ng-model-options directive](https://docs.angularjs.org/api/ng/directive/ngModelOptions)). Currently supports the `debounce` and `getterSetter` options.\n\n* `typeahead-append-to`\n  <small class=\"badge\">$</small>\n  _(Default: `null`)_ -\n  Should the typeahead popup be appended to an element instead of the parent element?\n\n* `typeahead-append-to-body`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `false`)_ -\n  Should the typeahead popup be appended to $body instead of the parent element?\n\n* `typeahead-editable`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `true`)_ -\n  Should it restrict model values to the ones selected from the popup only?\n\n* `typeahead-focus-first`\n  <small class=\"badge\">$</small>\n  _(Default: `true`)_ -\n  Should the first match automatically be focused as you type?\n\n* `typeahead-focus-on-select`\n  _(Default: `true`)_ -\n  On selection, focus the input element the typeahead directive is associated with.\n\n* `typeahead-input-formatter`\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `undefined`)_ -\n  Format the ng-model result after selection.\n\n* `typeahead-is-open`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `angular.noop`)_ -\n  Binding to a variable that indicates if the dropdown is open.\n\n* `typeahead-loading`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `angular.noop`)_ -\n  Binding to a variable that indicates if matches are being retrieved asynchronously.\n\n* `typeahead-min-length`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `1`)_ -\n  Minimal no of characters that needs to be entered before typeahead kicks-in. Must be greater than or equal to 0.\n\n* `typeahead-no-results`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `angular.noop`)_ -\n  Binding to a variable that indicates if no matching results were found.\n\n* `typeahead-should-select($event)`\n  <small class=\"badge\">$</small>\n  _(Default: `null`)_ -\n  A callback executed when a `keyup` event that might trigger a selection occurs. Selection will only occur if this function returns true.\n\n* `typeahead-on-select($item, $model, $label, $event)`\n  <small class=\"badge\">$</small>\n  _(Default: `null`)_ -\n  A callback executed when a match is selected. $event can be undefined if selection not triggered from a user event.\n\n* `typeahead-popup-template-url`\n  _(Default: `uib/template/typeahead/typeahead-popup.html`)_ -\n  Set custom popup template.\n\n* `typeahead-select-on-blur`\n  <small class=\"badge\">$</small>\n  _(Default: `false`)_ -\n  On blur, select the currently highlighted match.\n\n* `typeahead-select-on-exact`\n  <small class=\"badge\">$</small>\n  _(Default: `false`)_ -\n  Automatically select the item when it is the only one that exactly matches the user input.\n\n* `typeahead-show-hint`\n  <small class=\"badge\">$</small>\n  _(Default: `false`)_ -\n  Show hint when the first option matches.\n\n* `typeahead-template-url`\n  _(Default: `uib/template/typeahead/typeahead-match.html`)_ -\n  Set custom item template.\n\n* `typeahead-wait-ms`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `0`)_ -\n  Minimal wait time after last character typed before typeahead kicks-in.\n\n* `uib-typeahead`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i> -\n  Comprehension Angular expression (see [select directive](http://docs.angularjs.org/api/ng.directive:select)).\n\n---\n\n## Demo\n\nTo see all docs and a working demo, please refer to the\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/#/typeahead\" target=\"_blank\">official\ndocumentation</a> for this component.\n",
+  "readmeFilename": "README.md",
+  "version": "1.3.3-bb.3"
+}

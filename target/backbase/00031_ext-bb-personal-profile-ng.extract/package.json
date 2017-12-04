@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bb-personal-profile-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+        "scope": null,
+        "escapedName": "ext-bb-personal-profile-ng",
+        "name": "ext-bb-personal-profile-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bb-personal-profile-ng@>=1.0.40 <2.0.0",
+  "_id": "ext-bb-personal-profile-ng@1.0.40",
+  "_inCache": true,
+  "_location": "/ext-bb-personal-profile-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bb-personal-profile-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+    "scope": null,
+    "escapedName": "ext-bb-personal-profile-ng",
+    "name": "ext-bb-personal-profile-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/widget-bb-personal-profile-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+  "_shasum": "9dfa07978d4c96454af14dc737e743413d4163ba",
+  "_shrinkwrap": null,
+  "_spec": "ext-bb-personal-profile-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-personal-profile-ng/-/ext-bb-personal-profile-ng-1.0.40.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "ui-bb-avatar-ng": "^1.0.174",
+    "vendor-bb-angular-ng-aria": "1.5.8-bb.3"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bb-personal-profile-ng.js",
+  "name": "ext-bb-personal-profile-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.40"
+}

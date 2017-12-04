@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-paginator-ng@^1.1.82",
+        "scope": null,
+        "escapedName": "src.ui-bb-paginator-ng",
+        "name": "src.ui-bb-paginator-ng",
+        "rawSpec": "^1.1.82",
+        "spec": ">=1.1.82 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-paginator-ng@>=1.1.82 <2.0.0",
+  "_id": "src.ui-bb-paginator-ng@1.1.82",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-paginator-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-paginator-ng@^1.1.82",
+    "scope": null,
+    "escapedName": "src.ui-bb-paginator-ng",
+    "name": "src.ui-bb-paginator-ng",
+    "rawSpec": "^1.1.82",
+    "spec": ">=1.1.82 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-paginator-ng/-/src.ui-bb-paginator-ng-1.1.82.tgz",
+  "_shasum": "25814bcb918d3f6b2ed64947d834a9ab509880f0",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-paginator-ng@^1.1.82",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-paginator-ng/-/src.ui-bb-paginator-ng-1.1.82.tgz",
+    "shasum": "25814bcb918d3f6b2ed64947d834a9ab509880f0"
+  },
+  "name": "src.ui-bb-paginator-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.1.82"
+}

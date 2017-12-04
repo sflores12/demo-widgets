@@ -1,0 +1,101 @@
+<div
+  ng-controller="SelectAccountController as $ctrl"
+  class="ext-bbm-payment-select-account-ng ios-momentum-scroll">
+
+  <!-- Debit accounts -->
+  <div ng-if="$ctrl.accountType === $ctrl.AccountType.DEBIT">
+    <div class="list-group">
+      <div
+        class="list-group-item"
+        ng-repeat="account in $ctrl.state.debitAccounts.data track by $index"
+        ng-click="$ctrl.selectAccount(account)">
+        <div class="bbm-account bbm-account-md">
+          <div class="bbm-account-primary-information">
+            <h3 class="bbm-account-name" ng-bind="account.name"></h3>
+            <div class="bbm-account-primary-amount">
+              <ui-bb-format-amount
+                amount="account.amount"
+                currency="account.currency"
+                wrap-decimals>
+              </ui-bb-format-amount>
+            </div>
+          </div>
+          <div class="bbm-account-secondary-information">
+            <div class="bbm-account-identifier">
+              <span
+                class="prevent-ios-click"
+                data-role="product-id"
+                ng-bind="account.identifier">
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Beneficiaries -->
+  <div ng-if="$ctrl.accountType === $ctrl.AccountType.CREDIT">
+    <!-- Credit accounts -->
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        ng-repeat="account in $ctrl.state.beneficiaries.data.creditAccounts track by $index"
+        ng-click="$ctrl.selectAccount(account)">
+        <div class="bbm-account bbm-account-md">
+          <div class="bbm-account-primary-information">
+            <h3 class="bbm-account-name" ng-bind="account.name"></h3>
+            <div class="bbm-account-primary-amount">
+              <ui-bb-format-amount
+                amount="account.amount"
+                currency="account.currency"
+                wrap-decimals>
+              </ui-bb-format-amount>
+            </div>
+          </div>
+          <div class="bbm-account-secondary-information">
+            <div class="bbm-account-identifier">
+              <span
+                class="prevent-ios-click"
+                data-role="product-id" ng-bind="account.identifier">
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Contacts -->
+    <div class="panel" ng-repeat="group in $ctrl.state.beneficiaries.data.contacts track by $index">
+      <div class="panel-heading">
+        <h3 class="panel-title" ng-bind="group.char"></h3>
+      </div>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          ng-repeat="contact in group.contacts track by $index"
+          ng-click="$ctrl.selectAccount(contact)">
+          <div class="bbm-contact">
+            <div class="bbm-contact-avatar">
+              <ui-bb-avatar
+                class="bbm-avatar bbm-avatar-sm bbm-avatar-circle"
+                name="contact.name"
+                image="contact.imageAvatar">
+              </ui-bb-avatar>
+            </div>
+            <div class="bbm-contact-information">
+              <div class="bbm-contact-name" ng-bind="contact.name"></div>
+              <div class="bbm-contact-identifier">
+                <span
+                  class="prevent-ios-click"
+                  data-role="contact-id"
+                  ng-bind="contact.identifier">
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

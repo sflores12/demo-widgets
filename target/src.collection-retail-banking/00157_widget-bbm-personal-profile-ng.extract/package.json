@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.widget-bbm-personal-profile-ng@^1.0.19",
+        "scope": null,
+        "escapedName": "src.widget-bbm-personal-profile-ng",
+        "name": "src.widget-bbm-personal-profile-ng",
+        "rawSpec": "^1.0.19",
+        "spec": ">=1.0.19 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.widget-bbm-personal-profile-ng@>=1.0.19 <2.0.0",
+  "_id": "src.widget-bbm-personal-profile-ng@1.0.19",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.widget-bbm-personal-profile-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.widget-bbm-personal-profile-ng@^1.0.19",
+    "scope": null,
+    "escapedName": "src.widget-bbm-personal-profile-ng",
+    "name": "src.widget-bbm-personal-profile-ng",
+    "rawSpec": "^1.0.19",
+    "spec": ">=1.0.19 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bbm-personal-profile-ng/-/src.widget-bbm-personal-profile-ng-1.0.19.tgz",
+  "_shasum": "58ea94553f0126f3a701cf6116575fdcac4794e1",
+  "_shrinkwrap": null,
+  "_spec": "src.widget-bbm-personal-profile-ng@^1.0.19",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bbm-personal-profile-ng/-/src.widget-bbm-personal-profile-ng-1.0.19.tgz",
+    "shasum": "58ea94553f0126f3a701cf6116575fdcac4794e1"
+  },
+  "name": "src.widget-bbm-personal-profile-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.19"
+}

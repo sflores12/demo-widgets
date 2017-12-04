@@ -1,0 +1,52 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-uib-collapse@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-uib-collapse",
+        "name": "vendor-bb-uib-collapse",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-uib-collapse@1.3.3-bb.3",
+  "_id": "vendor-bb-uib-collapse@1.3.3-bb.3",
+  "_inCache": true,
+  "_location": "/vendor-bb-uib-collapse",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-uib-collapse@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-uib-collapse",
+    "name": "vendor-bb-uib-collapse",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/ui-bb-expandable-ng",
+    "/vendor-bb-uib-accordion"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+  "_shasum": "6d9d2f20c307729388896933fa4da24918ffc08f",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-uib-collapse@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-collapse/-/vendor-bb-uib-collapse-1.3.3-bb.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "^1.5.8-bb.1"
+  },
+  "description": "Angular UI Bootstrap collapse component written in pure AngularJS  based on Bootstrap's markup and CSS.",
+  "devDependencies": {},
+  "main": "scripts/vendor-bb-uib-collapse.js",
+  "name": "vendor-bb-uib-collapse",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-uib-collapse\n\nAngular UI Bootstrap collapse component written in pure AngularJS  based on Bootstrap's markup and CSS.\n\nThis component has been split from the complete\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/\">Angular UI\nBootstrap v1.3.3</a> and wrapped in a UMD block.\n\n## Imports\n\n* vendor-bb-angular\n\n\n---\n\n## Exports\n\n### *default*\n\nThe angular module name\n\n**Type:** *string*\n\n---\n\n## Usage in Extensions\n\nUI Components must be declared as dependencies of extensions before they can be used:\n\n```javascript\n// extension scripts/index.js\nimport uibCollapseKey from 'vendor-bb-uib-collapse';\n\nexport const dependencyKeys = [\n  uibCollapseKey,\n];\n```\n\n## Directive Usage\n\n<usage>\n**uib-collapse** provides a simple way to hide and show an element with a css transition\n\n### uib-collapse settings\n\n* `collapsed()`\n  <small class=\"badge\">$</small> -\n  An optional expression called after the element finished collapsing.\n\n* `collapsing()`\n  <small class=\"badge\">$</small> -\n  An optional expression called before the element begins collapsing.\n  If the expression returns a promise, animation won't start until the promise resolves.\n  If the returned promise is rejected, collapsing will be cancelled.\n\n* `expanded()`\n  <small class=\"badge\">$</small> -\n  An optional expression called after the element finished expanding.\n\n* `expanding()`\n  <small class=\"badge\">$</small> -\n  An optional expression called before the element begins expanding.\n  If the expression returns a promise, animation won't start until the promise resolves.\n  If the returned promise is rejected, expanding will be cancelled.\n\n* `uib-collapse`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `false`)_ -\n  Whether the element should be collapsed or not.\n\n\n---\n\n## Demo\n\nTo see all docs and a working demo, please refer to the\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/#/collapse\" target=\"_blank\">official\ndocumentation</a> for this component.\n",
+  "readmeFilename": "README.md",
+  "version": "1.3.3-bb.3"
+}

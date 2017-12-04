@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.widget-bb-login-ng@^2.0.65",
+        "scope": null,
+        "escapedName": "src.widget-bb-login-ng",
+        "name": "src.widget-bb-login-ng",
+        "rawSpec": "^2.0.65",
+        "spec": ">=2.0.65 <3.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.widget-bb-login-ng@>=2.0.65 <3.0.0",
+  "_id": "src.widget-bb-login-ng@2.0.65",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.widget-bb-login-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.widget-bb-login-ng@^2.0.65",
+    "scope": null,
+    "escapedName": "src.widget-bb-login-ng",
+    "name": "src.widget-bb-login-ng",
+    "rawSpec": "^2.0.65",
+    "spec": ">=2.0.65 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bb-login-ng/-/src.widget-bb-login-ng-2.0.65.tgz",
+  "_shasum": "edb959ad8e26d60b57c76439ca51a95f4bbd4cad",
+  "_shrinkwrap": null,
+  "_spec": "src.widget-bb-login-ng@^2.0.65",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bb-login-ng/-/src.widget-bb-login-ng-2.0.65.tgz",
+    "shasum": "edb959ad8e26d60b57c76439ca51a95f4bbd4cad"
+  },
+  "name": "src.widget-bb-login-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "2.0.65"
+}

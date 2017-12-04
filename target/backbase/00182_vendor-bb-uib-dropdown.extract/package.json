@@ -1,0 +1,52 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-uib-dropdown@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-uib-dropdown",
+        "name": "vendor-bb-uib-dropdown",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-uib-dropdown@1.3.3-bb.3",
+  "_id": "vendor-bb-uib-dropdown@1.3.3-bb.3",
+  "_inCache": true,
+  "_location": "/vendor-bb-uib-dropdown",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-uib-dropdown@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-uib-dropdown",
+    "name": "vendor-bb-uib-dropdown",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/ui-bb-dropdown-select"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+  "_shasum": "f3025a2ab729b1d63c30c1725b25821d136ef2b2",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-uib-dropdown@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dropdown/-/vendor-bb-uib-dropdown-1.3.3-bb.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "^1.5.8-bb.1",
+    "vendor-bb-uib-position": "^1.3.3-bb.3"
+  },
+  "description": "Angular UI Bootstrap dropdown component written in pure AngularJS  based on Bootstrap's markup and CSS.",
+  "devDependencies": {},
+  "main": "scripts/vendor-bb-uib-dropdown.js",
+  "name": "vendor-bb-uib-dropdown",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-uib-dropdown\n\nAngular UI Bootstrap dropdown component written in pure AngularJS  based on Bootstrap's markup and CSS.\n\nThis component has been split from the complete\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/\">Angular UI\nBootstrap v1.3.3</a> and wrapped in a UMD block.\n\n## Imports\n\n* vendor-bb-angular\n* vendor-bb-uib-position\n\n---\n\n## Exports\n\n### *default*\n\nThe angular module name\n\n**Type:** *string*\n\n---\n\n## Usage in Extensions\n\nUI Components must be declared as dependencies of extensions before they can be used:\n\n```javascript\n// extension scripts/index.js\nimport uibDropdownKey from 'vendor-bb-uib-dropdown';\n\nexport const dependencyKeys = [\n  uibDropdownKey,\n];\n```\n\n## Directive Usage\n\n<usage>\nDropdown is a simple directive which will toggle a dropdown menu on click or programmatically.\n\nThis directive is composed by three parts:\n\n* `uib-dropdown` which transforms a node into a dropdown.\n* `uib-dropdown-toggle` which allows the dropdown to be toggled via click. This directive is optional.\n* `uib-dropdown-menu` which transforms a node into the popup menu.\n\nEach of these parts need to be used as attribute directives.\n\n### uib-dropdown settings\n\n* `auto-close`\n  _(Default: `always`)_ -\n  Controls the behavior of the menu when clicked.\n  * `always` - Automatically closes the dropdown when any of its elements is clicked.\n  * `disabled` - Disables the auto close. You can control it manually with `is-open`. It still gets closed if the toggle is clicked, `esc` is pressed or another dropdown is open.\n  * `outsideClick` - Closes the dropdown automatically only when the user clicks any element outside the dropdown.\n\n* `dropdown-append-to`\n  <small class=\"badge\">$</small>\n  _(Default: `null`)_ -\n  Appends the inner dropdown-menu to an arbitrary DOM element.\n\n* `dropdown-append-to-body`\n  <small class=\"badge\">B</small>\n  _(Default: `false`)_ -\n  Appends the inner dropdown-menu to the body element.\n\n* `is-open`\n  <small class=\"badge\">$</small>\n  <i class=\"glyphicon glyphicon-eye-open\"></i>\n  _(Default: `false`)_ -\n  Defines whether or not the dropdown-menu is open. The `uib-dropdown-toggle` will toggle this attribute on click.\n\n* `keyboard-nav`:\n  <small class=\"badge\">B</small>\n  _(Default: `false`)_ -\n  Enables navigation of dropdown list elements with the arrow keys.\n\n* `on-toggle(open)`\n  <small class=\"badge\">$</small> -\n  An optional expression called when the dropdown menu is opened or closed.\n\n### uib-dropdown-menu settings\n\n* `template-url`\n  _(Default: `none`)_ -\n  You may specify a template for the dropdown menu. Check the demos for an example.\n\n### Additional settings `uibDropdownConfig`\n\n* `appendToOpenClass`\n  _(Default: `uib-dropdown-open`)_ -\n  Class to apply when the dropdown is open and appended to a different DOM element.\n\n* `openClass`\n  _(Default: `open`)_ -\n  Class to apply when the dropdown is open.\n\n### Known issues\n\nFor usage with ngTouch, it is recommended to use the programmatic `is-open` trigger with ng-click - this is due to ngTouch decorating ng-click to prevent propagation of the event.\n\n---\n\n## Demo\n\nTo see all docs and a working demo, please refer to the\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/#/dropdown\" target=\"_blank\">official\ndocumentation</a> for this component.\n",
+  "readmeFilename": "README.md",
+  "version": "1.3.3-bb.3"
+}

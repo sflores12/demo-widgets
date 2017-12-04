@@ -1,0 +1,51 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-uib-dateparser@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-uib-dateparser",
+        "name": "vendor-bb-uib-dateparser",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-uib-dateparser@1.3.3-bb.3",
+  "_id": "vendor-bb-uib-dateparser@1.3.3-bb.3",
+  "_inCache": true,
+  "_location": "/vendor-bb-uib-dateparser",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-uib-dateparser@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-uib-dateparser",
+    "name": "vendor-bb-uib-dateparser",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/vendor-bb-uib-datepicker"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+  "_shasum": "efa818bf0a229fd3ab8894c791ba5be81ca09c58",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-uib-dateparser@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-dateparser/-/vendor-bb-uib-dateparser-1.3.3-bb.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "^1.5.8-bb.1"
+  },
+  "description": "Angular UI Bootstrap dateparser component written in pure AngularJS  based on Bootstrap's markup and CSS.",
+  "devDependencies": {},
+  "main": "scripts/vendor-bb-uib-dateparser.js",
+  "name": "vendor-bb-uib-dateparser",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-uib-dateparser\n\nAngular UI Bootstrap dateparser component written in pure AngularJS  based on Bootstrap's markup and CSS.\n\nThis component has been split from the complete\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/\">Angular UI\nBootstrap v1.3.3</a> and wrapped in a UMD block.\n\n## Imports\n\n* vendor-bb-angular\n\n\n---\n\n## Exports\n\n### *default*\n\nThe angular module name\n\n**Type:** *string*\n\n---\n\n## Usage in Extensions\n\nUI Components must be declared as dependencies of extensions before they can be used:\n\n```javascript\n// extension scripts/index.js\nimport uibDateparserKey from 'vendor-bb-uib-dateparser';\n\nexport const dependencyKeys = [\n  uibDateparserKey,\n];\n```\n\n## Directive Usage\n\n<usage>\nThe `uibDateParser` is what the `uib-datepicker` uses internally to parse the dates. You can use it standalone by injecting the `uibDateParser` service where you need it.\n\nThe public API for the dateParser is a single method called `parse`.\n\nCertain format codes support i18n. Check this [guide](https://docs.angularjs.org/guide/i18n) for more information.\n\n### uibDateParser's parse function\n\n##### parameters\n\n* `input`\n  _(Type: `string`, Example: `2004/Sep/4`)_ -\n  The input date to parse.\n\n* `format`\n  _(Type: `string`, Example: `yyyy/MMM/d`)_ -\n  The format we want to use. Check all the supported formats below.\n\n* `baseDate`\n  _(Type: `Date`, Example: `new Date()`)_ -\n  If you want to parse a date but maintain the timezone, you can pass an existing date here.\n\n##### return\n\n* If the specified input matches the format, a new date with the input will be returned, otherwise, it will return undefined.\n\n### uibDateParser's format codes\n\n* `yyyy`\n  _(Example: `2015`)_ -\n  Parses a 4 digits year.\n\n* `yy`\n  _(Example: `15`)_ -\n  Parses a 2 digits year.\n\n* `y`\n  _(Example: `15`)_ -\n  Parses a year with 1, 2, 3, or 4 digits.\n\n* `MMMM`\n  _(Example: `February`, i18n support)_ -\n  Parses the full name of a month.\n\n* `MMM`\n  _(Example: `Feb`, i18n support)_ -\n  Parses the short name of a month.\n\n* `MM`\n  _(Example: `12`, Leading 0)_ -\n  Parses a numeric month.\n\n* `M`\n  _(Example: `3`)_ -\n  Parses a numeric month.\n\n* `M!`\n  _(Example: `3` or `03`)_ -\n  Parses a numeric month, but allowing an optional leading zero\n\n* `dd`\n  _(Example: `05`, Leading 0)_ -\n  Parses a numeric day.\n\n* `d`\n  _(Example: `5`)_ -\n  Parses a numeric day.\n\n* `d!`\n  _(Example: `3` or `03`)_ -\n  Parses a numeric day, but allowing an optional leading zero\n\n* `EEEE`\n  _(Example: `Sunday`, i18n support)_ -\n  Parses the full name of a day.\n\n* `EEE`\n  _(Example: `Mon`, i18n support)_ -\n  Parses the short name of a day.\n\n* `HH`\n  _(Example: `14`, Leading 0)_ -\n  Parses a 24 hours time.\n\n* `H`\n  _(Example: `3`)_ -\n  Parses a 24 hours time.\n\n* `hh`\n  _(Example: `11`, Leading 0)_ -\n  Parses a 12 hours time.\n\n* `h`\n  _(Example: `3`)_ -\n  Parses a 12 hours time.\n\n* `mm`\n  _(Example: `09`, Leading 0)_ -\n  Parses the minutes.\n\n* `m`\n  _(Example: `3`)_ -\n  Parses the minutes.\n\n* `sss`\n  _(Example: `094`, Leading 0)_ -\n  Parses the milliseconds.\n\n* `ss`\n  _(Example: `08`, Leading 0)_ -\n  Parses the seconds.\n\n* `s`\n  _(Example: `22`)_ -\n  Parses the seconds.\n\n* `a`\n  _(Example: `10AM`)_ -\n  Parses a 12 hours time with AM/PM.\n\n* `Z`\n  _(Example: `-0800`)_ -\n  Parses the timezone offset in a signed 4 digit representation\n\n* `ww`\n  _(Example: `03`, Leading 0)_ -\n  Parses the week number\n\n* `w`\n  _(Example: `03`)_ -\n  Parses the week number\n\n* `G`, `GG`, `GGG`\n  _(Example: `AD`)_ -\n  Parses the era (`AD` or `BC`)\n* `GGGG`\n  _(Example: `Anno Domini`)_ -\n  Parses the long form of the era (`Anno Domini` or `Before Christ`)\n\n\\* The ones marked with `Leading 0`, needs a leading 0 for values less than 10. Exception being milliseconds which needs it for values under 100.\n\n\\** It also supports `fullDate|longDate|medium|mediumDate|mediumTime|short|shortDate|shortTime` as the format for parsing.\n\n\\*** It supports template literals as a string between the single quote `'` character, i.e. `'The Date is' MM/DD/YYYY`. If one wants the literal single quote character, one must use `''''`.\n\n---\n\n## Demo\n\nTo see all docs and a working demo, please refer to the\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/#/dateparser\" target=\"_blank\">official\ndocumentation</a> for this component.\n",
+  "readmeFilename": "README.md",
+  "version": "1.3.3-bb.3"
+}

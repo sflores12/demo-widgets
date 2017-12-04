@@ -1,0 +1,26 @@
+{
+  "en-US": {
+    "message.loading": "Loading transactions",
+    "message.all.transactions.loaded": "All transactions loaded",
+    "message.no.transactions": "No transactions",
+    "message.searching": "Searching transactions",
+    "message.all.results.loaded": "No more results",
+    "message.no.results": "Sorry, no results",
+    "message.loading.failed.title": "Loading Failed",
+    "message.loading.failed.body": "Something went wrong while retrieving the transactions. Please try again later.",
+
+    "no.transactions.title": "No Transactions",
+    "no.transactions.message": "There are no transactions to display for this account",
+
+    "no.search-results.title": "No Results Found",
+    "no.search-results.message": "Please try a different search item",
+
+    "label.availableBalance": "Available:",
+    "label.accruedInterestAmount": "Accrued:",
+    "label.creditLimit": "Credit Limit:",
+    "label.initiatePayment": "New Payment",
+
+    "error.loading": "Unable to load transactions",
+    "error.searching": "Unable to search transactions"
+  }
+}

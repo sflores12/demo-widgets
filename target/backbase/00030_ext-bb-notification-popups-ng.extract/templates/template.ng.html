@@ -1,0 +1,70 @@
+<div data-ng-controller="NotificationsPopupsController as $ctrl"
+  class="ext-bb-notification-popups-ng">
+
+  <div class="notification-sticky-wrapper">
+    <div data-uib-alert
+      data-ng-if="::$ctrl.dismissSticky"
+      class="notification notification-single-view notification-sticky-view"
+      data-ng-repeat="notification in $ctrl.stickyNotifications track by notification.id"
+      data-type="{{ $ctrl.getNotificationType(notification) }}"
+      data-close="$ctrl.closeNotification(notification.id, true)">
+      <i class="fa {{ ext.helpers.getLevelIcon(notification.level) }} notification-level"
+        data-ng-class="'text-'+ notification.level | lowercase"
+        title="{{ 'notification.level.' + notification.level | lowercase | i18n }}">
+      </i>
+      <strong data-ng-if="notification.title"
+        data-ng-bind="notification.title">
+      </strong>
+      <ui-bb-message class="message"
+        data-on-link-click="$ctrl.closeNotification(notification.id, true)"
+        data-template="notification.message"
+        data-link="notification.link">
+      </ui-bb-message>
+    </div>
+    <div data-uib-alert
+      data-ng-if="::!$ctrl.dismissSticky"
+      class="notification notification-single-view notification-sticky-view"
+      data-ng-repeat="notification in $ctrl.stickyNotifications track by notification.id"
+      data-type="{{ $ctrl.getNotificationType(notification) }}">
+      <i class="fa {{ ext.helpers.getLevelIcon(notification.level) }} notification-level"
+        data-ng-class="'text-'+ notification.level | lowercase"
+        title="{{ 'notification.level.' + notification.level | lowercase | i18n }}">
+      </i>
+      <strong data-ng-if="notification.title"
+        data-ng-bind="notification.title">
+      </strong>
+      <ui-bb-message class="message"
+        data-template="notification.message"
+        data-link="notification.link">
+      </ui-bb-message>
+    </div>
+  </div>
+
+  <div class="notification-popup-wrapper">
+    <div data-uib-alert
+      class="notification notification-single-view notification-popup-view"
+      data-ng-repeat="notification in $ctrl.notifications track by notification.id"
+      data-close="$ctrl.closeNotification(notification.id)"
+      data-type="{{ $ctrl.getNotificationType(notification) }}">
+      <div class="notification-header">
+        <i class="fa notification-level"
+          data-ng-class="ext.helpers.getLevelIcon(notification.level)"
+          title="{{ 'notification.level.' + notification.level | lowercase | i18n }}">
+        </i>
+        <span class="notification-date"
+          data-ng-bind="ext.helpers.getDateLabel(notification)">
+        </span>
+      </div>
+      <strong data-ng-if="notification.title"
+        data-ng-bind="notification.title"
+        class="ellipsis"></strong>
+      <ui-bb-message class="message"
+        data-visible-lines-length="ext.helpers.getVisibleLinesLength(notification)"
+        data-on-link-click="$ctrl.closeNotification(notification.id)"
+        data-template="notification.message"
+        data-link="notification.link">
+      </ui-bb-message>
+    </div>
+  </div>
+
+</div>

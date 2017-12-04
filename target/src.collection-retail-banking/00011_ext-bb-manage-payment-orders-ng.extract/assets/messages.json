@@ -1,0 +1,16 @@
+{
+  "en-US": {
+    "payment.status.single": "One time",
+    "payment.status.recurring": "Recurring",
+
+    "label.loading": "Loading...",
+    "label.noItems.title": "No Payments",
+    "label.noItems.description": "You don't have any new payments to display yet.<br>Try creating a new payment using the \"New Payment\" button.",
+    "label.loadMore": "Load more",
+
+    "error.auth": "You are not authorised to perform this action.",
+    "error.user": "There is a problem with the action you are trying to perform.",
+    "error.connectivity": "Connection Error",
+    "error.unexpected": "An unexpected error occurred, we apologise for the inconvenience. Please try again later."
+  }
+}

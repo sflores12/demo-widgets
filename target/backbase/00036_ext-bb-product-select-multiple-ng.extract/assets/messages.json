@@ -1,0 +1,10 @@
+{
+  "en-US": {
+    "account.select.placeholder": "Select Accounts",
+    "account.select.label.no.accounts": "No Accounts",
+    "account.select.label.account": "Account",
+    "account.select.label.accounts": "Accounts",
+    "account.select.label.all.accounts": "All Accounts",
+    "account.select.label.selected.accounts": "Accounts Selected"
+  }
+}

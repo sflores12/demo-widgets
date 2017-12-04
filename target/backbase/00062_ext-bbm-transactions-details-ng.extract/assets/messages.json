@@ -1,0 +1,14 @@
+{
+  "en-US": {
+    "label.transactionCurrency": "Transaction currency",
+    "label.instructedAmount": "Instructed amount",
+    "label.exchangeRate": "Exchange rate",
+    "label.transactionDate": "Transaction date",
+    "label.processingDate": "Processing date",
+    "label.beneficiaryAccount": "Beneficiary account",
+    "label.description": "Description",
+    "label.reference": "Reference",
+    "label.share": "Share",
+    "label.revoke": "Revoke"
+  }
+}

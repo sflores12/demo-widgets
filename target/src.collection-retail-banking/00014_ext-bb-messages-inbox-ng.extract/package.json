@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ext-bb-messages-inbox-ng@^1.2.30",
+        "scope": null,
+        "escapedName": "src.ext-bb-messages-inbox-ng",
+        "name": "src.ext-bb-messages-inbox-ng",
+        "rawSpec": "^1.2.30",
+        "spec": ">=1.2.30 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ext-bb-messages-inbox-ng@>=1.2.30 <2.0.0",
+  "_id": "src.ext-bb-messages-inbox-ng@1.2.30",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ext-bb-messages-inbox-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ext-bb-messages-inbox-ng@^1.2.30",
+    "scope": null,
+    "escapedName": "src.ext-bb-messages-inbox-ng",
+    "name": "src.ext-bb-messages-inbox-ng",
+    "rawSpec": "^1.2.30",
+    "spec": ">=1.2.30 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bb-messages-inbox-ng/-/src.ext-bb-messages-inbox-ng-1.2.30.tgz",
+  "_shasum": "691ff1e964026eb75c489c0b07a32c255fa52ac8",
+  "_shrinkwrap": null,
+  "_spec": "src.ext-bb-messages-inbox-ng@^1.2.30",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bb-messages-inbox-ng/-/src.ext-bb-messages-inbox-ng-1.2.30.tgz",
+    "shasum": "691ff1e964026eb75c489c0b07a32c255fa52ac8"
+  },
+  "name": "src.ext-bb-messages-inbox-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.2.30"
+}

@@ -1,0 +1,37 @@
+{
+  "en-US": {
+    "form.label.end": "Ending",
+    "form.label.endDate": "End date",
+    "form.label.executionDate": "Execution date",
+    "form.label.frequency": "Frequency",
+    "form.label.repeat": "Repeat",
+    "form.label.save": "Save",
+    "form.label.startDate": "Start date",
+
+    "form.placeholder.repeat": "Repeat",
+    "form.placeholder.endDate": "Please select",
+
+    "form.title.selectEndDate": "Select end date",
+    "form.title.selectEnd": "Select ending",
+    "form.title.selectExecutionDate": "Select execution date",
+    "form.title.selectFrequency": "Select frequency",
+    "form.title.selectStartDate": "Select start date",
+
+    "calendar.label.today": "Today",
+
+    "message.payment.schedule.frequency.once": "One payment",
+    "message.payment.schedule.frequency.daily": "Daily",
+    "message.payment.schedule.frequency.weekly": "Weekly",
+    "message.payment.schedule.frequency.monthly": "Monthly",
+    "message.payment.schedule.frequency.quarterly": "Quarterly",
+    "message.payment.schedule.frequency.yearly": "Annually",
+
+    "errors.payment.schedule.endDate.required": "Please select end date",
+    "errors.payment.schedule.endDate.invalid": "Schedule end date must be after start date",
+    "errors.payment.schedule.repeat.invalid": "The repeat value must be between 1 and 99",
+
+    "recurrence.ending.never": "Never",
+    "recurrence.ending.on": "On date",
+    "recurrence.ending.after": "Occurrences"
+  }
+}

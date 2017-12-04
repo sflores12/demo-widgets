@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui-bbm-scroll-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+        "scope": null,
+        "escapedName": "ui-bbm-scroll-ng",
+        "name": "ui-bbm-scroll-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ui-bbm-scroll-ng@>=1.0.38 <2.0.0",
+  "_id": "ui-bbm-scroll-ng@1.0.38",
+  "_inCache": true,
+  "_location": "/ui-bbm-scroll-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui-bbm-scroll-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+    "scope": null,
+    "escapedName": "ui-bbm-scroll-ng",
+    "name": "ui-bbm-scroll-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/ext-bbm-contact-list-ng",
+    "/ext-bbm-notification-center-list-ng",
+    "/ext-bbm-transactions-list-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+  "_shasum": "6695622d3a17d71c73b694857dae1661092854ec",
+  "_shrinkwrap": null,
+  "_spec": "ui-bbm-scroll-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bbm-scroll-ng/-/ui-bbm-scroll-ng-1.0.38.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/ui-bbm-scroll-ng.js",
+  "name": "ui-bbm-scroll-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.38"
+}

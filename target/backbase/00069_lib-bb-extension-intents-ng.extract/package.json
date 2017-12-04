@@ -1,0 +1,55 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "lib-bb-extension-intents-ng@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+        "scope": null,
+        "escapedName": "lib-bb-extension-intents-ng",
+        "name": "lib-bb-extension-intents-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "lib-bb-extension-intents-ng@1.0.28",
+  "_id": "lib-bb-extension-intents-ng@1.0.28",
+  "_inCache": true,
+  "_location": "/lib-bb-extension-intents-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "lib-bb-extension-intents-ng@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+    "scope": null,
+    "escapedName": "lib-bb-extension-intents-ng",
+    "name": "lib-bb-extension-intents-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/lib-bb-extension-events-ng",
+    "/lib-bb-extension-helpers-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+  "_shasum": "a7df251e00bd8a05adfb41885713d64a801b1257",
+  "_shrinkwrap": null,
+  "_spec": "lib-bb-extension-intents-ng@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-extension-intents-ng/-/lib-bb-extension-intents-ng-1.0.28.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "lib-bb-intent-ng": "^1.1.27",
+    "lib-bb-state-container-ng": "^1.0.6",
+    "lib-bb-view-model-ng": "^1.0.28",
+    "lib-bb-widget-extension-ng": "^1.1.35",
+    "lib-bb-widget-ng": "^1.2.60",
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/lib-bb-extension-intents-ng.js",
+  "name": "lib-bb-extension-intents-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.28"
+}

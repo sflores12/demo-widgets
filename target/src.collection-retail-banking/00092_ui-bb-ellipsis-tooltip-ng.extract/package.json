@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-ellipsis-tooltip-ng@^1.0.64",
+        "scope": null,
+        "escapedName": "src.ui-bb-ellipsis-tooltip-ng",
+        "name": "src.ui-bb-ellipsis-tooltip-ng",
+        "rawSpec": "^1.0.64",
+        "spec": ">=1.0.64 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-ellipsis-tooltip-ng@>=1.0.64 <2.0.0",
+  "_id": "src.ui-bb-ellipsis-tooltip-ng@1.0.64",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-ellipsis-tooltip-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-ellipsis-tooltip-ng@^1.0.64",
+    "scope": null,
+    "escapedName": "src.ui-bb-ellipsis-tooltip-ng",
+    "name": "src.ui-bb-ellipsis-tooltip-ng",
+    "rawSpec": "^1.0.64",
+    "spec": ">=1.0.64 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-ellipsis-tooltip-ng/-/src.ui-bb-ellipsis-tooltip-ng-1.0.64.tgz",
+  "_shasum": "d5fd11fa3fb868e3f615be6a45aaf2000e46ca45",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-ellipsis-tooltip-ng@^1.0.64",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-ellipsis-tooltip-ng/-/src.ui-bb-ellipsis-tooltip-ng-1.0.64.tgz",
+    "shasum": "d5fd11fa3fb868e3f615be6a45aaf2000e46ca45"
+  },
+  "name": "src.ui-bb-ellipsis-tooltip-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.64"
+}

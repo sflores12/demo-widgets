@@ -1,0 +1,64 @@
+<div class="ext-bb-spending-ng" ng-controller="SpendingController as $ctrl">
+  <ui-bb-loading-indicator-ng data-is-loading="$ctrl.loading"
+    data-loading-text="{{ 'message.label.loading' | i18n }}">
+    <ui-bb-substitute-error-ng data-message="$ctrl.error | i18n" class="list-items-wrapper">
+      <div class="panel panel-default list-item">
+        <div class="panel-body">
+          <ui-bb-change-period-ng
+            data-ng-if="$ctrl.selectedProduct"
+            data-period-start="$ctrl.periodStartDate"
+            data-period-end="$ctrl.periodEndDate"
+            data-period-step="1"
+            data-on-period-start-change="ext.helpers.onPeriodStartChange($ctrl)"
+            data-on-period-end-change="ext.helpers.onPeriodEndChange($ctrl)"
+            data-period-formatter="ext.helpers.periodLabelFormatter"
+          ></ui-bb-change-period-ng>
+        </div>
+      </div>
+      <div class="panel panel-default list-item">
+        <div class="panel-body">
+          <ui-bb-empty-state-ng
+            data-icon-classes="{{
+              !$ctrl.selectedProduct ?
+                'fa fa-4x fa-credit-card text-muted' :
+                'fa fa-4x fa-bar-chart text-muted'
+            }}"
+            data-title="{{
+              (!$ctrl.selectedProduct ?
+                'spending.label.no.products.title' :
+                'spending.label.empty.dataset.title')
+                | i18n
+            }}"
+            data-subtitle="{{
+              (!$ctrl.selectedProduct ?
+                'spending.label.no.products.subtitle' :
+                'spending.label.empty.dataset.subtitle')
+                | i18n
+            }}"
+            data-is-empty="!ext.helpers.isSeriesDataAvailable($ctrl.series) || !$ctrl.selectedProduct">
+            <ui-bb-chartjs-chart-donut-ng
+              class="chart-donut"
+              data-series="$ctrl.series"
+              data-tooltip="ext.helpers.customizeTooltip"
+              data-plugins="ext.helpers.chartPlugins"
+              data-options="ext.helpers.donutChartOptions"
+              data-click-getter="ext.helpers.getClickHandler($ctrl)"
+            >
+              <div class="absolute-center">
+                <div class="text-center" data-i18n-key="spending.label.total"></div>
+                <div class="h3 text-center">
+                  <ui-bb-format-amount
+                    class="amount-regular-color"
+                    data-amount="$ctrl.items.totalSpending.amount"
+                    data-currency="$ctrl.items.totalSpending.currencyCode"
+                    data-wrap
+                  ></ui-bb-format-amount>
+                </div>
+              </div>
+            </ui-bb-chartjs-chart-donut-ng>
+          </ui-bb-empty-state-ng>
+        </div>
+      </div>
+    </ui-bb-substitute-error-ng>
+  </ui-bb-loading-indicator-ng>
+</div>

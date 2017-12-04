@@ -1,0 +1,67 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui-bb-substitute-error-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+        "scope": null,
+        "escapedName": "ui-bb-substitute-error-ng",
+        "name": "ui-bb-substitute-error-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ui-bb-substitute-error-ng@1.0.23",
+  "_id": "ui-bb-substitute-error-ng@1.0.23",
+  "_inCache": true,
+  "_location": "/ui-bb-substitute-error-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui-bb-substitute-error-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+    "scope": null,
+    "escapedName": "ui-bb-substitute-error-ng",
+    "name": "ui-bb-substitute-error-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/ext-bb-action-recipes-ng",
+    "/ext-bb-budget-ng",
+    "/ext-bb-contact-list-ng",
+    "/ext-bb-income-spending-analysis-category-ng",
+    "/ext-bb-initiate-payment-ng",
+    "/ext-bb-manage-payment-orders-ng",
+    "/ext-bb-manage-products-ng",
+    "/ext-bb-messages-inbox-ng",
+    "/ext-bb-messages-ng",
+    "/ext-bb-notification-badge-ng",
+    "/ext-bb-notification-center-ng",
+    "/ext-bb-places-list-map-ng",
+    "/ext-bb-places-list-ng",
+    "/ext-bb-places-ng",
+    "/ext-bb-product-summary-ng",
+    "/ext-bb-transactions-extended-ng",
+    "/ext-bb-transactions-list-ng",
+    "/ext-bb-transactions-ng",
+    "/ext-bb-turnovers-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+  "_shasum": "918e97b4cba0a094607c0d5b0ab0d72559658d8b",
+  "_shrinkwrap": null,
+  "_spec": "ui-bb-substitute-error-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-substitute-error-ng/-/ui-bb-substitute-error-ng-1.0.23.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/ui-bb-substitute-error-ng.js",
+  "name": "ui-bb-substitute-error-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.23"
+}

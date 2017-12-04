@@ -1,0 +1,220 @@
+<div
+  class="ext-bbm-contact-list-ng"
+  data-ng-controller="ContactController as $ctrl">
+  <div class="bbm-layout bbm-layout-scroll">
+    <!-- Normal list -->
+    <ui-bbm-scroll-ng
+      data-ng-if="!$ctrl.state.searching"
+      data-on-scroll-to-end="$ctrl.loadMore()">
+      <!-- Contacts -->
+      <div
+        class="bbm-list"
+        data-ng-if="ext.helpers.hasContacts($ctrl)"
+        data-role="contacts">
+        <div
+          class="bbm-list-group"
+          data-role="contacts-group"
+          data-ng-repeat="group in $ctrl.state.contacts.data track by $index">
+          <div class="bbm-list-group-header">
+            <h2
+              class="bbm-list-group-title"
+              data-role="contacts-group-title" data-ng-bind="group.char">
+            </h2>
+          </div>
+          <ul class="bbm-list-group-items">
+            <li
+              class="bbm-list-item bbm-list-item-has-media"
+              data-role="contact"
+              data-ng-repeat="contact in group.contacts track by $index"
+              data-ng-click="$ctrl.selectContact(contact)">
+              <div class="bbm-contact">
+                <div class="bbm-contact-avatar">
+                  <ui-bb-avatar
+                    data-ng-if="$ctrl.state.showAvatar"
+                    class="bbm-avatar bbm-avatar-sm bbm-avatar-circle"
+                    data-name="contact.name"
+                    data-image="contact.imageAvatar">
+                  </ui-bb-avatar>
+                </div>
+                <div class="bbm-contact-information">
+                  <h4
+                    class="bbm-contact-name"
+                    data-role="contact-name"
+                    data-ng-bind="contact.name">
+                  </h4>
+                  <div class="bbm-contact-identifier">
+                    <span
+                      class="prevent-ios-click"
+                      data-role="contact-iban"
+                      data-ng-bind="contact.accounts[0].IBAN">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- No data state -->
+      <div
+        class="bbm-empty-state"
+        data-ng-if="ext.helpers.showEmptyState($ctrl)">
+        <div class="bbm-empty-state-icon">
+          <i class="fa fa-address-book-o"></i>
+        </div>
+        <h2
+          class="bbm-empty-state-title"
+          data-i18n-key="no.contacts.title">
+        </h2>
+        <p
+          class="bbm-empty-state-message"
+          data-i18n-key="no.contacts.message">
+        </p>
+      </div>
+
+      <!-- Error state -->
+      <div
+        class="bbm-error-state"
+        data-ng-if="ext.helpers.showErrorState($ctrl)">
+        <div class="bbm-error-state-icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+        <h2
+          class="bbm-error-state-title"
+          data-i18n-key="message.loading.failed.title">
+        </h2>
+        <p
+          class="bbm-error-state-message"
+          data-i18n-key="message.loading.failed.body">
+        </p>
+      </div>
+
+      <!-- Loading state -->
+      <div
+        class="bbm-loading-state"
+        data-ng-if="ext.helpers.showLoadingState($ctrl)">
+        <div class="bbm-loading-state-spinner">
+        </div>
+        <p
+          class="bbm-loading-state-message"
+          data-i18n-key="message.loading">
+        </p>
+      </div>
+
+      <!-- Load more -->
+      <div
+        class="bbm-load-more"
+        data-ng-if="ext.helpers.showLoadMore($ctrl)">
+        <p
+          class="bbm-load-more-message"
+          data-i18n-key="message.loadMore.loading"
+          data-ng-if="ext.helpers.showLoadMoreLoading($ctrl)">
+        </p>
+      </div>
+    </ui-bbm-scroll-ng>
+
+    <!-- Searching list -->
+    <ui-bbm-scroll-ng
+      data-ng-if="$ctrl.state.searching"
+      data-on-scroll-to-end="$ctrl.searchMore()">
+      <!-- Contacts -->
+      <div
+        class="bbm-list"
+        data-ng-if="ext.helpers.hasSearchContacts($ctrl)"
+        data-role="contacts">
+        <div class="bbm-list-group">
+          <ul class="bbm-list-group-items">
+            <li
+              class="bbm-list-item bbm-list-item-has-media"
+              data-role="contact"
+              data-ng-repeat="contact in $ctrl.state.contactsSearch.data track by $index"
+              data-ng-click="$ctrl.selectContact(contact)">
+              <div class="bbm-contact">
+                <div class="bbm-contact-avatar">
+                  <ui-bb-avatar
+                    data-ng-if="$ctrl.state.showAvatar"
+                    class="bbm-avatar bbm-avatar-sm bbm-avatar-circle"
+                    data-name="contact.name"
+                    data-image="contact.imageAvatar">
+                  </ui-bb-avatar>
+                </div>
+                <div class="bbm-contact-information">
+                  <h4
+                    class="bbm-contact-name"
+                    data-role="contact-name"
+                    data-ng-bind="contact.name">
+                  </h4>
+                  <div class="bbm-contact-identifier">
+                    <span
+                      class="prevent-ios-click"
+                      data-role="contact-iban"
+                      data-ng-bind="contact.accounts[0].IBAN">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Loading state -->
+      <div
+        class="bbm-loading-state"
+        data-ng-if="ext.helpers.showSearchLoadingState($ctrl)">
+        <div class="bbm-loading-state-spinner">
+        </div>
+        <p
+          class="bbm-loading-state-message"
+          data-i18n-key="message.searching">
+        </p>
+      </div>
+
+      <!-- Load more -->
+      <div
+        class="bbm-load-more"
+        data-ng-if="ext.helpers.showSearchLoadMore($ctrl)">
+        <p
+          class="bbm-load-more-message"
+          data-i18n-key="message.loadMore.loading"
+          data-ng-if="ext.helpers.showSearchLoadMoreLoading($ctrl)">
+        </p>
+      </div>
+
+      <!-- No data state -->
+      <div
+        class="bbm-empty-state"
+        data-ng-if="ext.helpers.showSearchEmptyState($ctrl)">
+        <div class="bbm-empty-state-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <h2
+          class="bbm-empty-state-title"
+          data-i18n-key="no.search-results.title">
+        </h2>
+        <p
+          class="bbm-empty-state-message"
+          data-i18n-key="no.search-results.message">
+        </p>
+      </div>
+
+      <!-- Error state -->
+      <div
+        class="bbm-error-state"
+        data-ng-if="ext.helpers.showSearchErrorState($ctrl)">
+        <div class="bbm-error-state-icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+        <h2
+          class="bbm-error-state-title"
+          data-i18n-key="message.loading.failed.title">
+        </h2>
+        <p
+          class="bbm-error-state-message"
+          data-i18n-key="message.loading.failed.body">
+        </p>
+      </div>
+    </ui-bbm-scroll-ng>
+  </div>
+</div>

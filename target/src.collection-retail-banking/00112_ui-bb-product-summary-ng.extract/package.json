@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-product-summary-ng@^1.0.125",
+        "scope": null,
+        "escapedName": "src.ui-bb-product-summary-ng",
+        "name": "src.ui-bb-product-summary-ng",
+        "rawSpec": "^1.0.125",
+        "spec": ">=1.0.125 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-product-summary-ng@>=1.0.125 <2.0.0",
+  "_id": "src.ui-bb-product-summary-ng@1.0.125",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-product-summary-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-product-summary-ng@^1.0.125",
+    "scope": null,
+    "escapedName": "src.ui-bb-product-summary-ng",
+    "name": "src.ui-bb-product-summary-ng",
+    "rawSpec": "^1.0.125",
+    "spec": ">=1.0.125 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-product-summary-ng/-/src.ui-bb-product-summary-ng-1.0.125.tgz",
+  "_shasum": "b9be164e49bf17aa82fdc34a6caffaf15825d868",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-product-summary-ng@^1.0.125",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-product-summary-ng/-/src.ui-bb-product-summary-ng-1.0.125.tgz",
+    "shasum": "b9be164e49bf17aa82fdc34a6caffaf15825d868"
+  },
+  "name": "src.ui-bb-product-summary-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.125"
+}

@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-text-ng@1.0.215",
+        "scope": null,
+        "escapedName": "src.ui-bb-text-ng",
+        "name": "src.ui-bb-text-ng",
+        "rawSpec": "1.0.215",
+        "spec": "1.0.215",
+        "type": "version"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-text-ng@1.0.215",
+  "_id": "src.ui-bb-text-ng@1.0.215",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-text-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-text-ng@1.0.215",
+    "scope": null,
+    "escapedName": "src.ui-bb-text-ng",
+    "name": "src.ui-bb-text-ng",
+    "rawSpec": "1.0.215",
+    "spec": "1.0.215",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-text-ng/-/src.ui-bb-text-ng-1.0.215.tgz",
+  "_shasum": "67ae0f8a114205e7cf1010f2d091464aacf14fa7",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-text-ng@1.0.215",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-text-ng/-/src.ui-bb-text-ng-1.0.215.tgz",
+    "shasum": "67ae0f8a114205e7cf1010f2d091464aacf14fa7"
+  },
+  "name": "src.ui-bb-text-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.215"
+}

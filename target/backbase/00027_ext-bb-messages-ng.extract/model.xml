@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>ext-bb-messages-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="version" label="Version" readonly="true" viewHint="text-input,admin,designModeOnly">
+                <value type="string">1.1.42</value>
+            </property>
+            <property name="title" label="Title" readonly="true" viewHint="admin,designModeOnly">
+                <value type="string">ext-bb-messages-ng</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/ext-bb-messages-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-angular-ng-aria" label="Feature Vendor Bb Angular Ng Aria" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-ng-aria</value>
+            </property>
+            <property name="feature.vendor-bb-uib-accordion" label="Feature Vendor Bb Uib Accordion" readonly="true" viewHint="">
+                <value type="string">vendor-bb-uib-accordion</value>
+            </property>
+            <property name="feature.ui-bb-draft-edit-ng" label="Feature Ui Bb Draft Edit Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-draft-edit-ng</value>
+            </property>
+            <property name="feature.ui-bb-i18n-ng" label="Feature Ui Bb I 18 N Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-i18n-ng</value>
+            </property>
+            <property name="feature.ui-bb-conversation-view-ng" label="Feature Ui Bb Conversation View Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-conversation-view-ng</value>
+            </property>
+            <property name="feature.ui-bb-conversation-list-ng" label="Feature Ui Bb Conversation List Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-conversation-list-ng</value>
+            </property>
+            <property name="feature.ui-bb-substitute-error-ng" label="Feature Ui Bb Substitute Error Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-substitute-error-ng</value>
+            </property>
+            <property name="feature.ui-bb-notification-stripe-ng" label="Feature Ui Bb Notification Stripe Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-notification-stripe-ng</value>
+            </property>
+            <property name="feature.ui-bb-confirm-ng" label="Feature Ui Bb Confirm Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-confirm-ng</value>
+            </property>
+            <property name="feature.vendor-bb-uib-tabs" label="Feature Vendor Bb Uib Tabs" readonly="true" viewHint="">
+                <value type="string">vendor-bb-uib-tabs</value>
+            </property>
+            <property name="feature.ui-bb-load-more-ng" label="Feature Ui Bb Load More Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-load-more-ng</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

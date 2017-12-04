@@ -1,0 +1,64 @@
+{
+  "en-US": {
+
+    "product.details.label.accountType": "Account Type",
+    "product.details.label.IBAN": "IBAN",
+    "product.details.label.availableBalance": "Available Balance",
+    "product.details.label.accountBalance": "Account Balance",
+    "product.details.label.accountNumber": "Account Number",
+    "product.details.label.principalAmount": "Principal Amount",
+    "product.details.label.amountInArrear": "Amount in Arrear",
+    "product.details.label.outstandingAmount": "Outstanding Amount",
+    "product.details.label.monthlyInstalmentAmount": "Monthly Instalment Amount",
+    "product.details.label.totalInvestmentAmount": "Total Instalment Amount",
+
+    "product.details.label.interestDetails": "Interest Details",
+    "product.details.label.interestRate": "Interest rate",
+    "product.details.label.accruedInterest": "Accrued Interest",
+    "product.details.label.interestPaymentFrequency": "Interest Payment Frequency",
+    "product.details.label.interestPaymentFrequency.daily": "{number} time(s) per day",
+    "product.details.label.interestPaymentFrequency.weekly": "{number} time(s) per week",
+    "product.details.label.interestPaymentFrequency.monthly": "{number} time(s) per month",
+    "product.details.label.interestPaymentFrequency.yearly": "{number} time(s) per year",
+
+    "product.details.label.autoRenewalIndicator": "Auto Renewal Indicator",
+    "product.details.label.autoRenewalIndicatorTrue": "Yes",
+    "product.details.label.autoRenewalIndicatorFalse": "No",
+    "product.details.label.minimumRequiredBalance": "Minimum required balance",
+    "product.details.label.consumedAmount": "Consumed Amount",
+    "product.details.label.remainingAmount": "Remaining Amount",
+    "product.details.label.creditLimit": "Credit Limit",
+
+    "product.details.label.overdraftDetails": "Overdraft Details",
+    "product.details.label.overdraftLimit": "Overdraft Limit",
+    "product.details.label.overdraftExpiryDate": "Overdraft Expiry Date",
+    "product.details.label.maturityDetails": "Maturity Details",
+    "product.details.label.maturityBalance": "Maturity Balance",
+    "product.details.label.term": "Term",
+    "product.details.label.termUnit.daily": "{number} day(s)",
+    "product.details.label.termUnit.weekly": "{number} week(s)",
+    "product.details.label.termUnit.monthly": "{number} month(s)",
+    "product.details.label.termUnit.yearly": "{number} year(s)",
+
+    "product.details.label.startDate": "Start Date",
+    "product.details.label.maturityDate": "Maturity Date",
+    "product.details.label.minimumPayment": "Minimum Payment",
+    "product.details.label.minimumPaymentDueDate": "Minimum Payment due Date",
+    "product.details.label.validThru": "Valid Thru",
+
+    "product.details.label.associatedDebitCards":"Associated Debit Cards",
+    "product.details.label.debitCard":"Debit Card",
+    "product.details.label.expiryDate":"Expiry Date:",
+    "product.details.label.interestSettlementAccount":"Interest settlement Account",
+    "product.details.label.interestAndMaturitySettlementAccount":"Interest & Maturity Settlement Account",
+    "product.details.label.interestAndRedemptionSettlementAccount":"Interest & Redemption Settlement Account",
+    "product.details.label.myCurrentAccount":"My Current account",
+
+    "product.details.label.аccountOpeningDate": "Account Opening Date",
+    "product.details.label.lastUpdatedDate": "Last Updated Date",
+
+    "product.details.empty.state.title": "No product was selected",
+    "product.details.empty.state.subtitle": "To see detailed information for a product, please select one"
+
+  }
+}

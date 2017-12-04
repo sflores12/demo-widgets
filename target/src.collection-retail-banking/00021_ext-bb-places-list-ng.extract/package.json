@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ext-bb-places-list-ng@^1.0.38",
+        "scope": null,
+        "escapedName": "src.ext-bb-places-list-ng",
+        "name": "src.ext-bb-places-list-ng",
+        "rawSpec": "^1.0.38",
+        "spec": ">=1.0.38 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ext-bb-places-list-ng@>=1.0.38 <2.0.0",
+  "_id": "src.ext-bb-places-list-ng@1.0.38",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ext-bb-places-list-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ext-bb-places-list-ng@^1.0.38",
+    "scope": null,
+    "escapedName": "src.ext-bb-places-list-ng",
+    "name": "src.ext-bb-places-list-ng",
+    "rawSpec": "^1.0.38",
+    "spec": ">=1.0.38 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bb-places-list-ng/-/src.ext-bb-places-list-ng-1.0.38.tgz",
+  "_shasum": "52ed926585191631171ae159d0ff0c8f8ba8459b",
+  "_shrinkwrap": null,
+  "_spec": "src.ext-bb-places-list-ng@^1.0.38",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bb-places-list-ng/-/src.ext-bb-places-list-ng-1.0.38.tgz",
+    "shasum": "52ed926585191631171ae159d0ff0c8f8ba8459b"
+  },
+  "name": "src.ext-bb-places-list-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.38"
+}

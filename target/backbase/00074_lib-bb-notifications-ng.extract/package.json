@@ -1,0 +1,51 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "lib-bb-notifications-ng@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+        "scope": null,
+        "escapedName": "lib-bb-notifications-ng",
+        "name": "lib-bb-notifications-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "lib-bb-notifications-ng@1.0.39",
+  "_id": "lib-bb-notifications-ng@1.0.39",
+  "_inCache": true,
+  "_location": "/lib-bb-notifications-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "lib-bb-notifications-ng@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+    "scope": null,
+    "escapedName": "lib-bb-notifications-ng",
+    "name": "lib-bb-notifications-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/lib-bb-extension-events-ng",
+    "/lib-bb-extension-helpers-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+  "_shasum": "a294e3af14b7d0a316d7329c1f891afbbc1abc9f",
+  "_shrinkwrap": null,
+  "_spec": "lib-bb-notifications-ng@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-notifications-ng/-/lib-bb-notifications-ng-1.0.39.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "lib-bb-event-bus-ng": "^1.1.61",
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/lib-bb-notifications-ng.js",
+  "name": "lib-bb-notifications-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.39"
+}

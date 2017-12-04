@@ -1,0 +1,56 @@
+{
+  "en-US": {
+    "notification.dialog.delete.title": "Delete notification",
+    "notification.dialog.delete.body": "You are about to delete a notification.<br/>Do you wish to continue?",
+    "notification.dialog.delete.yes": "Yes, Delete",
+    "notification.dialog.delete.no": "No, Cancel",
+
+    "notification.message.empty": "There are currently no notifications here",
+    "notification.message.not.found": "There are no notifications matching your criteria. Please adjust filter parameters.",
+    "notification.message.deleted": "A notification has successfully been deleted",
+
+    "notification.level.all": "All",
+    "notification.level.info": "Info",
+    "notification.level.warning": "Warning",
+    "notification.level.alert": "Alert",
+    "notification.level.success": "Success",
+    "notification.label.delete": "Delete",
+    "notification.label.read": "Read",
+    "notification.label.unread": "Unread",
+
+    "notification.header.description": "Description",
+    "notification.header.status": "S",
+    "notification.header.date": "Date",
+
+    "notification.filter.button.main": "Filter",
+    "notification.filter.button.apply": "Apply filters",
+    "notification.filter.button.clear": "Clear all",
+    "notification.filter.button.cancel": "Cancel",
+
+    "notification.filter.header.date": "Date Range",
+    "notification.filter.header.level": "Severity level",
+    "notification.filter.header.status": "Status",
+
+    "notification.filter.status.all": "All",
+    "notification.filter.status.read": "Read",
+    "notification.filter.status.unread": "Unread",
+
+    "message.loading": "Loading",
+    "message.error.auth": "You are not authorised to perform this action.",
+    "message.error.connection": "Connection Error",
+    "message.error.unexpected": "An unexpected error occurred, we apologise for the inconvenience. Please try again later.",
+    "message.error.user": "Incorrect filter parameters.",
+
+    "label.load.more": "Load more",
+
+    "pagination.label.first": "First",
+    "pagination.label.last": "Last",
+    "pagination.label.next": "Next",
+    "pagination.label.prev": "Previous",
+    "pagination.label.page_navigation": "Page navigation",
+
+    "calendar.label.now": "Now",
+    "calendar.label.today": "Today",
+    "calendar.label.yesterday": "Yesterday"
+  }
+}

@@ -1,0 +1,60 @@
+<div class="ext-training-detalles-ng" ng-controller="DetallesController as $ctrl">
+ 	<div class="navbar-more-overlay"></div>
+	<nav class="navbar navbar-inverse navbar-fixed-top animate">
+		<div class="container navbar-more visible-xs">
+			<ul class="nav navbar-nav">
+				<li>
+					<a ng-click="$ctrl.onSignOut()">
+						<span class="menu-icon fa fa-bars"></span>
+						Sign Out
+					</a>
+				</li>				
+			</ul>
+		</div>
+		<div class="container">
+			<div class=" navbar-header hidden-xs">
+				<a class="navbar-brand" >Usuario:</a>
+				<a class="navbar-brand">
+					{{$ctrl.dtaContact.data.userData.nombreCliente |uppercase}}
+				</a>
+				<a class="navbar-brand" >Fecha acceso:</a>
+				<a class="navbar-brand">
+					{{$ctrl.dtaContact.data.userData.ultimoAcceso |date:'dd/MM/yyyy'}}
+				</a>
+			</div>			
+			<ul class="nav navbar-nav navbar-right mobile-bar">								
+				<li>
+					<a ng-click="$ctrl.onSignOut()">						
+						Sign Out
+					</a>
+				</li>				
+			</ul>
+		</div>
+	</nav>
+    <section class="container">
+		<div class="col-xs-12 col-sm-12">
+			<header ng-if="$ctrl.dtaAccounts.length === 0">
+				No dtaAccounts available.
+			</header>	
+			<section>
+				<table id="mytable" class="table table-bordred table-striped">
+					<thead>
+						<th>Alias</th>
+						<th>Numero</th>
+						<th>Monto</th>
+						<!-- <th>Edit</th>                       -->
+						<!-- <th>Delete</th> -->
+					</thead>
+					<tbody>
+						<tr  ng-repeat="item in $ctrl.dtaAccounts.data"> 
+							<td  ng-click="$ctrl.onSelectAccounts(item)">{{item.alias | json}}</td>
+							<td>{{item.numero | json}}</td>
+							<td tooltip-placement="left" uib-tooltip="{{item.monto | json}}">{{item.monto | json}}</td>
+						</tr>
+					</tbody>
+				</table>
+			
+			</section>     
+		</div>
+    </section>     
+</div>

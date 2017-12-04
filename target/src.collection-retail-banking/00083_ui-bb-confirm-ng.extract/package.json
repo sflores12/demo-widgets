@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-confirm-ng@^2.0.72",
+        "scope": null,
+        "escapedName": "src.ui-bb-confirm-ng",
+        "name": "src.ui-bb-confirm-ng",
+        "rawSpec": "^2.0.72",
+        "spec": ">=2.0.72 <3.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-confirm-ng@>=2.0.72 <3.0.0",
+  "_id": "src.ui-bb-confirm-ng@2.0.72",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-confirm-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-confirm-ng@^2.0.72",
+    "scope": null,
+    "escapedName": "src.ui-bb-confirm-ng",
+    "name": "src.ui-bb-confirm-ng",
+    "rawSpec": "^2.0.72",
+    "spec": ">=2.0.72 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-confirm-ng/-/src.ui-bb-confirm-ng-2.0.72.tgz",
+  "_shasum": "558132905b25be0fe9e8df31180242fafca4b898",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-confirm-ng@^2.0.72",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-confirm-ng/-/src.ui-bb-confirm-ng-2.0.72.tgz",
+    "shasum": "558132905b25be0fe9e8df31180242fafca4b898"
+  },
+  "name": "src.ui-bb-confirm-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "2.0.72"
+}

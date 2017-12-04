@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Respuesta para status 500",
+    "properties": {
+        "success": {
+            "type": "string",
+            "enum": [
+                "true",
+                "false"
+            ]
+        },
+        "message": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 100
+        },
+        "data": {
+            "type": "object"
+        }
+    },
+    "required": [
+        "success",
+        "message"
+    ]
+}

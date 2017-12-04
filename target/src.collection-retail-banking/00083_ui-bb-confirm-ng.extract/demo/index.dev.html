@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ui-bb-confirm-modal component</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="../../node_modules/vendor-bb-angular/scripts/vendor-bb-angular.js"></script>
+    <script src="../../node_modules/vendor-bb-uib-position/scripts/vendor-bb-uib-position.js"></script>
+    <script src="../../node_modules/vendor-bb-uib-stacked-map/scripts/vendor-bb-uib-stacked-map.js"></script>
+    <script src="../../node_modules/vendor-bb-uib-modal/scripts/vendor-bb-uib-modal.js"></script>
+    <script src="../../node_modules/vendor-bb-angular-sanitize/scripts/vendor-bb-angular-sanitize.js"></script>
+    <script src="../../ui-bb-modal-ng/dist/ui-bb-modal-ng/scripts/ui-bb-modal-ng.js"></script>
+    <script src="../dist/ui-bb-confirm-ng/scripts/ui-bb-confirm-ng.js"></script>
+    <script>
+        angular.module('ui-bb-component-demo', ['ui-bb-confirm-ng'])
+          .controller('DemoController', function() {
+            this.name = 'ui-bb-confirm-ng';
+            this.success = function() { alert("success"); };
+            this.cancel = function() { alert("cancel"); };
+            this.close = function() { alert("close"); };
+        });
+
+        angular.element(document).ready(function() {
+          angular.bootstrap(document, ['ui-bb-component-demo']);
+        });
+    </script>
+</head>
+<body data-ng-controller="DemoController as demo">
+
+  <h1>ui-bb-confirm</h1>
+  <pre>{{ demo.name }}</pre>
+
+  <!-- auto opens -->
+  <ui-bb-confirm
+    data-is-open="true"
+    data-labels="{
+      heading: 'Notification',
+      bodyHtml: 'You should be 18+ to proceed!<br/> Are you?',
+      cancel: 'No, I\'m not :(',
+      confirm: 'Yes, I am :)'
+    }"
+    data-footer-class="'text-centered'"
+    data-on-cancel="demo.cancel()"
+    data-on-confirm="demo.success()">
+  </ui-bb-confirm>
+
+  <!-- opens on click -->
+  <button class="btn btn-info" data-ng-click="confirmOpen = true">
+    Click to confirm!
+  </button>
+  <ui-bb-confirm
+    data-is-open="confirmOpen"
+    data-labels="{
+      heading: 'Confirm',
+      bodyText: 'Confirmation dialog',
+      cancel: 'Cancel',
+      confirm: 'Send'
+    }"
+    data-size="'lg'"
+    data-animation="false"
+    data-footer-class="'text-centered'"
+    data-on-confirm="demo.success()">
+  </ui-bb-confirm>
+
+  <hr>
+
+  <!-- opens on click -->
+  <button class="btn btn-warning" data-ng-click="removeOpen = true">
+    Click to remove!
+  </button>
+  <ui-bb-confirm
+    data-is-open="removeOpen"
+    data-labels="{
+      heading: 'Remove',
+      bodyText: 'Remove item dialog',
+      cancel: 'Dismiss',
+      confirm: 'Delete'
+    }"
+    data-confirm-btn-class="'btn-danger'"
+    data-is-dismissible="false"
+    data-on-confirm="demo.success()"
+    data-on-close="demo.close()">
+  </ui-bb-confirm>
+
+</body>
+</html>

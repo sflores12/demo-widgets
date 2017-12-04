@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>model-bb-notifications-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Notifications Model</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">1.2.78</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/model-bb-notifications-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-angular" label="Feature Vendor Bb Angular" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular</value>
+            </property>
+            <property name="feature.data-bb-notifications-http-ng" label="Feature Data Bb Notifications Http Ng" readonly="true" viewHint="">
+                <value type="string">data-bb-notifications-http-ng</value>
+            </property>
+            <property name="feature.lib-bb-widget-ng" label="Feature Lib Bb Widget Ng" readonly="true" viewHint="">
+                <value type="string">lib-bb-widget-ng</value>
+            </property>
+            <property name="feature.lib-bb-event-bus-ng" label="Feature Lib Bb Event Bus Ng" readonly="true" viewHint="">
+                <value type="string">lib-bb-event-bus-ng</value>
+            </property>
+            <property name="feature.lib-bb-model-errors" label="Feature Lib Bb Model Errors" readonly="true" viewHint="">
+                <value type="string">lib-bb-model-errors</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

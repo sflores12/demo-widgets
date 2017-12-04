@@ -1,0 +1,291 @@
+<div
+  class="ext-bbm-transactions-list-ng"
+  data-ng-controller="TransactionsController as $ctrl"
+  data-ng-init="ext.helpers.onInit($ctrl)">
+  <div class="bbm-layout">
+    <!-- Search list -->
+    <ui-bbm-scroll-ng
+      data-ng-if="$ctrl.searching"
+      data-on-scroll-to-end="$ctrl.searchMore()">
+      <!-- List of transactions -->
+      <div
+        class="bbm-list"
+        data-ng-if="$ctrl.searchTransactions.length"
+        data-role="transactions-search">
+        <div
+          class="bbm-list-group"
+          data-role="transactions-group"
+          data-index="{{ $index }}"
+          data-ng-repeat="group in $ctrl.searchTransactions track by $index">
+          <div class="bbm-list-group-header">
+            <h4
+              class="bbm-list-group-title"
+              data-role="transactions-group-date"
+              data-ng-bind="group.date | date">
+            </h4>
+          </div>
+          <ul class="bbm-list-group-items">
+            <li
+              class="bbm-list-item"
+              data-role="transaction"
+              data-index="{{ $index }}"
+              data-ng-repeat="transaction in group.transactions track by transaction.id">
+              <div
+                class="bbm-transaction"
+                data-ng-click="$ctrl.onTransactionClick(transaction)">
+                <div class="bbm-transaction-information">
+                  <h5
+                    class="bbm-transaction-title"
+                    data-role="transaction-counter-party-name"
+                    data-ng-bind="transaction.counterPartyName">
+                  </h5>
+                  <span
+                    class="bbm-transaction-subtitle"
+                    data-role="transaction-type"
+                    data-ng-bind="transaction.type">
+                  </span>
+                </div>
+                <div class="bbm-transaction-amount">
+                  <ui-bb-format-amount
+                    data-ng-class="{ 'amount-neutral': transaction.creditDebitIndicator === 'DBIT' }"
+                    class="pull-right"
+                    data-amount="ext.helpers.getSignedAmount(transaction)"
+                    data-wrap
+                    data-show-plus-sign>
+                  </ui-bb-format-amount>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- No data state -->
+      <div
+        class="bbm-empty-state"
+        data-ng-if="ext.helpers.isSearchEmptyState($ctrl)">
+        <div class="bbm-empty-state-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <h2
+          class="bbm-empty-state-title"
+          data-i18n-key="no.search-results.title">
+        </h2>
+        <p
+          class="bbm-empty-state-message"
+          data-i18n-key="no.search-results.message">
+        </p>
+      </div>
+
+      <!-- Error state -->
+      <div
+        class="bbm-error-state"
+        data-ng-if="ext.helpers.isSearchErrorState($ctrl)">
+        <div class="bbm-error-state-icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+        <h2
+          class="bbm-error-state-title"
+          data-i18n-key="message.loading.failed.title">
+        </h2>
+        <p
+          class="bbm-error-state-message"
+          data-i18n-key="message.loading.failed.body">
+        </p>
+      </div>
+    </ui-bbm-scroll-ng>
+
+    <!-- Normal list -->
+    <ui-bbm-scroll-ng
+      data-ng-if="!$ctrl.searching"
+      data-on-scroll-to-end="$ctrl.loadMore()">
+      <!-- Account -->
+      <div
+        class="bbm-account-compact"
+        data-ng-if="$ctrl.product"
+        data-role="product">
+        <div class="bbm-account-compact-primary-information">
+          <h4
+            class="bbm-account-compact-name"
+            data-role="product-name"
+            data-ng-bind="$ctrl.product.alias || $ctrl.product.name">
+          </h4>
+          <div
+            class="bbm-account-compact-primary-amount"
+            data-ng-if="$ctrl.product.primaryValue">
+            <ui-bb-format-amount
+              data-amount="$ctrl.product.primaryValue"
+              data-currency="$ctrl.product.currency"
+              data-wrap>
+            </ui-bb-format-amount>
+          </div>
+        </div>
+        <div class="bbm-account-compact-secondary-information">
+          <div class="bbm-account-compact-identifier">
+            <span
+              class="prevent-ios-click"
+              data-role="product-identifier"
+              data-ng-bind="$ctrl.product.identifier">
+            </span>
+          </div>
+          <div class="bbm-account-compact-other-amounts">
+            <div
+              class="bbm-account-compact-secondary-amount"
+              data-ng-if="$ctrl.product.secondaryValue">
+              <span data-ng-bind="$ctrl.product.secondaryLabel | i18n"></span>
+              <span>
+                <ui-bb-format-amount
+                  data-amount="$ctrl.product.secondaryValue"
+                  data-currency="$ctrl.product.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </span>
+            </div>
+            <div
+              class="bbm-account-compact-tertiary-amount"
+              data-ng-if="$ctrl.product.tertiaryValue">
+              <span data-ng-bind="$ctrl.product.tertiaryLabel | i18n"></span>
+              <span>
+                <ui-bb-format-amount
+                  data-amount="$ctrl.product.tertiaryValue"
+                  data-currency="$ctrl.product.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bbm-account-compact-actions"
+          data-ng-if="ext.helpers.isIOS() && ext.helpers.showAccountActions()">
+          <div class="bbm-account-action">
+            <button
+              class="btn btn-block btn-secondary"
+              data-ng-click="ext.helpers.initiatePayment()"
+              data-i18n-key="label.initiatePayment"
+              data-role="account-action-initiate-payment">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- List of transactions -->
+      <div
+        class="bbm-list"
+        data-ng-if="$ctrl.transactions.length"
+        data-role="transactions">
+        <div
+          class="bbm-list-group"
+          data-role="transactions-group"
+          data-index="{{ $index }}"
+          data-ng-repeat="group in $ctrl.transactions track by $index">
+          <div class="bbm-list-group-header">
+            <h4
+              class="bbm-list-group-title"
+              data-role="transactions-group-date"
+              data-ng-bind="group.date | date">
+            </h4>
+          </div>
+          <ul class="bbm-list-group-items">
+            <li
+              class="bbm-list-item"
+              data-role="transaction"
+              data-index="{{ $index }}"
+              data-ng-repeat="transaction in group.transactions track by transaction.id">
+              <div
+                class="bbm-transaction"
+                data-ng-click="$ctrl.onTransactionClick(transaction)"
+                data-transaction-id="{{ transaction.id }}">
+                <div class="bbm-transaction-information prevent-ios-click">
+                  <h5
+                    class="bbm-transaction-title"
+                    data-role="transaction-counter-party-name"
+                    data-ng-bind="transaction.counterPartyName">
+                  </h5>
+                  <span
+                    class="bbm-transaction-subtitle"
+                    data-role="transaction-type"
+                    data-ng-bind="transaction.type">
+                  </span>
+                </div>
+                <div class="bbm-transaction-amount">
+                  <ui-bb-format-amount
+                    ng-class="{ 'amount-neutral': transaction.creditDebitIndicator === 'DBIT' }"
+                    class="pull-right"
+                    data-amount="ext.helpers.getSignedAmount(transaction)"
+                    data-wrap
+                    data-show-plus-sign>
+                  </ui-bb-format-amount>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- No data state -->
+      <div
+        class="bbm-empty-state"
+        data-ng-if="ext.helpers.isEmptyState($ctrl)">
+        <div class="bbm-empty-state-icon">
+          <i class="fa fa-exchange"></i>
+        </div>
+        <h2
+          class="bbm-empty-state-title"
+          data-i18n-key="no.transactions.title">
+        </h2>
+        <p
+          class="bbm-empty-state-message"
+          data-i18n-key="no.transactions.message">
+        </p>
+      </div>
+
+      <!-- Error state -->
+      <div
+        class="bbm-error-state"
+        data-ng-if="ext.helpers.isErrorState($ctrl)">
+        <div class="bbm-error-state-icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+        <h2
+          class="bbm-error-state-title"
+          data-i18n-key="message.loading.failed.title">
+        </h2>
+        <p
+          class="bbm-error-state-message"
+          data-i18n-key="message.loading.failed.body">
+        </p>
+      </div>
+
+      <!-- Loading state -->
+      <div
+        class="bbm-loading-state"
+        data-ng-if="ext.helpers.isInitialLoading($ctrl)">
+        <div class="bbm-loading-state-spinner">
+        </div>
+        <p
+          class="bbm-loading-state-message"
+          data-i18n-key="message.loading">
+        </p>
+      </div>
+
+    </ui-bbm-scroll-ng>
+
+    <!-- Floating action buttons for Android -->
+    <div
+      class="bbm-fab"
+      data-ng-if="ext.helpers.showFAB($ctrl)">
+      <div class="bbm-fab-actions">
+        <div class="bbm-fab-action">
+          <button
+            class="btn btn-icon btn-primary"
+            data-ng-click="ext.helpers.initiatePayment()"
+            data-role="account-action-initiate-payment">
+            <i class="bbm-icon bbm-icon-initiate-payment fa fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

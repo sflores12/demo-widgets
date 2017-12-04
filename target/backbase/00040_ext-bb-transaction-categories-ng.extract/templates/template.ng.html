@@ -1,0 +1,77 @@
+<div class="ext-bb-transaction-categories-ng" data-ng-controller="TransactionCategoriesController as $ctrl">
+  <ui-bb-loading-indicator-ng
+    data-is-loading="$ctrl.isLoading"
+    data-loading-text="{{ 'message.label.loading' | i18n }}">
+    <ui-bb-modal
+      data-is-open="$ctrl.isModalOpen"
+      data-on-open="ext.helpers.initModal($ctrl)"
+      data-on-close="ext.helpers.onClose()">
+        <div data-ng-include="'#popup.html'"></div>
+    </ui-bb-modal>
+  </ui-bb-loading-indicator-ng>
+</div>
+
+<script type="text/ng-template" id="#popup.html">
+  <div class="modal-narrow">
+    <div class="modal-header modal-header-with-subtitle"
+      data-ng-init="modal = ext.helpers.getModalData()">
+      <h3 class="modal-title" data-i18n-key="modal.title.change.category"></h3>
+
+      <h2>
+        <ui-bb-format-amount
+          data-ng-class="{ 'amount-regular-color': modal.transaction.creditDebitIndicator === 'DBIT' }"
+          data-amount="ext.helpers.getSignedAmount(modal.transaction)"
+          data-currency=""
+          data-no-map
+          data-wrap
+        >
+        </ui-bb-format-amount>
+      </h2>
+
+      <h5 class="modal-subtitle">{{ modal.transaction.counterPartyName }}</h5>
+
+      <p class="text-muted">{{ modal.transaction.valueDate | date: 'longDate' }}</span>
+    </div>
+    <div class="modal-body">
+      <div class="bb-transaction-category-list list-items-wrapper clearfix">
+        <div data-ng-repeat="item in modal.items.data track by item.categoryId"
+          class="bb-transaction-category-list-item list-item hover-item text-default col-xs-12 p-0"
+          data-ng-class="{ active: item.categoryName === modal.newCategory }"
+        >
+          <div class="radio clearfix m-0">
+            <span class="bb-transaction-category-label col-xs-12 pl-7"
+              role="row"
+              data-ng-click="modal.newCategory = item.categoryName"
+            >
+              <input
+                class="bb-transaction-category-input"
+                type="radio"
+                data-ng-model="modal.newCategory"
+                data-ng-value="item.categoryName"
+                name="category"
+                tabindex="-1"
+              />
+              <span aria-hidden="true"
+                class="bb-transaction-category {{ ext.helpers.getCategoryIconClass(item.categoryName) }} fa-lg">
+              </span>
+              <span class="bb-transaction-category-name" data-ng-bind="item.categoryName"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer mt-3">
+      <button
+        class="btn btn-default"
+        data-ng-click="ext.helpers.cancel()"
+        data-i18n-key="modal.button.cancel">
+      </button>
+      <button
+        class="btn btn-primary"
+        data-ng-click="ext.helpers.submit()"
+        data-ng-disabled="$ctrl.selectedTransaction.category === modal.newCategory"
+        data-i18n-key="modal.button.save">
+      </button>
+    </div>
+  </div>
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ui-bb-expandable-ng component</title>
+    <script src="node_modules/vendor-bb-angular/scripts/vendor-bb-angular.js"></script>
+    <script src="./dist/ui-bb-expandable-ng.js"></script>
+    <script>
+        var demoModule = angular.module('ui-bb-component-demo', ['ui-bb-expandable-ng'])
+            .controller('DemoController', function() {
+                this.name = 'ui-bb-expandable-ng';
+                this.config = {name: 'test'};
+            });
+
+        angular.element(document).ready(function() {
+            angular.bootstrap(document, ['ui-bb-component-demo']);
+        });
+    </script>
+</head>
+<body ng-controller="DemoController as demo">
+
+    <h1>ui-bb-expandable-ng</h1>
+    <pre>{{ demo.name }}</pre>
+
+    <ui-bb-expandable-ng>
+      <ui-bb-expandable-summary-ng>
+        <div class="summary">{{config.name}}</div>
+      </ui-bb-expandable-summary-ng>
+      <ui-bb-expandable-details-ng>
+        <div class="details"></div>
+      </ui-bb-expandable-details-ng>
+    </ui-bb-expandable-ng>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.widget-bb-transactions-ng@^1.13.10",
+        "scope": null,
+        "escapedName": "src.widget-bb-transactions-ng",
+        "name": "src.widget-bb-transactions-ng",
+        "rawSpec": "^1.13.10",
+        "spec": ">=1.13.10 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.widget-bb-transactions-ng@>=1.13.10 <2.0.0",
+  "_id": "src.widget-bb-transactions-ng@1.13.10",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.widget-bb-transactions-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.widget-bb-transactions-ng@^1.13.10",
+    "scope": null,
+    "escapedName": "src.widget-bb-transactions-ng",
+    "name": "src.widget-bb-transactions-ng",
+    "rawSpec": "^1.13.10",
+    "spec": ">=1.13.10 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bb-transactions-ng/-/src.widget-bb-transactions-ng-1.13.10.tgz",
+  "_shasum": "fcb794da6d2e334d3ca41daf3f436ae5329ab15d",
+  "_shrinkwrap": null,
+  "_spec": "src.widget-bb-transactions-ng@^1.13.10",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bb-transactions-ng/-/src.widget-bb-transactions-ng-1.13.10.tgz",
+    "shasum": "fcb794da6d2e334d3ca41daf3f436ae5329ab15d"
+  },
+  "name": "src.widget-bb-transactions-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.13.10"
+}

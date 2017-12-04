@@ -1,0 +1,48 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "data-bb-categories-management-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+        "scope": null,
+        "escapedName": "data-bb-categories-management-http-ng",
+        "name": "data-bb-categories-management-http-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "data-bb-categories-management-http-ng@>=1.1.0 <2.0.0",
+  "_id": "data-bb-categories-management-http-ng@1.1.0",
+  "_inCache": true,
+  "_location": "/data-bb-categories-management-http-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "data-bb-categories-management-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+    "scope": null,
+    "escapedName": "data-bb-categories-management-http-ng",
+    "name": "data-bb-categories-management-http-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/model-bb-transaction-categories-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+  "_shasum": "8d147cb710074fab9db4886ca54d4a9e83de83e0",
+  "_shrinkwrap": null,
+  "_spec": "data-bb-categories-management-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-categories-management-http-ng/-/data-bb-categories-management-http-ng-1.1.0.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/data-bb-categories-management-http-ng.js",
+  "name": "data-bb-categories-management-http-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.1.0"
+}

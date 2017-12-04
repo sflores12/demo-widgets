@@ -1,0 +1,5 @@
+ui-bb-list {
+  display: block;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}

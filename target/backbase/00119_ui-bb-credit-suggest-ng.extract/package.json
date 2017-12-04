@@ -1,0 +1,56 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui-bb-credit-suggest-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+        "scope": null,
+        "escapedName": "ui-bb-credit-suggest-ng",
+        "name": "ui-bb-credit-suggest-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ui-bb-credit-suggest-ng@>=1.6.38 <2.0.0",
+  "_id": "ui-bb-credit-suggest-ng@1.6.38",
+  "_inCache": true,
+  "_location": "/ui-bb-credit-suggest-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui-bb-credit-suggest-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+    "scope": null,
+    "escapedName": "ui-bb-credit-suggest-ng",
+    "name": "ui-bb-credit-suggest-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/ext-bb-initiate-payment-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+  "_shasum": "5f749128819fa220449b6faf50eb54adca62eb4a",
+  "_shrinkwrap": null,
+  "_spec": "ui-bb-credit-suggest-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-credit-suggest-ng/-/ui-bb-credit-suggest-ng-1.6.38.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "lib-bb-iban": "^1.1.104",
+    "ui-bb-autocomplete-search-ng": "^1.0.47",
+    "ui-bb-avatar-ng": "^1.0.174",
+    "ui-bb-i18n-ng": "^1.0.33",
+    "ui-bb-iban-ng": "^1.0.152",
+    "vendor-bb-angular": "1.5.8-bb.1",
+    "vendor-bb-uib-debounce": "1.3.3-bb.3",
+    "vendor-bb-uib-position": "1.3.3-bb.3",
+    "vendor-bb-uib-typeahead": "1.3.3-bb.3"
+  },
+  "devDependencies": {},
+  "main": "scripts/ui-bb-credit-suggest-ng.js",
+  "name": "ui-bb-credit-suggest-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.6.38"
+}

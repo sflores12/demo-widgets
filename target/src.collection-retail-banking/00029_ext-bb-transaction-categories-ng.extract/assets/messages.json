@@ -1,0 +1,9 @@
+{
+  "en-US": {
+    "message.label.loading": "Loading",
+
+    "modal.title.change.category": "Change category",
+    "modal.button.save": "Save",
+    "modal.button.cancel": "Cancel"
+  }
+}

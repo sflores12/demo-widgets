@@ -1,0 +1,10 @@
+{
+  "en-US": {
+    "places.input.search": "Search",
+    "places.message.loading": "Loading map",
+    "places.error.ERROR_AUTH": "You are not authorised to perform this action.",
+    "places.error.ERROR_CONNECTION" : "ErrorConnection Error",
+    "places.error.ERROR_UNEXPECTED": "An unexpected error occurred, we apologise for the inconvenience. Please try again later.",
+    "places.error.ERROR_USER": "User error"
+  }
+}

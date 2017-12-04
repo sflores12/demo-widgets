@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.widget-bb-manage-payment-orders-ng@^1.0.1",
+        "scope": null,
+        "escapedName": "src.widget-bb-manage-payment-orders-ng",
+        "name": "src.widget-bb-manage-payment-orders-ng",
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.widget-bb-manage-payment-orders-ng@>=1.0.1 <2.0.0",
+  "_id": "src.widget-bb-manage-payment-orders-ng@1.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.widget-bb-manage-payment-orders-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.widget-bb-manage-payment-orders-ng@^1.0.1",
+    "scope": null,
+    "escapedName": "src.widget-bb-manage-payment-orders-ng",
+    "name": "src.widget-bb-manage-payment-orders-ng",
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bb-manage-payment-orders-ng/-/src.widget-bb-manage-payment-orders-ng-1.0.1.tgz",
+  "_shasum": "61ed84d356c55b2e56de2f2b1b5b50397e42f284",
+  "_shrinkwrap": null,
+  "_spec": "src.widget-bb-manage-payment-orders-ng@^1.0.1",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bb-manage-payment-orders-ng/-/src.widget-bb-manage-payment-orders-ng-1.0.1.tgz",
+    "shasum": "61ed84d356c55b2e56de2f2b1b5b50397e42f284"
+  },
+  "name": "src.widget-bb-manage-payment-orders-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.1"
+}

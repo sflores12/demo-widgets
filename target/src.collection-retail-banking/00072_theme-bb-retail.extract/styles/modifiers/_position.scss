@@ -1,0 +1,18 @@
+/**
+ * Modifier that positions an element within its relative container
+ *
+ * @example:
+ * <div class="panel">
+ *   <div class="panel-body">
+ *     ...
+ *   </div>
+ *   <div class="absolute-top-right">
+ *     ...
+ *   </div>
+ * </div>
+ */
+.absolute-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

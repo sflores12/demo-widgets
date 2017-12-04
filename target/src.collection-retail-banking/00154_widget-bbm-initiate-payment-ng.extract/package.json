@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.widget-bbm-initiate-payment-ng@^1.1.44",
+        "scope": null,
+        "escapedName": "src.widget-bbm-initiate-payment-ng",
+        "name": "src.widget-bbm-initiate-payment-ng",
+        "rawSpec": "^1.1.44",
+        "spec": ">=1.1.44 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.widget-bbm-initiate-payment-ng@>=1.1.44 <2.0.0",
+  "_id": "src.widget-bbm-initiate-payment-ng@1.1.44",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.widget-bbm-initiate-payment-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.widget-bbm-initiate-payment-ng@^1.1.44",
+    "scope": null,
+    "escapedName": "src.widget-bbm-initiate-payment-ng",
+    "name": "src.widget-bbm-initiate-payment-ng",
+    "rawSpec": "^1.1.44",
+    "spec": ">=1.1.44 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bbm-initiate-payment-ng/-/src.widget-bbm-initiate-payment-ng-1.1.44.tgz",
+  "_shasum": "3fd3c14af5ba9d9765049768fa030865d4d9cb86",
+  "_shrinkwrap": null,
+  "_spec": "src.widget-bbm-initiate-payment-ng@^1.1.44",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.widget-bbm-initiate-payment-ng/-/src.widget-bbm-initiate-payment-ng-1.1.44.tgz",
+    "shasum": "3fd3c14af5ba9d9765049768fa030865d4d9cb86"
+  },
+  "name": "src.widget-bbm-initiate-payment-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.1.44"
+}

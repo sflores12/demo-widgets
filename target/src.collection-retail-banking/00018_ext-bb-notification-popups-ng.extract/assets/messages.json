@@ -1,0 +1,11 @@
+{
+  "en-US": {
+    "notification.level.info": "Info",
+    "notification.level.warning": "Warning",
+    "notification.level.alert": "Alert",
+    "notification.level.success": "Success",
+    "calendar.label.now": "Now",
+    "calendar.label.today": "Today",
+    "calendar.label.yesterday": "Yesterday"
+  }
+}

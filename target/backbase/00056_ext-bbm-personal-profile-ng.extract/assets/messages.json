@@ -1,0 +1,25 @@
+{
+  "en-US": {
+    "label.birthDate": "Birth date",
+    "label.address": "Address",
+    "label.phone": "Phone",
+    "label.email": "Email",
+
+    "label.primaryEmail": "Primary Email",
+    "label.primaryPhone": "Primary Phone",
+
+    "label.additionalEmail": "Additional Email",
+    "label.additionalPhone": "Additional Phone",
+
+    "label.emailAddresses": "Email Addresses",
+    "label.phoneNumbers": "Phone Numbers",
+
+    "label.addPhone": "+ Add Phone",
+    "label.addEmail": "+ Add Email",
+
+    "message.loading.failed.title": "Loading Failed",
+    "message.loading.failed.body": "Something went wrong while retrieving the user profile. Please try again later.",
+
+    "message.loading": "Loading user profile"
+  }
+}

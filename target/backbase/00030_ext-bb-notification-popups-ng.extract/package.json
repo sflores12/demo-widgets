@@ -1,0 +1,52 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bb-notification-popups-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+        "scope": null,
+        "escapedName": "ext-bb-notification-popups-ng",
+        "name": "ext-bb-notification-popups-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bb-notification-popups-ng@>=1.1.28 <2.0.0",
+  "_id": "ext-bb-notification-popups-ng@1.1.28",
+  "_inCache": true,
+  "_location": "/ext-bb-notification-popups-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bb-notification-popups-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+    "scope": null,
+    "escapedName": "ext-bb-notification-popups-ng",
+    "name": "ext-bb-notification-popups-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/widget-bb-notification-popups-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+  "_shasum": "91096abacdc2a5c65335360c4564b3a9e153311b",
+  "_shrinkwrap": null,
+  "_spec": "ext-bb-notification-popups-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-popups-ng/-/ext-bb-notification-popups-ng-1.1.28.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "ui-bb-date-label-filter-ng": "^1.1.6",
+    "ui-bb-i18n-ng": "^1.0.33",
+    "ui-bb-message-ng": "^1.1.66",
+    "vendor-bb-angular-ng-aria": "1.5.8-bb.3",
+    "vendor-bb-uib-alert": "1.3.3-bb.3"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bb-notification-popups-ng.js",
+  "name": "ext-bb-notification-popups-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.1.28"
+}

@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui-bb-chartjs-chart-donut-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+        "scope": null,
+        "escapedName": "ui-bb-chartjs-chart-donut-ng",
+        "name": "ui-bb-chartjs-chart-donut-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ui-bb-chartjs-chart-donut-ng@>=1.0.127 <2.0.0",
+  "_id": "ui-bb-chartjs-chart-donut-ng@1.0.127",
+  "_inCache": true,
+  "_location": "/ui-bb-chartjs-chart-donut-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui-bb-chartjs-chart-donut-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+    "scope": null,
+    "escapedName": "ui-bb-chartjs-chart-donut-ng",
+    "name": "ui-bb-chartjs-chart-donut-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/ext-bb-income-spending-analysis-category-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+  "_shasum": "a7abbb945e76dd9c9007cacf45e8108bb51f3152",
+  "_shrinkwrap": null,
+  "_spec": "ui-bb-chartjs-chart-donut-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-chartjs-chart-donut-ng/-/ui-bb-chartjs-chart-donut-ng-1.0.127.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "1.5.8-bb.1",
+    "vendor-bb-chartjs": "2.6.0-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/ui-bb-chartjs-chart-donut-ng.js",
+  "name": "ui-bb-chartjs-chart-donut-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.127"
+}

@@ -1,0 +1,219 @@
+<div class="ext-bb-product-details-ng" data-ng-controller="ProductSummaryController as $ctrl">
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <ui-bb-empty-state-ng
+        data-icon-classes="fa fa-4x fa-credit-card text-muted"
+        data-title="{{'product.details.empty.state.title' | i18n}}"
+        data-subtitle="{{'product.details.empty.state.subtitle' | i18n}}"
+        data-is-empty="$ctrl.extendedProduct === null">
+
+        <!-- Product general details section -->
+        <div data-ng-if="$ctrl.extendedProduct.generalDetails">
+          <div class="h3" data-ng-bind="$ctrl.extendedProduct.generalDetails.name"></div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.generalDetails.valueOneLabel}}"></span>
+              <p data-ng-bind="$ctrl.extendedProduct.generalDetails.valueOne"></p>
+            </div>
+            <div class="col-xs-8">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.generalDetails.valueTwoLabel}}"></span>
+              <p data-ng-if="$ctrl.extendedProduct.generalDetails.valueTwoType === 'text'"
+                data-ng-bind="$ctrl.extendedProduct.generalDetails.valueTwo"></p>
+              <p data-ng-if="$ctrl.extendedProduct.generalDetails.valueTwoType === 'card'"
+                data-ng-bind="ext.helpers.maskCardNumber($ctrl.extendedProduct.generalDetails.valueTwo)">
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.generalDetails.valueThreeLabel}}"></span>
+              <p data-ng-if="$ctrl.extendedProduct.generalDetails.valueThreeType === 'text'"
+                data-ng-bind="$ctrl.extendedProduct.generalDetails.valueThree"></p>
+              <p data-ng-if="$ctrl.extendedProduct.generalDetails.valueThreeType === 'amount'">
+                <ui-bb-format-amount
+                  data-amount="$ctrl.extendedProduct.generalDetails.valueThree"
+                  data-currency="$ctrl.extendedProduct.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </p>
+            </div>
+            <div class="col-xs-8">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.generalDetails.valueFourLabel}}"></span>
+              <p data-ng-if="$ctrl.extendedProduct.generalDetails.valueFourType === 'text'"
+                data-ng-bind="$ctrl.extendedProduct.generalDetails.valueFour"></p>
+              <p data-ng-if="$ctrl.extendedProduct.generalDetails.valueFourType === 'amount'">
+                <ui-bb-format-amount
+                  data-amount="$ctrl.extendedProduct.generalDetails.valueFour"
+                  data-currency="$ctrl.extendedProduct.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <!-- Product interest details section -->
+        <div data-ng-if="$ctrl.extendedProduct.interestDetails">
+          <h4 data-i18n-key="{{$ctrl.extendedProduct.interestDetails.headerLabel}}"></h4>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.interestDetails.valueOneLabel}}"></span>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueOneType === 'percentage'"
+                data-ng-bind="$ctrl.extendedProduct.interestDetails.valueOne + ' %'">
+              </p>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueOneType === 'amount'">
+                <ui-bb-format-amount
+                  data-amount="$ctrl.extendedProduct.interestDetails.valueOne"
+                  data-currency="$ctrl.extendedProduct.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </p>
+            </div>
+            <div class="col-xs-8">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.interestDetails.valueTwoLabel}}"></span>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueTwoType === 'amount'">
+                <ui-bb-format-amount
+                  data-amount="$ctrl.extendedProduct.interestDetails.valueTwo"
+                  data-currency="$ctrl.extendedProduct.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.interestDetails.valueThreeLabel}}"></span>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueThreeType === 'percentage'"
+                data-ng-bind="$ctrl.extendedProduct.interestDetails.valueThree + ' %'">
+              </p>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueThreeType === 'label'"
+                data-ng-bind="$ctrl.extendedProduct.interestDetails.valueThreeLabelValue | i18n: { number: $ctrl.extendedProduct.interestDetails.valueThree }">
+              </p>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueThreeType === 'amount'">
+                <ui-bb-format-amount
+                  data-amount="$ctrl.extendedProduct.interestDetails.valueThree"
+                  data-currency="$ctrl.extendedProduct.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </p>
+            </div>
+            <div class="col-xs-8">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.interestDetails.valueFourLabel}}"></span>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueFourType === 'label'"
+                data-ng-bind="$ctrl.extendedProduct.interestDetails.valueFourLabelValue | i18n:{ number: $ctrl.extendedProduct.interestDetails.valueFour }">
+              </p>
+              <p data-ng-if="$ctrl.extendedProduct.interestDetails.valueFourType === 'amount'">
+                <ui-bb-format-amount
+                  data-amount="$ctrl.extendedProduct.interestDetails.valueFour"
+                  data-currency="$ctrl.extendedProduct.currency"
+                  data-wrap>
+                </ui-bb-format-amount>
+              </p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <!-- Product maturity details section -->
+        <div data-ng-if="$ctrl.extendedProduct.maturityDetails">
+          <h4 data-i18n-key="{{$ctrl.extendedProduct.maturityDetails.headerLabel}}"></h4>
+            <div class="row">
+              <div class="col-xs-4">
+                <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.maturityDetails.valueOneLabel}}"></span>
+                <p data-ng-if="$ctrl.extendedProduct.maturityDetails.valueOneType === 'amount'">
+                  <ui-bb-format-amount
+                    data-amount="$ctrl.extendedProduct.maturityDetails.valueOne"
+                    data-currency="$ctrl.extendedProduct.currency"
+                    data-wrap>
+                  </ui-bb-format-amount>
+                </p>
+              </div>
+              <div class="col-xs-8">
+                <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.maturityDetails.valueTwoLabel}}"></span>
+                <p data-ng-if="$ctrl.extendedProduct.maturityDetails.valueTwoType === 'date'"
+                  data-ng-bind="$ctrl.extendedProduct.maturityDetails.valueTwo | date : 'd MMMM yyyy'">
+                </p>
+                <p data-ng-if="$ctrl.extendedProduct.maturityDetails.valueTwoType === 'label'"
+                  data-ng-bind="$ctrl.extendedProduct.maturityDetails.valueTwoLabelValue | i18n:{ number: $ctrl.extendedProduct.maturityDetails.valueTwo }">
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.maturityDetails.valueThreeLabel}}"></span>
+                <p data-ng-if="$ctrl.extendedProduct.maturityDetails.valueThreeType === 'date'"
+                  data-ng-bind="$ctrl.extendedProduct.maturityDetails.valueThree | date : 'd MMMM yyyy'">
+                </p>
+              </div>
+              <div class="col-xs-8">
+                <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.maturityDetails.valueFourLabel}}"></span>
+                <p data-ng-if="$ctrl.extendedProduct.maturityDetails.valueFourType === 'date'"
+                  data-ng-bind="$ctrl.extendedProduct.maturityDetails.valueFour | date : 'd MMMM yyyy'">
+                <p data-ng-if="$ctrl.extendedProduct.maturityDetails.valueFourType === 'percentage'"
+                  data-ng-bind="$ctrl.extendedProduct.maturityDetails.valueFour + ' %'">
+                </p>
+              </div>
+            </div>
+          <hr>
+        </div>
+
+        <!-- Product associated cards section -->
+        <div data-ng-if="$ctrl.extendedProduct.associatedCards">
+          <h4 data-i18n-key="{{$ctrl.extendedProduct.associatedCards.headerLabel}}"></h4>
+
+          <div data-ng-if="$ctrl.extendedProduct.associatedCards.sectionType === 'account'">
+            <div class="container-fluid">
+              <div class="row" >
+                <div class="col-xs-5 well">
+                  <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.associatedCards.accountLabel}}"></span>
+                  <p data-ng-bind="$ctrl.extendedProduct.associatedCards.account"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-ng-if="$ctrl.extendedProduct.associatedCards.sectionType === 'debitCards'">
+            <div data-ng-repeat="debitCard in $ctrl.extendedProduct.associatedCards.debitCards track by $index">
+              <div class="container-fluid">
+                <div class="row" >
+                  <div class="col-xs-5 well">
+                    <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.associatedCards.debitCardLabel}}"></span>
+                    <p data-ng-bind="ext.helpers.maskCardNumber(debitCard.number)"></p>
+
+                    <span class="h5 text-muted" 
+                      data-i18n-key="{{$ctrl.extendedProduct.associatedCards.debitCardExpiryDateLabel}}">
+                    </span>
+                    <div class="text-muted" data-ng-bind="debitCard.expiryDate | date : 'd MMMM yyyy'"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+        </div>
+
+        <!-- Product activity details section -->
+        <div data-ng-if="$ctrl.extendedProduct.activityDetails">
+          <div class="row">
+            <div class="col-xs-4">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.activityDetails.accountOpeningDateLabel}}"></span>
+              <p data-ng-bind="$ctrl.extendedProduct.activityDetails.accountOpeningDateValue | date : 'd MMMM yyyy'"></p>
+            </div>
+            <div class="col-xs-8">
+              <span class="h5" data-i18n-key="{{$ctrl.extendedProduct.activityDetails.lastUpdateDateLabel}}"></span>
+              <p data-ng-bind="$ctrl.extendedProduct.activityDetails.lastUpdateDateValue | date : 'd MMMM yyyy'"></p>
+            </div>
+          </div>
+        </div>
+
+      </ui-bb-empty-state-ng>
+
+    </div>
+  </div>
+</div>

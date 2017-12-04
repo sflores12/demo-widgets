@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ui-bb-calendar-popup component</title>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="./dist/ui-bb-calendar-popup-ng.js"></script>
+<script>
+    var demoModule = angular.module('ui-bb-calendar-popup-demo', [
+        'ui-bb-calendar-popup-ng'
+    ])
+    .controller('DemoController', function() {
+        this.name = 'ui-bb-calendar-popup';
+        this.message = 'UI BB Calendar Popup Component';
+        this.date = '03 Oct 2017';
+        this.config = {};
+        this.disabled = false;
+    });
+
+    angular.element(document).ready(function() {
+        angular.bootstrap(document, [demoModule.name]);
+    });
+</script>
+</head>
+<body ng-controller="DemoController as demo">
+    <h1>ui-bb-calendar-popup</h1>
+    <pre>{{ demo.name }}</pre>
+    <ui-bb-calendar-popup
+      date="demo.date"
+      config="demo.config"
+      disabled="demo.disabled"
+    ></ui-bb-calendar-popup>
+</body>
+</html>

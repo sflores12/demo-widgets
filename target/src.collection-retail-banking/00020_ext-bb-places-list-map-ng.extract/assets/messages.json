@@ -1,0 +1,13 @@
+{
+  "en-US": {
+    "places.message.loading": "Loading places list",
+    "places.message.setup.list": "Ordering items by distance from your current position",
+    "places.message.setup.error": "Current position is unavailable",
+    "places.message.setup.empty": "There are no places nearby",
+    "places.input.search": "Search",
+    "places.error.ERROR_AUTH": "You are not authorised to perform this action.",
+    "places.error.ERROR_CONNECTION" : "ErrorConnection Error",
+    "places.error.ERROR_UNEXPECTED": "An unexpected error occurred, we apologise for the inconvenience. Please try again later.",
+    "places.error.ERROR_USER": "User error"
+  }
+}

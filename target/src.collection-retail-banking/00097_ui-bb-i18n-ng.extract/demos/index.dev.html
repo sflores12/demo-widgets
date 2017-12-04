@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ui-bb-expandable-ng component</title>
+    <script src="../node_modules/vendor-bb-angular/scripts/vendor-bb-angular.js"></script>
+    <script src="../node_modules/lib-bb-i18n-ng/scripts/lib-bb-i18n-ng.js"></script>
+    <script src="../dist/scripts/ui-bb-i18n-ng.js"></script>
+    <script>
+      var demoModule = angular
+      .module('ui-bb-component-demo', ['ui-bb-i18n-ng'])
+
+      .config(['lib-bb-i18n-ng:bbTranslateProvider', function(i18n) {
+        i18n.setMessages({
+          'demo.title': 'ui-bb-i18n-ng Component',
+          'demo.greeting': 'Greetings, {username}.',
+          'demo.introduction': 'This is a demonstration of the internationalization UI component',
+          'demo.salutation': 'Regards, {username}.',
+        });
+      }])
+
+      .controller('DemoController', function() {
+        this.user = {
+          name: 'Joe Citizen',
+        };
+        this.staff = {
+          name: 'Bob Sprocket',
+        };
+      });
+
+      angular.element(document).ready(function() {
+        angular.bootstrap(document, ['ui-bb-component-demo']);
+      });
+    </script>
+</head>
+<body ng-controller="DemoController as demo">
+    <h1 i18n-key="demo.title"></h1>
+
+    <p i18n-key="demo.greeting"
+         i18n-data="{ username: demo.user.name }"
+    ></p>
+
+    <p>{{'demo.introduction' | i18n }}</p>
+
+    <p i18n-key="demo.salutation"
+         i18n-data-username="demo.staff.name">
+    ></p>
+
+</body>
+</html>

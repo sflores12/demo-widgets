@@ -1,0 +1,28 @@
+{
+  "en-US": {
+    "label.beneficiaryName": "Recipient",
+    "label.beneficiaryAccountNumber": "Account number",
+    "label.description": "Description",
+    "label.schedule": "Schedule",
+    "label.submit": "Pay",
+
+    "message.contactSave": "Recipient will be saved.",
+    "message.urgentPayment": "This is an urgent payment.",
+
+    "message.payment.start": "Sending payment",
+    "message.payment.failed": "Not able to process payment, please try again.",
+    "message.payment.done": "Payment successfully submitted",
+
+    "message.payment.schedule.today": "today",
+    "message.payment.schedule.startingFrom": "starting",
+    "message.payment.schedule.frequency.once": "One payment",
+    "message.payment.schedule.frequency.daily": "Daily",
+    "message.payment.schedule.frequency.weekly": "Weekly",
+    "message.payment.schedule.frequency.monthly": "Monthly",
+    "message.payment.schedule.frequency.quarterly": "Quarterly",
+    "message.payment.schedule.frequency.yearly": "Annually",
+    "message.payment.schedule.frequency.end.never": "until cancelled",
+    "message.payment.schedule.frequency.end.after": "times",
+    "message.payment.schedule.frequency.end.on": "until"
+  }
+}

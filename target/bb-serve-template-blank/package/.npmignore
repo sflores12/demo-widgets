@@ -1,0 +1,10 @@
+pom.xml
+target
+*.tgz
+src
+reports
+.gradle
+.npm
+build.gradle
+test
+RELEASE.md

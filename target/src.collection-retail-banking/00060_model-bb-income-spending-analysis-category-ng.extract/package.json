@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.model-bb-income-spending-analysis-category-ng@^1.1.7",
+        "scope": null,
+        "escapedName": "src.model-bb-income-spending-analysis-category-ng",
+        "name": "src.model-bb-income-spending-analysis-category-ng",
+        "rawSpec": "^1.1.7",
+        "spec": ">=1.1.7 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.model-bb-income-spending-analysis-category-ng@>=1.1.7 <2.0.0",
+  "_id": "src.model-bb-income-spending-analysis-category-ng@1.1.7",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.model-bb-income-spending-analysis-category-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.model-bb-income-spending-analysis-category-ng@^1.1.7",
+    "scope": null,
+    "escapedName": "src.model-bb-income-spending-analysis-category-ng",
+    "name": "src.model-bb-income-spending-analysis-category-ng",
+    "rawSpec": "^1.1.7",
+    "spec": ">=1.1.7 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-income-spending-analysis-category-ng/-/src.model-bb-income-spending-analysis-category-ng-1.1.7.tgz",
+  "_shasum": "f29a41e2d6a3e52d0fce058705cb113ef239bb92",
+  "_shrinkwrap": null,
+  "_spec": "src.model-bb-income-spending-analysis-category-ng@^1.1.7",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-income-spending-analysis-category-ng/-/src.model-bb-income-spending-analysis-category-ng-1.1.7.tgz",
+    "shasum": "f29a41e2d6a3e52d0fce058705cb113ef239bb92"
+  },
+  "name": "src.model-bb-income-spending-analysis-category-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.1.7"
+}

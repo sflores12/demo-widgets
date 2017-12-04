@@ -1,0 +1,73 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "lib-bb-start@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+        "scope": null,
+        "escapedName": "lib-bb-start",
+        "name": "lib-bb-start",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "lib-bb-start@2.0.53",
+  "_id": "lib-bb-start@2.0.53",
+  "_inCache": true,
+  "_location": "/lib-bb-start",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "lib-bb-start@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+    "scope": null,
+    "escapedName": "lib-bb-start",
+    "name": "lib-bb-start",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/widget-bb-action-recipes-ng",
+    "/widget-bb-budget-ng",
+    "/widget-bb-contact-ng",
+    "/widget-bb-income-spending-analysis-category-ng",
+    "/widget-bb-initiate-payment-ng",
+    "/widget-bb-login-ng",
+    "/widget-bb-manage-payment-orders-ng",
+    "/widget-bb-manage-products-ng",
+    "/widget-bb-messages-ng",
+    "/widget-bb-notification-badge-ng",
+    "/widget-bb-notification-center-ng",
+    "/widget-bb-notification-popups-ng",
+    "/widget-bb-personal-profile-ng",
+    "/widget-bb-places-ng",
+    "/widget-bb-product-summary-ng",
+    "/widget-bb-transaction-categories-ng",
+    "/widget-bb-transactions-ng",
+    "/widget-bb-turnovers-ng",
+    "/widget-bb-user-menu-ng",
+    "/widget-bbm-initiate-payment-ng",
+    "/widget-bbm-notification-center-ng",
+    "/widget-bbm-personal-profile-ng",
+    "/widget-bbm-product-details-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+  "_shasum": "01ce7055c209ccaa88d028903a991ba04757740f",
+  "_shrinkwrap": null,
+  "_spec": "lib-bb-start@https://artifacts.backbase.com/api/npm/npm-backbase/lib-bb-start/-/lib-bb-start-2.0.53.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "config-bb-module-loader": "^1.1.0",
+    "lib-bb-start-ng": "^1.7.10",
+    "vendor-bb-systemjs": "0.19.38-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/lib-bb-start.js",
+  "name": "lib-bb-start",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "2.0.53"
+}

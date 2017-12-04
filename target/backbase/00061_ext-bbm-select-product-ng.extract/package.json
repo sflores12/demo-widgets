@@ -1,0 +1,48 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bbm-select-product-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+        "scope": null,
+        "escapedName": "ext-bbm-select-product-ng",
+        "name": "ext-bbm-select-product-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bbm-select-product-ng@>=1.0.224 <2.0.0",
+  "_id": "ext-bbm-select-product-ng@1.0.224",
+  "_inCache": true,
+  "_location": "/ext-bbm-select-product-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bbm-select-product-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+    "scope": null,
+    "escapedName": "ext-bbm-select-product-ng",
+    "name": "ext-bbm-select-product-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+  "_shasum": "48be3382e908bef3b9fd3d952b08c7d4fa3a04e4",
+  "_shrinkwrap": null,
+  "_spec": "ext-bbm-select-product-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-select-product-ng/-/ext-bbm-select-product-ng-1.0.224.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "ui-bb-avatar-ng": "^1.0.174",
+    "ui-bb-i18n-ng": "^1.0.33"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bbm-select-product-ng.js",
+  "name": "ext-bbm-select-product-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.224"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>ext-bb-notification-badge-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Notification Badge Extension</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">2.2.28</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/ext-bb-notification-badge-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-uib-popover" label="Feature Vendor Bb Uib Popover" readonly="true" viewHint="">
+                <value type="string">vendor-bb-uib-popover</value>
+            </property>
+            <property name="feature.vendor-bb-angular-ng-aria" label="Feature Vendor Bb Angular Ng Aria" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-ng-aria</value>
+            </property>
+            <property name="feature.ui-bb-i18n-ng" label="Feature Ui Bb I 18 N Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-i18n-ng</value>
+            </property>
+            <property name="feature.ui-bb-date-label-filter-ng" label="Feature Ui Bb Date Label Filter Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-date-label-filter-ng</value>
+            </property>
+            <property name="feature.ui-bb-message-ng" label="Feature Ui Bb Message Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-message-ng</value>
+            </property>
+            <property name="feature.ui-bb-load-more-ng" label="Feature Ui Bb Load More Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-load-more-ng</value>
+            </property>
+            <property name="feature.ui-bb-substitute-error-ng" label="Feature Ui Bb Substitute Error Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-substitute-error-ng</value>
+            </property>
+            <property name="feature.ui-bb-loading-overlay-ng" label="Feature Ui Bb Loading Overlay Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-loading-overlay-ng</value>
+            </property>
+            <property name="feature.ui-bb-confirm-ng" label="Feature Ui Bb Confirm Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-confirm-ng</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

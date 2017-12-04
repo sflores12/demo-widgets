@@ -1,0 +1,18 @@
+{
+  "en-US": {
+    "no.contacts.title": "No Contacts",
+    "no.contacts.message": "Looks like you don’t have any contacts. To add a new one, please tap + in the top right.",
+
+    "no.search-results.title": "No Results Found",
+    "no.search-results.message": "Please try a different search item",
+
+    "message.loading.failed.title": "Loading Failed",
+    "message.loading.failed.body": "Something went wrong while retrieving your contacts. Please try again later.",
+
+    "message.loading": "Loading contacts",
+    "message.loadMore.loading": "Loading...",
+    "message.searching": "Searching...",
+    "message.no.contacts": "You do not have any contacts yet. Please add a contact"
+  }
+}
+

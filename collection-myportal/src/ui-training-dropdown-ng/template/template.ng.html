@@ -1,0 +1,14 @@
+<div class="dropdown" uib-dropdown>
+    <div class="f11">{{$ctrl.itemType}}:</div>
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" uib-dropdown-toggle>
+            <span ng-if="$ctrl.selected">{{$ctrl.selected.personalData.fullname}} </span> <span ng-if="!$ctrl.selected">Select one {{$ctrl.itemType}} </span><span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" uib-dropdown-menu>
+            <li ng-click="$ctrl.select(null)">
+                    <a role="menuitem" tabindex="-1" href="#" >Deselect</a>
+            </li>
+            <li ng-repeat="item in $ctrl.items" ng-click="$ctrl.select(item)">
+                    <a role="menuitem" tabindex="-1" href="#" ng-bind="item.personalData.fullname"></a>
+            </li>
+    </ul>
+</div>

@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "model-bb-login-ng@https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+        "scope": null,
+        "escapedName": "model-bb-login-ng",
+        "name": "model-bb-login-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "model-bb-login-ng@>=3.0.21 <4.0.0",
+  "_id": "model-bb-login-ng@3.0.21",
+  "_inCache": true,
+  "_location": "/model-bb-login-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "model-bb-login-ng@https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+    "scope": null,
+    "escapedName": "model-bb-login-ng",
+    "name": "model-bb-login-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/widget-bb-login-ng",
+    "/widget-bb-user-menu-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+  "_shasum": "fb3586f33c898b9d1b8c70315a097b40b2dcd325",
+  "_shrinkwrap": null,
+  "_spec": "model-bb-login-ng@https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-login-ng/-/model-bb-login-ng-3.0.21.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "data-bb-cxp-authentication-http-ng": "^1.5.3",
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/model-bb-login-ng.js",
+  "name": "model-bb-login-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "3.0.21"
+}

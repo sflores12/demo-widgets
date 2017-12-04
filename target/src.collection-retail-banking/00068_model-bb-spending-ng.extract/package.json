@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.model-bb-spending-ng@0.1.39",
+        "scope": null,
+        "escapedName": "src.model-bb-spending-ng",
+        "name": "src.model-bb-spending-ng",
+        "rawSpec": "0.1.39",
+        "spec": "0.1.39",
+        "type": "version"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.model-bb-spending-ng@0.1.39",
+  "_id": "src.model-bb-spending-ng@0.1.39",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.model-bb-spending-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.model-bb-spending-ng@0.1.39",
+    "scope": null,
+    "escapedName": "src.model-bb-spending-ng",
+    "name": "src.model-bb-spending-ng",
+    "rawSpec": "0.1.39",
+    "spec": "0.1.39",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-spending-ng/-/src.model-bb-spending-ng-0.1.39.tgz",
+  "_shasum": "0ff00b6f04e9543a4ea52578bba9e10ad4c940ee",
+  "_shrinkwrap": null,
+  "_spec": "src.model-bb-spending-ng@0.1.39",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-spending-ng/-/src.model-bb-spending-ng-0.1.39.tgz",
+    "shasum": "0ff00b6f04e9543a4ea52578bba9e10ad4c940ee"
+  },
+  "name": "src.model-bb-spending-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "0.1.39"
+}

@@ -1,0 +1,21 @@
+{
+  "en-US": {
+    "message.loading": "Loading notifications",
+    "message.loadMore.loading": "Loading...",
+    "no.notifications.title": "No Notifications",
+    "no.notifications.message": "There are no new notifications to display.",
+    
+    "notification.level.info": "Info",
+    "notification.level.warning": "Warning",
+    "notification.level.alert": "Alert",
+    "notification.level.success": "Success",
+
+    "message.loading.failed.title": "Loading Failed",
+    "message.loading.failed.body": "Something went wrong while retrieving your notifications. Please try again later.",
+
+    "calendar.label.now": "Now",
+    "calendar.label.today": "Today",
+    "calendar.label.yesterday": "Yesterday",
+    "calendar.label.at": " at "
+  }
+}

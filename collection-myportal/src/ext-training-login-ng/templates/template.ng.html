@@ -1,0 +1,26 @@
+<div class="ext-training-login-ng container" ng-controller="LoginController as $ctrl">
+    <div class="omb_login">
+    	<h3 class="omb_authTitle">Login</h3>
+		<div class="row omb_row-sm-offset-3">
+			<div class="col-xs-12 col-sm-6">	
+			    <form name="loginForm" class="omb_loginForm" action="" autocomplete="off" ng-submit="$ctrl.onPostLogin($event)">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+						<input type="text" ng-model="$ctrl.data.usuario" class="form-control" name="username" placeholder="Username" required>
+					</div>
+					<span class="help-block"></span>
+										
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+						<input  type="password" ng-model="$ctrl.data.password" class="form-control" name="password" placeholder="Password" required>
+					</div> 
+					<br>
+					<!-- <pre>{{$ctrl.data | json}}</pre> -->
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>	
+				</form>
+			</div>
+			
+			
+    	</div>		   	
+	</div>
+</div>

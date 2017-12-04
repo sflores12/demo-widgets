@@ -1,0 +1,31 @@
+{
+  "en-US": {
+    "label.messages": "All Messages",
+    "label.sent": "Sent",
+    "label.archived": "Archived",
+    "label.drafts": "Drafts",
+    "label.send": "Send",
+    "label.remove": "Remove",
+
+    "label.confim.header": "Confirm removal",
+    "label.confim.text": "Do you really want to remove the selected conversations? This action is irreversable.",
+    "label.confim.remove": "Remove",
+    "label.confim.cancel": "Cancel",
+
+    "label.message.loading": "Loading...",
+    "label.messages.empty": "You currently have no messages",
+
+    "error.auth": "You are not authorised to perform this action.",
+    "error.connection": "Connection error",
+    "error.unexpected": "An unexpected error occurred, we apologise for the inconvenience. Please try again later.",
+
+    "error.draft.save": "An error occured while saving your draft. Please try again later.",
+    "error.draft.send": "An error occured while sending your draft. Please try again later.",
+    "error.conversation.save-reply": "An error occured while replying to conversation. Your message has not been sent. Please try again later.",
+    "error.conversation.send-reply": "An error occured while replying to conversation. Your message has not been sent. Please try again later.",
+    "error.conversation.remove": "An error occured while removing some of selected conversations.",
+
+    "ui-bb-conversation-view-ng.label.close": "Close",
+    "ui-bb-conversation-view-ng.label.send": "Send"
+  }
+}

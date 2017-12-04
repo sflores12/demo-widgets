@@ -1,0 +1,15 @@
+{
+  "en-US": {
+    "message.loading": "Loading products",
+
+    "no.products.title": "No Products",
+    "no.products.message": "Looks like you don’t have any products. To add a new one, please contact or visit your bank.",
+
+    "message.loading.failed.title": "Loading Failed",
+    "message.loading.failed.body": "Something went wrong while retrieving your products. Please try again later.",
+
+    "label.availableBalance": "Available:",
+    "label.accruedInterestAmount": "Accrued:",
+    "label.creditLimit": "Credit Limit:"
+  }
+}

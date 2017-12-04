@@ -1,0 +1,31 @@
+{
+  "en-US": {
+    "error.load.auth": "You are not authorized to perform this action",
+    "error.load.connectivity": "There was a connection problem, please try again",
+    "error.load.user": "There is a problem with the action you are trying to perform",
+    "error.load.unexpected": "An unexpected error occurred while performing this action",
+    "error.load.params": "Data could not be obtained, as some required parameters were missing",
+
+    "message.label.loading": "Loading",
+
+    "analysis.label.empty.dataset.title": "No transactions found",
+    "analysis.label.empty.dataset.subtitle": "Please select a different period or product",
+    "analysis.label.no.products.title": "No products supported",
+    "analysis.label.no.products.spending.subtitle": "There are no products supporting Spending Analysis",
+    "analysis.label.no.products.income.subtitle": "There are no products supporting Income Analysis",
+    "analysis.label.spending.total": "Total Spending",
+    "analysis.label.income.total": "Total Income",
+    "analysis.label.period.now": "Now",
+    "analysis.label.spending.category": "Spending per category",
+    "analysis.label.income.category": "Income per category",
+    "analysis.label.spending.total.amount": "Total amount:",
+    "analysis.label.period.one.month": "1 Month",
+    "analysis.label.period.six.months": "6 Months",
+    "analysis.label.period.twelve.months": "12 Months",
+
+    "analysis.tooltip.of.total": "of total",
+    "analysis.tooltip.more.than.previous": "more than previous month",
+    "analysis.tooltip.less.than.previous": "less than previous month",
+    "analysis.tooltip.same.as.previous": "Same as previous month",
+  }
+}

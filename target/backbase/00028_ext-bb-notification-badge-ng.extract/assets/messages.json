@@ -1,0 +1,33 @@
+{
+  "en-US": {
+    "label.load.more": "Load more",
+
+    "notification.dialog.delete.title": "Delete notification",
+    "notification.dialog.delete.body": "You are about to delete a notification.<br/>Do you wish to continue?",
+    "notification.dialog.delete.yes": "Yes, Delete",
+    "notification.dialog.delete.no": "No, Cancel",
+
+    "notification.badge.title": "Notifications badge",
+    "notification.badge.popover.title": "Notifications",
+    "notification.badge.popover.back.title" : "Back to notifications",
+    "notification.badge.popover.view.details.title" : "View notification details",
+    "notification.badge.popover.view.list.title" : "View notification list",
+    "notification.message.empty": "No new notifications to display",
+
+    "notification.level.alert.title": "Alert",
+    "notification.level.warning.title": "Warning",
+    "notification.level.info.title": "Info",
+    "notification.level.success.title": "Success",
+
+    "model.error.auth": "You are not authorized to perform this action",
+    "model.error.connectivity": "There was a connection problem, please try again",
+    "model.error.user": "There is a problem with the action you are trying to perform",
+    "model.error.unexpected": "An unexpected error occurred while performing this action",
+
+    "message.loading": "Loading",
+
+    "calendar.label.now": "Now",
+    "calendar.label.today": "Today",
+    "calendar.label.yesterday": "Yesterday"
+  }
+}

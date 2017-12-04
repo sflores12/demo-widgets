@@ -1,0 +1,51 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui-bb-conversation-view-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+        "scope": null,
+        "escapedName": "ui-bb-conversation-view-ng",
+        "name": "ui-bb-conversation-view-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ui-bb-conversation-view-ng@>=1.2.14 <2.0.0",
+  "_id": "ui-bb-conversation-view-ng@1.2.14",
+  "_inCache": true,
+  "_location": "/ui-bb-conversation-view-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui-bb-conversation-view-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+    "scope": null,
+    "escapedName": "ui-bb-conversation-view-ng",
+    "name": "ui-bb-conversation-view-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/ext-bb-messages-inbox-ng",
+    "/ext-bb-messages-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+  "_shasum": "b5479e90c527b5d4c6e911813ec83c3bf6803dc8",
+  "_shrinkwrap": null,
+  "_spec": "ui-bb-conversation-view-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-conversation-view-ng/-/ui-bb-conversation-view-ng-1.2.14.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "ui-bb-rich-text-editor-ng": "^1.0.18",
+    "vendor-bb-angular": "1.5.8-bb.1",
+    "vendor-bb-angular-sanitize": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/ui-bb-conversation-view-ng.js",
+  "name": "ui-bb-conversation-view-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.2.14"
+}

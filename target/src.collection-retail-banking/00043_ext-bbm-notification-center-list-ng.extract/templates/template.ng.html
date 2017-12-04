@@ -1,0 +1,118 @@
+<div
+  data-ng-controller="ListController as $ctrl"
+  class="ext-bbm-notification-item-center-list-ng">
+  <div class="bbm-layout">
+    <ui-bbm-scroll-ng on-scroll-to-end="$ctrl.loadMoreNotifications()">
+      <!-- Notifications -->
+      <div
+        class="bbm-list"
+        data-ng-if="ext.helpers.hasNotifications($ctrl)"
+        data-role="notifications">
+        <div class="bbm-list-group">
+          <ul class="bbm-list-group-items">
+            <li
+              class="bbm-list-item"
+              data-role="notification"
+              data-index="{{ $index }}"
+              data-ng-repeat="notification in $ctrl.state.notifications.data track by notification.id"
+              data-ng-click="$ctrl.showNotificationDetails(notification.id)">
+              <div
+                class="bbm-notification-item"
+                data-role="notification"
+                data-notification-id="{{ notification.id }}"
+                data-notification-read="{{ notification.read }}"
+                data-ng-class="{
+                  'bbm-notification-item-unread'    : !notification.read,
+                  'bbm-notification-item-has-title' : notification.title
+                }">
+                <div class="bbm-notification-item-content">
+                  <div class="bbm-notification-item-information prevent-ios-click">
+                    <span class="{{ 'bbm-notification-item-level bbm-notification-item-level-' + notification.level | lowercase }}">
+                      <i
+                        class="fa {{ ext.helpers.getLevelIcon(notification.level) }}"
+                        title="{{ 'notification.level.' + notification.level | lowercase | i18n }}">
+                      </i>
+                    </span>
+                    <span
+                      class="bbm-notification-item-date"
+                      data-ng-bind="ext.helpers.getDateLabel(notification)">
+                    </span>
+                  </div>
+                  <h3
+                    data-ng-if="notification.title"
+                    class="bbm-notification-item-title prevent-ios-click"
+                    data-ng-bind="notification.title">
+                  </h3>
+                  <div
+                    class="bbm-notification-item-message prevent-ios-click"
+                    data-ng-bind="notification.message">
+                  </div>
+                </div>
+                <div class="bbm-notification-item-icon">
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- No data state -->
+      <div
+        class="bbm-empty-state"
+        data-ng-if="ext.helpers.showEmptyState($ctrl)">
+        <div class="bbm-empty-state-icon">
+          <i class="fa fa-bell-o"></i>
+        </div>
+        <h2
+          class="bbm-empty-state-title"
+          data-i18n-key="no.notifications.title">
+        </h2>
+        <p
+          class="bbm-empty-state-message"
+          data-i18n-key="no.notifications.message">
+        </p>
+      </div>
+
+      <!-- Error state -->
+      <div
+        class="bbm-error-state"
+        data-ng-if="ext.helpers.showErrorState($ctrl)">
+        <div class="bbm-error-state-icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+        <h2
+          class="bbm-error-state-title"
+          data-i18n-key="message.loading.failed.title">
+        </h2>
+        <p
+          class="bbm-error-state-message"
+          data-i18n-key="message.loading.failed.body">
+        </p>
+      </div>
+
+      <!-- Loading state -->
+      <div
+        class="bbm-loading-state"
+        data-ng-if="ext.helpers.showLoadingState($ctrl)">
+        <div class="bbm-loading-state-spinner">
+        </div>
+        <p
+          class="bbm-loading-state-message"
+          data-i18n-key="message.loading">
+        </p>
+      </div>
+
+      <!-- Load more -->
+      <div
+        class="bbm-load-more"
+        data-ng-if="ext.helpers.showLoadMore($ctrl)">
+        <p
+          class="bbm-load-more-message"
+          data-i18n-key="message.loadMore.loading"
+          data-ng-if="ext.helpers.showLoadMoreLoading($ctrl)">
+        </p>
+      </div>
+    </ui-bbm-scroll-ng>
+  </div>
+</div>

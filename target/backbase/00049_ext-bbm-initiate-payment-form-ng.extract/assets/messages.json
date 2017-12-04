@@ -1,0 +1,45 @@
+{
+  "en-US": {
+    "errors.createBeneficiary": "Please select one of your own accounts",
+    "errors.invalidAccountIBAN": "Please input a valid IBAN",
+    "errors.requiredAccountIBAN": "Please input an IBAN",
+    "errors.sameAccountIBAN": "Please select a different beneficiary",
+    "errors.requiredAmount": "Please input an amount",
+
+    "form.label.beneficiaryName": "Recipient",
+    "form.label.beneficiaryIdentifier": "Account Number",
+    "form.label.continue": "Continue",
+    "form.label.description": "Description",
+    "form.label.saveContact": "Add as a new contact",
+    "form.label.schedule": "Schedule",
+    "form.label.urgentPayment": "Urgent payment",
+    "form.placeholder.beneficiaryName": "Name Surname",
+    "form.placeholder.beneficiaryIdentifier": "NL01 IBAN 0123 4567 89",
+    "form.placeholder.description": "Optional message",
+    "form.placeholder.selectDebitAccount": "Select account",
+
+    "message.payment.beneficiaries.load": "Loading beneficiaries",
+    "message.payment.beneficiaries.load.failed": "Not able to load beneficiaries, please try again.",
+    "message.payment.debitAccounts.load": "Loading accounts",
+    "message.payment.debitAccounts.load.failed": "Not able to load accounts, please try again.",
+    "message.payment.start": "Sending payment",
+    "message.payment.failed": "Not able to process payment, please try again.",
+    "message.payment.done": "Payment successfully submitted",
+
+    "message.payment.schedule.today": "today",
+    "message.payment.schedule.startingFrom": "starting",
+    "message.payment.schedule.frequency.once": "One payment",
+    "message.payment.schedule.frequency.daily": "Daily",
+    "message.payment.schedule.frequency.weekly": "Weekly",
+    "message.payment.schedule.frequency.monthly": "Monthly",
+    "message.payment.schedule.frequency.quarterly": "Quarterly",
+    "message.payment.schedule.frequency.yearly": "Annually",
+    "message.payment.schedule.frequency.end.never": "until cancelled",
+    "message.payment.schedule.frequency.end.after": "times",
+    "message.payment.schedule.frequency.end.on": "until",
+
+    "message.payment.urgentPayment.info.title": "Urgent Payment",
+    "message.payment.urgentPayment.info.message": "If you submit this payment order before 4.30pm and your account balance is sufficient, domestic payments will be made within a maximum of 1.5 hours. Charges will apply. Please note: Urgent transfers are not processed on Saturdays, Sundays or Holidays.",
+    "message.payment.urgentPayment.info.button.ok": "OK"
+  }
+}

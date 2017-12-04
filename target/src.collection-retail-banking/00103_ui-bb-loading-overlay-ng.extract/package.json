@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-loading-overlay-ng@^1.0.98",
+        "scope": null,
+        "escapedName": "src.ui-bb-loading-overlay-ng",
+        "name": "src.ui-bb-loading-overlay-ng",
+        "rawSpec": "^1.0.98",
+        "spec": ">=1.0.98 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-loading-overlay-ng@>=1.0.98 <2.0.0",
+  "_id": "src.ui-bb-loading-overlay-ng@1.0.98",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-loading-overlay-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-loading-overlay-ng@^1.0.98",
+    "scope": null,
+    "escapedName": "src.ui-bb-loading-overlay-ng",
+    "name": "src.ui-bb-loading-overlay-ng",
+    "rawSpec": "^1.0.98",
+    "spec": ">=1.0.98 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-loading-overlay-ng/-/src.ui-bb-loading-overlay-ng-1.0.98.tgz",
+  "_shasum": "a84b1519a1d0b154e84851edb5cf3afb5ce8dfdd",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-loading-overlay-ng@^1.0.98",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-loading-overlay-ng/-/src.ui-bb-loading-overlay-ng-1.0.98.tgz",
+    "shasum": "a84b1519a1d0b154e84851edb5cf3afb5ce8dfdd"
+  },
+  "name": "src.ui-bb-loading-overlay-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.98"
+}

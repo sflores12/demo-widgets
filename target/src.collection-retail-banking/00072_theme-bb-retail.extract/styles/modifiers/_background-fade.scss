@@ -1,0 +1,37 @@
+/**
+ * Modifier that fades out the background to its normal state
+ * for a list-group-item
+ *
+ * @example:
+ * <ul class="list-group">
+ *   <li class="list-group-item list-group-item-fade-success">
+ *     ...
+ *   </li>
+ *   <li class="list-group-item">
+ *     ...
+ *   </li>
+ * </ul>
+ */
+
+ @mixin animation-ease-in {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+@mixin fade-background-from-to($class-name, $background-from, $background-to) {
+    @keyframes fade-#{$class-name} {
+        from {background-color: $background-from;}
+        to {background-color: $background-to;}
+    }
+    .#{$class-name} {
+        background-color: $background-from;
+        animation-name: fade-#{$class-name};
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+        @include animation-ease-in;
+    }
+};
+
+@include fade-background-from-to('list-group-item-fade-success', $state-success-bg, $list-group-bg);
+@include fade-background-from-to('list-group-item-fade-info', $state-info-bg, $list-group-bg);

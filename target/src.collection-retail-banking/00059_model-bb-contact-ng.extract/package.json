@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.model-bb-contact-ng@^4.1.80",
+        "scope": null,
+        "escapedName": "src.model-bb-contact-ng",
+        "name": "src.model-bb-contact-ng",
+        "rawSpec": "^4.1.80",
+        "spec": ">=4.1.80 <5.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.model-bb-contact-ng@>=4.1.80 <5.0.0",
+  "_id": "src.model-bb-contact-ng@4.1.80",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.model-bb-contact-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.model-bb-contact-ng@^4.1.80",
+    "scope": null,
+    "escapedName": "src.model-bb-contact-ng",
+    "name": "src.model-bb-contact-ng",
+    "rawSpec": "^4.1.80",
+    "spec": ">=4.1.80 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-contact-ng/-/src.model-bb-contact-ng-4.1.80.tgz",
+  "_shasum": "ccf1611111eafaa8dd5ad0b9eb930ef1a25876b2",
+  "_shrinkwrap": null,
+  "_spec": "src.model-bb-contact-ng@^4.1.80",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-contact-ng/-/src.model-bb-contact-ng-4.1.80.tgz",
+    "shasum": "ccf1611111eafaa8dd5ad0b9eb930ef1a25876b2"
+  },
+  "name": "src.model-bb-contact-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "4.1.80"
+}

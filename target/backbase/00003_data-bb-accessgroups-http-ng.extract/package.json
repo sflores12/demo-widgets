@@ -1,0 +1,48 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "data-bb-accessgroups-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+        "scope": null,
+        "escapedName": "data-bb-accessgroups-http-ng",
+        "name": "data-bb-accessgroups-http-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "data-bb-accessgroups-http-ng@>=1.3.4 <2.0.0",
+  "_id": "data-bb-accessgroups-http-ng@1.3.4",
+  "_inCache": true,
+  "_location": "/data-bb-accessgroups-http-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "data-bb-accessgroups-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+    "scope": null,
+    "escapedName": "data-bb-accessgroups-http-ng",
+    "name": "data-bb-accessgroups-http-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/lib-bb-permissions-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+  "_shasum": "ef2671deca43d6d5648b270a9e059d74c02f1f17",
+  "_shrinkwrap": null,
+  "_spec": "data-bb-accessgroups-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-accessgroups-http-ng/-/data-bb-accessgroups-http-ng-1.3.4.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/data-bb-accessgroups-http-ng.js",
+  "name": "data-bb-accessgroups-http-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.3.4"
+}

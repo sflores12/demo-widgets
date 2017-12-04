@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "data-bb-cxp-authentication-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+        "scope": null,
+        "escapedName": "data-bb-cxp-authentication-http-ng",
+        "name": "data-bb-cxp-authentication-http-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "data-bb-cxp-authentication-http-ng@>=1.5.3 <2.0.0",
+  "_id": "data-bb-cxp-authentication-http-ng@1.5.3",
+  "_inCache": true,
+  "_location": "/data-bb-cxp-authentication-http-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "data-bb-cxp-authentication-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+    "scope": null,
+    "escapedName": "data-bb-cxp-authentication-http-ng",
+    "name": "data-bb-cxp-authentication-http-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/lib-bb-user-data-ng",
+    "/model-bb-login-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+  "_shasum": "06e969acac4623b70054e6471a52a40f673afde0",
+  "_shrinkwrap": null,
+  "_spec": "data-bb-cxp-authentication-http-ng@https://artifacts.backbase.com/api/npm/npm-backbase/data-bb-cxp-authentication-http-ng/-/data-bb-cxp-authentication-http-ng-1.5.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "lib-bb-challenge-ng": "2.0.30",
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/data-bb-cxp-authentication-http-ng.js",
+  "name": "data-bb-cxp-authentication-http-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.5.3"
+}

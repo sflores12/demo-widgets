@@ -1,0 +1,55 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bb-turnovers-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+        "scope": null,
+        "escapedName": "ext-bb-turnovers-ng",
+        "name": "ext-bb-turnovers-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bb-turnovers-ng@>=1.2.8 <2.0.0",
+  "_id": "ext-bb-turnovers-ng@1.2.8",
+  "_inCache": true,
+  "_location": "/ext-bb-turnovers-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bb-turnovers-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+    "scope": null,
+    "escapedName": "ext-bb-turnovers-ng",
+    "name": "ext-bb-turnovers-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/widget-bb-turnovers-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+  "_shasum": "f27f05525bacb6f90a9e5af57171a8daf343442c",
+  "_shrinkwrap": null,
+  "_spec": "ext-bb-turnovers-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-turnovers-ng/-/ext-bb-turnovers-ng-1.2.8.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "lib-bb-styles": "^1.2.20",
+    "ui-bb-chartjs-chart-bar-ng": "^1.0.131",
+    "ui-bb-dropdown-select": "^1.1.4",
+    "ui-bb-empty-state-ng": "^1.0.130",
+    "ui-bb-format-amount": "^1.4.48",
+    "ui-bb-i18n-ng": "^1.0.33",
+    "ui-bb-substitute-error-ng": "^1.0.23",
+    "vendor-bb-angular-ng-aria": "1.5.8-bb.3"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bb-turnovers-ng.js",
+  "name": "ext-bb-turnovers-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.2.8"
+}

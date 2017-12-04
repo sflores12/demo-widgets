@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bbm-contact-list-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+        "scope": null,
+        "escapedName": "ext-bbm-contact-list-ng",
+        "name": "ext-bbm-contact-list-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bbm-contact-list-ng@>=1.0.173 <2.0.0",
+  "_id": "ext-bbm-contact-list-ng@1.0.173",
+  "_inCache": true,
+  "_location": "/ext-bbm-contact-list-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bbm-contact-list-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+    "scope": null,
+    "escapedName": "ext-bbm-contact-list-ng",
+    "name": "ext-bbm-contact-list-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+  "_shasum": "daf8e51d1b709fb15e0e0e0d6436d189bfac5404",
+  "_shrinkwrap": null,
+  "_spec": "ext-bbm-contact-list-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bbm-contact-list-ng/-/ext-bbm-contact-list-ng-1.0.173.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "ui-bb-avatar-ng": "^1.0.174",
+    "ui-bb-i18n-ng": "^1.0.33",
+    "ui-bbm-scroll-ng": "^1.0.38"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bbm-contact-list-ng.js",
+  "name": "ext-bbm-contact-list-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.173"
+}

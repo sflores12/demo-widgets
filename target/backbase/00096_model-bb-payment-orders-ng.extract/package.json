@@ -1,0 +1,56 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "model-bb-payment-orders-ng@https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+        "scope": null,
+        "escapedName": "model-bb-payment-orders-ng",
+        "name": "model-bb-payment-orders-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "model-bb-payment-orders-ng@>=1.8.14 <2.0.0",
+  "_id": "model-bb-payment-orders-ng@1.8.14",
+  "_inCache": true,
+  "_location": "/model-bb-payment-orders-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "model-bb-payment-orders-ng@https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+    "scope": null,
+    "escapedName": "model-bb-payment-orders-ng",
+    "name": "model-bb-payment-orders-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/widget-bb-initiate-payment-ng",
+    "/widget-bb-manage-payment-orders-ng",
+    "/widget-bbm-initiate-payment-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+  "_shasum": "d6e9d704593571be7ff086d8bb2cd23b065847c8",
+  "_shrinkwrap": null,
+  "_spec": "model-bb-payment-orders-ng@https://artifacts.backbase.com/api/npm/npm-backbase/model-bb-payment-orders-ng/-/model-bb-payment-orders-ng-1.8.14.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "data-bb-contact-http-ng": "^1.5.8",
+    "data-bb-payment-orders-http-ng": "^1.2.6",
+    "data-bb-product-summary-http-ng": "^1.3.2",
+    "lib-bb-model-errors": "^1.0.106",
+    "lib-bb-storage-ng": "^1.0.82",
+    "lib-bb-widget-ng": "^1.2.60",
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/model-bb-payment-orders-ng.js",
+  "name": "model-bb-payment-orders-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.8.14"
+}

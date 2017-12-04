@@ -1,0 +1,53 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ui-bb-iban-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+        "scope": null,
+        "escapedName": "ui-bb-iban-ng",
+        "name": "ui-bb-iban-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ui-bb-iban-ng@>=1.0.155 <2.0.0",
+  "_id": "ui-bb-iban-ng@1.0.155",
+  "_inCache": true,
+  "_location": "/ui-bb-iban-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ui-bb-iban-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+    "scope": null,
+    "escapedName": "ui-bb-iban-ng",
+    "name": "ui-bb-iban-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/ext-bb-contact-list-ng",
+    "/ext-bbm-contact-form-ng",
+    "/ext-bbm-initiate-payment-form-ng",
+    "/ui-bb-credit-suggest-ng",
+    "/ui-bbm-beneficiary-select-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+  "_shasum": "78c7c437e3e38ff2aa6d9b50ec2c8004b0337af7",
+  "_shrinkwrap": null,
+  "_spec": "ui-bb-iban-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ui-bb-iban-ng/-/ui-bb-iban-ng-1.0.155.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "lib-bb-iban": "^1.1.107",
+    "vendor-bb-angular": "1.5.8-bb.1"
+  },
+  "devDependencies": {},
+  "main": "scripts/ui-bb-iban-ng.js",
+  "name": "ui-bb-iban-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.155"
+}

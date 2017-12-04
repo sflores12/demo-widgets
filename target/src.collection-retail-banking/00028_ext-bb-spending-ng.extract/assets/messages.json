@@ -1,0 +1,21 @@
+{
+  "en-US": {
+    "error.load.auth": "You are not authorized to perform this action",
+    "error.load.connectivity": "There was a connection problem, please try again",
+    "error.load.user": "There is a problem with the action you are trying to perform",
+    "error.load.unexpected": "An unexpected error occurred while performing this action",
+    "error.load.params": "Data could not be obtained, as some required parameters were missing",
+
+    "message.label.loading": "Loading",
+
+    "spending.label.empty.dataset.title": "No transactions found",
+    "spending.label.empty.dataset.subtitle": "Please select a different period or product",
+    "spending.label.no.products.title": "No products supported",
+    "spending.label.no.products.subtitle": "There are no products supporting Spending Analysis",
+    "spending.label.total": "Total Spending",
+    "spending.label.period.now": "Now",
+
+    "spending.tooltip.of.total": "of total",
+    "spending.tooltip.compared.to": "compared to the last month",
+  }
+}

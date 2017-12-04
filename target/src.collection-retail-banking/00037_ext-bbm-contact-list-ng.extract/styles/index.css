@@ -1,0 +1,11 @@
+/**
+ * Quick fix until the front-end building blocks get updated.
+ * Please check pull request RBM2-416 on:
+ * https://stash.backbase.com/projects/FBB/repos/themes/pull-requests/14/overview
+ *
+ * This fix will probably be available in the next release of the
+ * building blocks (2.4.0)
+ */
+html {
+  min-height: 100%;
+}

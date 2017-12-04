@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bb-credit-suggest-ng@^1.6.38",
+        "scope": null,
+        "escapedName": "src.ui-bb-credit-suggest-ng",
+        "name": "src.ui-bb-credit-suggest-ng",
+        "rawSpec": "^1.6.38",
+        "spec": ">=1.6.38 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bb-credit-suggest-ng@>=1.6.38 <2.0.0",
+  "_id": "src.ui-bb-credit-suggest-ng@1.6.38",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bb-credit-suggest-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bb-credit-suggest-ng@^1.6.38",
+    "scope": null,
+    "escapedName": "src.ui-bb-credit-suggest-ng",
+    "name": "src.ui-bb-credit-suggest-ng",
+    "rawSpec": "^1.6.38",
+    "spec": ">=1.6.38 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-credit-suggest-ng/-/src.ui-bb-credit-suggest-ng-1.6.38.tgz",
+  "_shasum": "6151e75b98aaea6451b07548ace29cffccb56fc0",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bb-credit-suggest-ng@^1.6.38",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bb-credit-suggest-ng/-/src.ui-bb-credit-suggest-ng-1.6.38.tgz",
+    "shasum": "6151e75b98aaea6451b07548ace29cffccb56fc0"
+  },
+  "name": "src.ui-bb-credit-suggest-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.6.38"
+}

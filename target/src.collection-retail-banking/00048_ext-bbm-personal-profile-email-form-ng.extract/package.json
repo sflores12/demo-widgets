@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ext-bbm-personal-profile-email-form-ng@^1.0.17",
+        "scope": null,
+        "escapedName": "src.ext-bbm-personal-profile-email-form-ng",
+        "name": "src.ext-bbm-personal-profile-email-form-ng",
+        "rawSpec": "^1.0.17",
+        "spec": ">=1.0.17 <2.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ext-bbm-personal-profile-email-form-ng@>=1.0.17 <2.0.0",
+  "_id": "src.ext-bbm-personal-profile-email-form-ng@1.0.17",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ext-bbm-personal-profile-email-form-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ext-bbm-personal-profile-email-form-ng@^1.0.17",
+    "scope": null,
+    "escapedName": "src.ext-bbm-personal-profile-email-form-ng",
+    "name": "src.ext-bbm-personal-profile-email-form-ng",
+    "rawSpec": "^1.0.17",
+    "spec": ">=1.0.17 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bbm-personal-profile-email-form-ng/-/src.ext-bbm-personal-profile-email-form-ng-1.0.17.tgz",
+  "_shasum": "1e75af929639dd86c2226138c95b12f7fc9e19ef",
+  "_shrinkwrap": null,
+  "_spec": "src.ext-bbm-personal-profile-email-form-ng@^1.0.17",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ext-bbm-personal-profile-email-form-ng/-/src.ext-bbm-personal-profile-email-form-ng-1.0.17.tgz",
+    "shasum": "1e75af929639dd86c2226138c95b12f7fc9e19ef"
+  },
+  "name": "src.ext-bbm-personal-profile-email-form-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.17"
+}

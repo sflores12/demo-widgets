@@ -1,0 +1,97 @@
+<!--<section class="ext-training-appointments-ng" ng-controller="AppointmentsController as $ctrl">
+    <header ng-if="$ctrl.appointments.length === 0">
+        No appointments available.
+    </header>
+    <ul>
+        <li ng-repeat="item in $ctrl.appointments">
+            <section>
+                <div>
+                    {{item.date | date:'dd/MM/yyyy'}}
+                </div>
+                <div>
+                    {{item.date | date:'HH:mm'}}
+                </div>
+                <div>
+                    {{item.subject}}
+                </div>
+                <ul>
+                    <li ng-repeat="guest in item.guests">
+                        <span>{{guest.personalData.fullname}}</span>{{guest.personalData.email}}
+                    </li>
+                </ul>
+            </section>
+        </li>
+    </ul>
+</section>-->
+
+<!-- 
+<section class="ext-training-appointments-ng" ng-controller="AppointmentsController as $ctrl">
+    <header ng-if="$ctrl.appointments.length === 0">
+        No appointments available.
+    </header>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in $ctrl.appointments">
+            <section class="row row-eq-height">
+                <div class="col-xs-5 col-sm-4 col-md-3 col-lg-2 right-border">
+                    <div class="text-center col-xs-3 col-sm-4 col-md-4">
+                        <span class="fa fa-calendar fa-2x"></span>
+                    </div>
+                    <div class="col-xs-9 col-sm-8 col-md-8 col-lg-8">
+                        <div class="text-left">
+                            {{item.date | date:'dd/MM/yyyy'}}
+                        </div>
+                        <div class="text-left">
+                            {{item.date | date:'HH:mm'}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-7 col-sm-8 col-md-9 col-lg-10 overflow-hidden-on-xs">
+                    <h5 ng-bind="item.subject"></h5>
+                    <div class="col-xs-12 col-sm-9">
+                        <ul>
+                            <li ng-repeat="guest in item.guests">
+                                <h6>
+                                    <span ng-bind="guest.personalData.fullname"></span>
+                                    <a href="mailto:{{guest.personalData.email}}"
+                                       class="hidden-xs">&lt; {{guest.personalData.email}} &gt;</a>
+                                </h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </li>
+    </ul>
+</section>-->
+
+
+<!-- 
+<section class="ext-training-appointments-ng" ng-controller="AppointmentsController as $ctrl">
+    <header ng-if="$ctrl.appointments.length === 0">
+        No appointments available.
+    </header>
+    <ui-training-appointments-list-ng items="$ctrl.appointments" on-select="$ctrl.onSelectAppointments(item)"></ui-training-appointments-list-ng>
+</section>-->
+
+<section class="ext-training-appointments-ng" ng-controller="AppointmentsController as $ctrl">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- DROPDOWNS -->
+            <ui-training-dropdown-ng
+            class="col-sm-6" items="$ctrl.customers"
+            item-type="$ctrl.customersHeader"
+            on-select="$ctrl.onSelectCustomer(item)"></ui-training-dropdown-ng>
+            <ui-training-dropdown-ng
+            class="col-sm-6" items="$ctrl.advisors"
+            item-type="$ctrl.advisorsHeader"
+            on-select="$ctrl.onSelectAdvisor(item)"></ui-training-dropdown-ng>
+        </div>
+        <br>
+        <div class="row">
+            <!-- LIST COMPONENT -->
+            <ui-training-appointments-list-ng items="$ctrl.filteredAppointments"
+              on-select="$ctrl.onSelectAppointments(item)"></ui-training-appointments-list-ng>
+            <h4 ng-if="$ctrl.filteredAppointments.length === 0">No appointments available.</h4>
+        </div>
+    </div>
+</section>

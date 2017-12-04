@@ -1,0 +1,582 @@
+<div class="ext-bb-initiate-payment-ng" data-ng-controller="InitiatePaymentController as $ctrl" data-ng-init="step = 'form'">
+  <ui-bb-substitute-error-ng data-message="$ctrl.accountsLoadError.messageKey | i18n">
+    <div data-ng-include="'templates/' + step + '.html'"></div>
+  </ui-bb-substitute-error-ng>
+</div>
+<script type="text/ng-template" id="templates/form.html">
+  <form name="paymentForm"
+    data-ng-submit="ext.helpers.reviewPayment($ctrl, $parent)">
+    <div class="form-group">
+      <ui-bb-loading-overlay-ng data-is-loading="$ctrl.accountsLoading">
+        <ui-bb-account-selector
+          class="bb-account-selector drop-shadow"
+          data-ng-model="$ctrl.payment.from"
+          data-accounts="$ctrl.accountsFrom"
+          data-ng-change="ext.helpers.onAccountChange($ctrl, $item)"
+          placeholder="{{:: 'form.credit.placeholder' | i18n }}"
+          data-labels="{
+            noAccounts: ('form.label.noAccounts' | i18n),
+          }"
+          required>
+        </ui-bb-account-selector>
+      </ui-bb-loading-overlay-ng>
+    </div>
+    <div class="panel">
+      <div class="panel-body panel-body-large">
+        <div class="form-group">
+          <label data-i18n-key="form.label.amount"></label>
+          <div data-ui-bb-parent-responsiveness-ng class="col-xs-12 col-sm-6 col-md-4 amount-block">
+            <ui-bb-currency-input-ng
+              class="currency-input"
+              placeholder="0"
+              data-max-length="ext.helpers.maxDigits"
+              data-ng-model="$ctrl.payment.amount"
+              data-currencies="$ctrl.currencies"
+              data-messages="{
+                'label.currency': ('ui-bb-currency-input-ng.label.currency' | i18n),
+                'label.amount': ('ui-bb-currency-input-ng.label.amount' | i18n),
+                'label.decimals': ('ui-bb-currency-input-ng.label.decimals' | i18n),
+              }"
+              data-on-currency-change="$ctrl.updateRate($ctrl.payment.from.currency, currency)">
+            </ui-bb-currency-input-ng>
+            <div data-ng-messages="ext.helpers.showCrossCurrencyMessage($ctrl)" role="info">
+              <div data-ng-message="cross-currency" class="pull-right">
+                <i class="fa fa-info-circle text-muted"
+                  aria-hidden="true"
+                  data-uib-popover-template="'templates/cross-currency-popup.html'"
+                  data-popover-trigger="click outsideClick"
+                  data-popover-placement="bottom">
+                </i>
+                <span class="text-muted">{{ 'cross-currency.indicative-amount' | i18n }}:</span>
+                <ui-bb-format-amount
+                  class="text-muted"
+                  data-amount="$ctrl.payment.amount.value / $ctrl.rate"
+                  data-currency="$ctrl.payment.from.currency">
+                </ui-bb-format-amount>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group"
+          data-ng-class="{ 'has-error': paymentForm.credit.$error.credit || paymentForm.credit.$error.required || paymentForm.credit.$error.iban }">
+           <ui-bb-credit-suggest-ng
+            name="credit"
+            class="amount-regular-color"
+            data-ng-model="$ctrl.payment.to"
+            data-accounts="$ctrl.accountsTo"
+            data-get-accounts="ext.helpers.normalizeAccounts(accounts)"
+            data-messages="{
+              accountPlaceholder: ('ui-bb-credit-suggest-ng.account.placeholder' | i18n),
+              filterPlaceholder: ('ui-bb-credit-suggest-ng.filter.placeholder' | i18n),
+              newRecipient: ('ui-bb-credit-suggest-ng.filter.newRecipient' | i18n),
+              noResults: ('ui-bb-credit-suggest-ng.filter.noResults' | i18n),
+              hint: ('ui-bb-credit-suggest-ng.filter.hint' | i18n),
+            }"
+            data-allow-external="!$ctrl.payment.from || $ctrl.payment.from.externalTransferAllowed"
+            data-iban-validation-classes
+            data-hide-account-number="true"
+            required>
+          </ui-bb-credit-suggest-ng>
+          <div data-ng-messages="paymentForm.credit.$error" role="alert" class="text-danger">
+            <div data-ng-message="credit" data-i18n-key="form.credit.select"></div>
+            <div data-ng-message="required" data-i18n-key="form.credit.required"></div>
+            <div data-ng-message="iban" data-i18n-key="form.credit.iban"></div>
+          </div>
+        </div>
+        <div data-ng-if="$ctrl.canSaveNewContact($ctrl.payment.to, $ctrl.accountsTo)" class="form-group">
+          <div class="row-fluid">
+            <div class="pull-left" data-i18n-key="dialog.switcher.label"></div>
+            <ui-bb-switcher-ng
+              class="pull-left col-xs-offset-1"
+              data-size="smaller"
+              data-switcher="$ctrl.saveNewContact">
+            </ui-bb-switcher-ng>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="form-group row"
+          data-ng-class="{ 'has-error': paymentForm.description.$error.pattern ||
+            paymentForm.description.$error.maxlength }">
+          <span class="col-xs-12">
+            <label data-i18n-key="form.label.description"></label>
+            <label data-i18n-key="form.label.optional" class="text-muted"></label>
+          </span>
+          <div class="col-xs-12">
+            <textarea name="description"
+              aria-label="{{:: 'form.label.description' | i18n }}"
+              data-ng-model="$ctrl.payment.description"
+              class="form-control"
+              data-ng-attr-placeholder="{{:: 'form.placeholder.description' | i18n }}"
+              rows="3"
+              data-ng-pattern="'^[^$^&%<>]*$'"
+              data-ng-maxlength="140">
+            </textarea>
+            <ui-bb-char-counter-ng
+              data-ng-if="!paymentForm.description.$error.maxlength && !paymentForm.description.$error.pattern"
+              data-state="$ctrl.descriptionCounterState"
+              data-config="ext.helpers.descriptionCharCounterConfig"
+              data-text-el-query="textarea[name='description']">
+            </ui-bb-char-counter-ng>
+          </div>
+          <div data-ng-messages="paymentForm.description.$error" role="alert" class="text-danger col-xs-12">
+            <div data-ng-message="pattern" data-i18n-key="form.error.description.pattern"></div>
+            <div data-ng-message="maxlength" data-i18n-key="form.error.description.maxlength"></div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="execute" data-i18n-key="form.label.schedule" class="col-xs-12"></label>
+          <div data-ui-bb-parent-responsiveness-ng class="checkbox col-xs-12 col-sm-7 col-md-5">
+            <ui-bb-expandable-ng data-chevron="true" class="bb-expandable-box">
+              <ui-bb-expandable-summary-ng>
+                {{ ext.helpers.getScheduleText($ctrl) }}
+              </ui-bb-expandable-summary-ng>
+              <ui-bb-expandable-details-ng>
+                <div class="form-group row">
+                  <div class="col-xs-12" data-i18n-key="form.schedule.execution"></div>
+                  <div class="col-xs-6">
+                    <ui-bb-calendar-popup
+                      data-date="$ctrl.payment.schedule.startDate"
+                      aria-label="{{:: 'form.schedule.execution' | i18n }}">
+                    </ui-bb-calendar-popup>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-xs-12" data-i18n-key="form.schedule.frequency"></div>
+                  <div class="col-xs-6">
+                    <ui-bb-dropdown-select
+                      name="repetition"
+                      data-ng-change="$ctrl.payment.schedule.endDate = ext.helpers.getMinDate($ctrl.payment.schedule.startDate, $ctrl.payment.schedule.transferFrequency)"
+                      data-ng-model="$ctrl.payment.schedule.transferFrequency"
+                      data-ng-disabled="!$ctrl.paymentPreferences.recurring"
+                      data-selected-as="$option.name | i18n | lowercase">
+                      <ui-bb-dropdown-option
+                        data-template-url="templates/option.html"
+                        data-option="repeatType"
+                        data-ng-repeat="repeatType in ext.helpers.getFrequencies($ctrl) track by $index">
+                      </ui-bb-dropdown-option>
+                    </ui-bb-dropdown-select>
+                  </div>
+                </div>
+                <div class="form-group row" data-ng-show="$ctrl.payment.schedule.transferFrequency.value !== $ctrl.singleTransfer.value">
+                  <div class="col-xs-12" data-i18n-key="form.schedule.ending"></div>
+                  <div class="row-fluid">
+                    <div class="col-xs-12 radio">
+                      <label>
+                        <input type="radio" name="endingType"
+                          data-ng-model="$ctrl.payment.endingType"
+                          value="{{ $ctrl.EndingType.NEVER }}"
+                          data-ng-checked="$ctrl.payment.endingType === $ctrl.EndingType.NEVER">
+                          &nbsp;{{ ::'form.schedule.never' | i18n }}
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row-fluid">
+                    <div class="col-xs-3 radio">
+                      <label>
+                        <input type="radio" name="endingType"
+                          data-ng-model="$ctrl.payment.endingType"
+                          value="{{ $ctrl.EndingType.ON }}"
+                          data-ng-checked="$ctrl.payment.endingType === $ctrl.EndingType.ON">
+                          &nbsp;{{ ::'form.schedule.on' | i18n }}
+                      </label>
+                    </div>
+                    <div class="col-xs-6">
+                      <ui-bb-calendar-popup
+                        data-date="$ctrl.payment.schedule.endDate"
+                        aria-label="{{ ::'form.schedule.ending' | i18n }}"
+                        data-disabled="$ctrl.payment.endingType !== $ctrl.EndingType.ON"
+                        data-config="{ minDate: ext.helpers.getMinDate($ctrl.payment.schedule.startDate, $ctrl.payment.schedule.transferFrequency) }">
+                      </ui-bb-calendar-popup>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="row-fluid">
+                    <div class="col-xs-3 radio">
+                      <label>
+                        <input type="radio" name="endingType"
+                          data-ng-model="$ctrl.payment.endingType"
+                          value="{{ $ctrl.EndingType.AFTER }}"
+                          data-ng-checked="$ctrl.payment.endingType === $ctrl.EndingType.AFTER">
+                          &nbsp;{{ ::'form.schedule.after' | i18n }}
+                      </label>
+                    </div>
+                    <div class="col-xs-9">
+                      <input
+                        name="repeat"
+                        type="number"
+                        data-ng-min="{{ ext.helpers.minOccurrences }}"
+                        data-ng-max="{{ ext.helpers.maxOccurences }}"
+                        data-ng-pattern="/^[0-9]\d*?$/"
+                        class="form-control occurence-field"
+                        data-ng-required="$ctrl.payment.endingType === $ctrl.EndingType.AFTER"
+                        data-ng-disabled="$ctrl.payment.endingType !== $ctrl.EndingType.AFTER"
+                        data-ng-model="$ctrl.payment.schedule.repeat"
+                        data-ng-init="$ctrl.payment.schedule.repeat = $ctrl.payment.schedule.repeat || ext.helpers.minOccurrences"
+                      >
+                      <span
+                        data-i18n-key="form.schedule.occurrences"
+                        data-ng-class="{ 'text-muted': $ctrl.payment.endingType !== $ctrl.EndingType.AFTER }"
+                      ></span>
+                      <div data-ng-messages="paymentForm.repeat.$error" role="alert" class="text-danger">
+                        <div data-ng-message="required">{{ 'form.repeat.min' | i18n: { min: ext.helpers.minOccurrences } }}</div>
+                        <div data-ng-message="min">{{ 'form.repeat.min' | i18n: { min: ext.helpers.minOccurrences } }}</div>
+                        <div data-ng-message="max">{{ 'form.repeat.max' | i18n: { max: ext.helpers.maxOccurences } }}</div>
+                        <div data-ng-message="pattern" data-role="ext-bb-initiate-payment-ng-form-schedule-occurrences-error-pattern">{{ 'form.repeat.pattern' | i18n }}</div>
+                        <div data-ng-message="number" data-role="ext-bb-initiate-payment-ng-form-schedule-occurrences-error-number">{{ 'form.repeat.number' | i18n }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ui-bb-expandable-details-ng>
+            </ui-bb-expandable-ng>
+          </div>
+        </div>
+        <div data-ng-if="ext.helpers.canSelectUrgentPayment($ctrl)" class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" data-ng-model="$ctrl.payment.urgent"> {{ 'form.label.urgent' | i18n }}
+            </label>
+            <i class="fa fa-info-circle"
+              aria-hidden="true"
+              data-uib-popover-template="'templates/urgent-payment-popup.html'"
+              data-popover-trigger="click outsideClick"
+              data-popover-placement="top">
+            </i>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer text-right">
+        <button type="submit" class="btn btn-primary btn-lg"
+          data-ng-disabled="paymentForm.$invalid" data-i18n-key="form.label.continue">
+        </button>
+      </div>
+    </div>
+  </form>
+</script>
+
+<script type="text/ng-template" id="templates/review.html">
+  <div data-ng-if="$ctrl.paymentLoading || $ctrl.accountsLoading" class="empty-element-placeholder-relative"></div>
+  <div data-ng-hide="$ctrl.paymentLoading || $ctrl.accountsLoading" class="list-items-wrapper">
+    <div class="panel list-item">
+      <div class="panel-body panel-body-large">
+        <div ng-if="$ctrl.paymentSubmitError" class="row">
+          <div data-uib-alert
+            data-type="{{$ctrl.paymentSubmitError.type}}"
+            data-close="$ctrl.clearPaymentError()">
+            <b data-i18n-key="form.label.error"></b>
+            <span>{{:: $ctrl.paymentSubmitError.messageKey | i18n }}</span>
+            <span data-ng-if="$ctrl.paymentSubmitError.breach && !$ctrl.paymentSubmitError.shadow">
+              <a href="javascript:void(0)"
+                 data-ng-click="ext.breachReportOpened = true;">
+                {{:: 'payment.model.error.breach.details' | i18n }}
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="row form-group">
+          <label class="col-xs-12" i18n-key="form.label.from"></label>
+          <div class="col-xs-12 col-sm-10">
+            <ui-bb-account-card
+              class="bb-account-card"
+              data-account-name="$ctrl.payment.from.name"
+              data-account-number="$ctrl.payment.from.identifier"
+              data-amount="$ctrl.payment.from.amount"
+              data-currency="$ctrl.payment.from.currency"
+              data-show-avatar="true">
+            </ui-bb-account-card>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-10 text-right">
+            <ui-bb-format-amount
+              class="transfer-amount amount-regular-color"
+              data-amount="$ctrl.payment.amount.value"
+              data-currency="$ctrl.payment.amount.currency"
+              data-wrap>
+            </ui-bb-format-amount>
+            <i class="fa fa-arrow-down transfer-direction" aria-hidden="true"></i>
+            <span data-ng-messages="ext.helpers.showCrossCurrencyMessage($ctrl)" role="info" class="cross-currency-info">
+              <span data-ng-message="cross-currency">
+                <i class="fa fa-info-circle text-muted"
+                  aria-hidden="true"
+                  data-popover-trigger="click outsideClick"
+                  data-uib-popover-template="'templates/cross-currency-popup-review.html'"
+                  data-popover-placement="bottom">
+                </i>
+              </span>
+            </span>
+          </div>
+        </div>
+         <div class="row form-group">
+          <label class="col-xs-12" i18n-key="form.label.to"></label>
+          <div class="col-xs-12 col-sm-10">
+            <ui-bb-account-card
+              class="bb-account-card"
+              data-account-name="$ctrl.payment.to.name"
+              data-account-image="$ctrl.payment.to.image"
+              data-account-number="$ctrl.payment.to.identifier"
+              data-amount="$ctrl.payment.to.amount"
+              data-currency="$ctrl.payment.to.currency"
+              data-show-avatar="true">
+            </ui-bb-account-card>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel list-item">
+      <div class="panel-body panel-body-large">
+        <div class="row form-group" data-ng-if="$ctrl.payment.description">
+          <label class="col-xs-12" data-i18n-key="form.label.description"></label>
+          <div class="col-xs-12 text-muted break-word" data-ng-bind="$ctrl.payment.description"></div>
+        </div>
+        <div class="row form-group">
+          <label class="col-xs-12" data-i18n-key="form.label.schedule"></label>
+          <div class="col-xs-12 text-muted" data-ng-bind="ext.helpers.getScheduleText($ctrl)"></div>
+        </div>
+        <div data-ng-if="ext.helpers.canSelectUrgentPayment($ctrl) && $ctrl.payment.urgent" class="row form-group">
+          <div class="col-xs-12">
+            <label data-i18n-key="form.label.urgent"></label>
+            <i class="fa fa-info-circle"
+              aria-hidden="true"
+              data-popover-trigger="click outsideClick"
+              data-uib-popover-template="'templates/urgent-payment-popup.html'"
+              data-popover-placement="top">
+            </i>
+          </div>
+          <div class="col-xs-12 text-muted" data-i18n-key="form.label.urgent.on"></div>
+        </div>
+      </div>
+      <div class="panel-footer text-right">
+        <button type="button"
+          class="btn btn-link btn-lg"
+          data-ng-click="ext.cancelConfirmOpened = true"
+          data-i18n-key="form.label.cancel">
+        </button>
+        <button type="button"
+          class="btn btn-primary btn-lg"
+          data-ng-click="ext.helpers.makePayment($ctrl, $parent)"
+          data-i18n-key="form.label.continue">
+        </button>
+        <button type="button"
+          class="btn btn-default btn-lg"
+          data-ng-click="$parent.step = 'form'"
+          data-i18n-key="form.label.edit">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ui-bb-modal data-is-open="ext.breachReportOpened">
+    <div class="modal-header">
+      <h3 class="modal-title">{{:: 'payment.model.error.breach.modal.header' | i18n}}</h3>
+    </div>
+    <div class="modal-body">
+      <div>
+        {{:: 'payment.model.error.breach' | i18n}} {{:: 'payment.model.error.breach.details.below' | i18n}}:
+      </div>
+      <br>
+      <div><b>{{:: 'payment.model.error.breach.amount' | i18n }}</b></div>
+      <ui-bb-format-amount
+        class="transfer-amount amount-regular-color"
+        data-amount="$ctrl.payment.amount.value"
+        data-currency="$ctrl.payment.amount.currency"
+        data-wrap>
+      </ui-bb-format-amount>
+      <h4>{{:: 'payment.model.error.breach.breached' | i18n }}</h4>
+      <div data-ng-repeat="breach in $ctrl.paymentSubmitError.report">
+        <div data-ng-repeat="info in breach.breachInfo" data-ng-if="!breach.shadow">
+
+          <!-- Periodical limits -->
+          <div data-ng-if="info.timeframe">
+            <div data-ng-if="breach['user-BBID']">
+              <b>{{:: 'payment.model.error.breach.limit.type' | i18n: { breach: info.breachType.toLowerCase(), type: info.timeframe.period.toLowerCase() } }}</b>
+            </div>
+            <div data-ng-if="!breach['user-BBID']">
+              <b>{{ breach.limitedEntity[breach.limitedEntity.length - 1].type }} {{:: 'payment.model.error.breach.limit' | i18n: { type: info.timeframe.period.toLowerCase() } }}:</b>
+              <span>{{ breach.limitedEntity[breach.limitedEntity.length - 1].description }}</span>
+            </div>
+            <div>
+              <span>{{:: 'payment.model.error.breach.limit.threshold' | i18n }}:</span>
+              <ui-bb-format-amount
+                class="transfer-amount amount-regular-color"
+                data-amount="info.currentThreshold"
+                data-currency="breach.currency"
+                data-wrap>
+              </ui-bb-format-amount>
+            </div>
+
+            <div>
+              <span>{{:: 'payment.model.error.breach.limit.consumed' | i18n }}:</span>
+              <ui-bb-format-amount
+                class="transfer-amount amount-regular-color"
+                data-amount="info.currentConsumption"
+                data-currency="breach.currency"
+                data-wrap>
+              </ui-bb-format-amount>
+            </div>
+
+            <div>
+              <span>{{:: 'payment.model.error.breach.limit.available' | i18n }}:</span>
+              <ui-bb-format-amount
+                class="transfer-amount amount-regular-color"
+                data-amount="(info.currentThreshold - info.currentConsumption)"
+                data-currency="breach.currency"
+                data-wrap>
+              </ui-bb-format-amount>
+            </div>
+
+            <div>
+              <span>{{:: 'payment.model.error.breach.limit.period' | i18n }}:</span>
+              {{ info.timeframe.startTime | date: 'shortDate' }} - {{ info.timeframe.endTime | date: 'shortDate' }}
+            </div>
+            <br>
+          </div>
+
+          <!-- Transactional limits -->
+          <div data-ng-if="!info.timeframe">
+            <div><b data-i18n-key="payment.model.error.breach.limit.transactional"></b></div>
+            <div>
+              <span>{{ 'payment.model.error.breach.limit.threshold' | i18n }}:</span>
+              <ui-bb-format-amount
+                class="transfer-amount amount-regular-color"
+                data-amount="info.currentThreshold"
+                data-currency="breach.currency"
+                data-wrap>
+              </ui-bb-format-amount>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-ng-click="ext.breachReportOpened = false">
+        {{:: 'payment.model.error.breach.modal.close' | i18n}}
+      </button>
+    </div>
+  </ui-bb-modal>
+  
+  <ui-bb-confirm
+    data-is-open="ext.cancelConfirmOpened"
+    data-on-confirm="ext.helpers.resetPayment($ctrl, $parent)"
+    data-labels="{
+      heading: ('dialog.cancel.title' | i18n),
+      bodyHtml: ('dialog.cancel.body' | i18n),
+      confirm: ('dialog.cancel.yes' | i18n),
+      cancel: ('dialog.cancel.no' | i18n)
+    }">
+  </ui-bb-confirm>
+</script>
+
+<script type="text/ng-template" id="templates/confirmation.html">
+  <div data-ng-if="$ctrl.accountsLoading" class="empty-element-placeholder-relative"></div>
+  <div class="panel" data-ng-hide="$ctrl.accountsLoading">
+    <div class="panel-body panel-body-large">
+      <div class="row text-center">
+        <i class="fa fa-check fa-2x text-success" aria-hidden="true"></i>
+        <p data-i18n-key="{{'form.label.' + $ctrl.createPaymentResponseStatus}}"></p>
+      </div>
+      <div class="row form-group">
+        <label class="col-xs-12" data-i18n-key="form.label.from"></label>
+        <div class="col-xs-12 col-sm-10">
+          <ui-bb-account-card
+            class="bb-account-card"
+            data-account-name="$ctrl.payment.from.name"
+            data-account-number="$ctrl.payment.from.identifier"
+            data-show-avatar="true">
+          </ui-bb-account-card>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 text-right">
+          <ui-bb-format-amount
+            class="transfer-amount amount-regular-color"
+            data-amount="$ctrl.payment.amount.value"
+            data-currency="$ctrl.payment.amount.currency"
+            data-wrap>
+          </ui-bb-format-amount>
+          <i class="fa fa-arrow-down transfer-direction" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="row form-group">
+        <label class="col-xs-12" data-i18n-key="form.label.to"></label>
+        <div class="col-xs-12 col-sm-10">
+          <ui-bb-account-card
+            class="bb-account-card"
+            data-account-name="$ctrl.payment.to.name"
+            data-account-image="$ctrl.payment.to.image"
+            data-account-number="$ctrl.payment.to.identifier"
+            data-show-avatar="true">
+          </ui-bb-account-card>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer text-right">
+      <button type="button"
+        class="btn btn-default btn-lg"
+        data-ng-click="ext.helpers.resetPayment($ctrl, $parent)"
+        data-i18n-key="form.label.confirmation.payment">
+      </button>
+    </div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="templates/cross-currency-popup.html">
+  <div class="text-center">
+    <div class="text-muted" data-i18n-key="cross-currency.exchange-rate"></div>
+    <b>
+      <ui-bb-format-amount
+        data-amount="1"
+        data-currency="$ctrl.payment.from.currency">
+      </ui-bb-format-amount>
+      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+      <ui-bb-format-amount
+        data-amount="$ctrl.rate"
+        data-currency="$ctrl.payment.amount.currency">
+      </ui-bb-format-amount>
+    </b>
+    <div class="text-muted" data-i18n-key="cross-currency.warning-note"></div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="templates/cross-currency-popup-review.html">
+  <div class="text-center">
+    <div class="text-muted" data-i18n-key="cross-currency.indicative-amount"></div>
+    <b>
+      <ui-bb-format-amount
+        data-amount="$ctrl.payment.amount.value / $ctrl.rate"
+        data-currency="$ctrl.payment.from.currency">
+      </ui-bb-format-amount>
+    </b>
+    <hr>
+    <div class="text-muted" data-i18n-key="cross-currency.exchange-rate"></div>
+    <b>
+      <ui-bb-format-amount
+        data-amount="1"
+        data-currency="$ctrl.payment.from.currency">
+      </ui-bb-format-amount>
+      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+      <ui-bb-format-amount
+        data-amount="$ctrl.rate"
+        data-currency="$ctrl.payment.amount.currency">
+      </ui-bb-format-amount>
+    </b>
+    <div class="text-muted" data-i18n-key="cross-currency.warning-note"></div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="templates/urgent-payment-popup.html">
+  <div class="text-center">
+    <p data-i18n-key="payment.urgent.popup.title"></p>
+    <p><strong data-i18n-key="payment.urgent.popup.subtitle"></strong></p>
+    <p class="text-muted" data-i18n-key="payment.urgent.popup.description"></p>
+    <p class="text-muted" data-i18n-key="payment.urgent.popup.warning"></p>
+  </div>
+</script>
+
+<script type="text/ng-template" id="templates/option.html">
+  <a class="clearfix cursor-pointer" tabindex="0" href="javascript:void(0)">
+    <div>
+      <p class="list-group-item-text">{{:: $option.name | i18n | lowercase}}</p>
+    </div>
+  </a>
+</script>

@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.model-bb-messages-ng@^3.2.5",
+        "scope": null,
+        "escapedName": "src.model-bb-messages-ng",
+        "name": "src.model-bb-messages-ng",
+        "rawSpec": "^3.2.5",
+        "spec": ">=3.2.5 <4.0.0",
+        "type": "range"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.model-bb-messages-ng@>=3.2.5 <4.0.0",
+  "_id": "src.model-bb-messages-ng@3.2.5",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.model-bb-messages-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.model-bb-messages-ng@^3.2.5",
+    "scope": null,
+    "escapedName": "src.model-bb-messages-ng",
+    "name": "src.model-bb-messages-ng",
+    "rawSpec": "^3.2.5",
+    "spec": ">=3.2.5 <4.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-messages-ng/-/src.model-bb-messages-ng-3.2.5.tgz",
+  "_shasum": "f93e94e987fbf22a9cc99212c418305c5ff362b9",
+  "_shrinkwrap": null,
+  "_spec": "src.model-bb-messages-ng@^3.2.5",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.model-bb-messages-ng/-/src.model-bb-messages-ng-3.2.5.tgz",
+    "shasum": "f93e94e987fbf22a9cc99212c418305c5ff362b9"
+  },
+  "name": "src.model-bb-messages-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "3.2.5"
+}

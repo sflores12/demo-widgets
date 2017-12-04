@@ -1,0 +1,134 @@
+<div
+  class="ext-bbm-product-summary-ng"
+  data-ng-controller="ProductSummaryController as $ctrl">
+  <div class="bbm-layout bbm-layout-scroll">
+    <div
+      class="bbm-list"
+      data-ng-if="!$ctrl.isProductLoading && $ctrl.hasProducts()">
+      <div
+        class="bbm-list-group"
+        data-role="product-kind"
+        data-index="{{$index}}"
+        data-ng-repeat="productKind in $ctrl.productKinds track by productKind.id">
+        <div class="bbm-list-group-header">
+          <h2
+            class="bbm-list-group-title"
+            data-product-kind-name="{{productKind.name}}"
+            data-role="product-kind-name"
+            data-ng-bind="productKind.name">
+          </h2>
+        </div>
+        <ul
+          class="bbm-list-group-items"
+          aria-label="{{ productKind.name }}">
+          <li
+            class="bbm-list-item"
+            data-role="product"
+            data-index="{{$index}}"
+            data-ng-click="$ctrl.selectProduct(product)"
+            data-ng-repeat="product in productKind.products track by product.id">
+            <div class="bbm-account-compact">
+              <div class="bbm-account-compact-primary-information">
+                <h4
+                  class="bbm-account-compact-name"
+                  data-role="product-name"
+                  data-ng-bind="product.alias || product.name">
+                </h4>
+                <div
+                  class="bbm-account-compact-primary-amount"
+                  data-ng-if="product.primaryValue">
+                  <ui-bb-format-amount
+                    data-amount="product.primaryValue"
+                    data-currency="product.currency"
+                    data-wrap>
+                  </ui-bb-format-amount>
+                </div>
+              </div>
+              <div class="bbm-account-compact-secondary-information">
+                <div class="bbm-account-compact-identifier">
+                  <span
+                    class="prevent-ios-click"
+                    data-role="product-id"
+                    data-ng-bind="product.identifier">
+                  </span>
+                </div>
+                <div class="bbm-account-compact-other-amounts">
+                  <div
+                    class="bbm-account-compact-secondary-amount"
+                    data-ng-if="product.secondaryValue">
+                    <span data-i18n-key="{{ product.secondaryLabel }}"></span>
+                    <span>
+                      <ui-bb-format-amount
+                        data-amount="product.secondaryValue"
+                        data-currency="product.currency"
+                        data-wrap>
+                      </ui-bb-format-amount>
+                    </span>
+                  </div>
+                  <div
+                    class="bbm-account-compact-tertiary-amount"
+                    data-ng-if="product.tertiaryValue">
+                    <span data-i18n-key="{{ product.tertiaryLabel }}"></span>
+                    <span>
+                      <ui-bb-format-amount
+                        data-amount="product.tertiaryValue"
+                        data-currency="product.currency"
+                        data-wrap>
+                      </ui-bb-format-amount>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- No data state -->
+    <div
+      class="bbm-empty-state"
+      data-ng-if="ext.helpers.isEmptyState($ctrl)">
+      <div class="bbm-empty-state-icon">
+        <i class="fa fa-credit-card"></i>
+      </div>
+      <h2
+        class="bbm-empty-state-title"
+        data-i18n-key="no.products.title">
+      </h2>
+      <p
+        class="bbm-empty-state-message"
+        data-i18n-key="no.products.message">
+      </p>
+    </div>
+
+    <!-- Error state -->
+    <div
+      class="bbm-error-state"
+      data-ng-if="ext.helpers.isErrorState($ctrl)">
+      <div class="bbm-error-state-icon">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      </div>
+      <h2
+        class="bbm-error-state-title"
+        data-i18n-key="message.loading.failed.title">
+      </h2>
+      <p
+        class="bbm-error-state-message"
+        data-i18n-key="message.loading.failed.body">
+      </p>
+    </div>
+
+    <!-- Loading state -->
+    <div
+      class="bbm-loading-state"
+      data-ng-if="ext.helpers.isInitialLoading($ctrl)">
+      <div class="bbm-loading-state-spinner">
+      </div>
+      <p
+        class="bbm-loading-state-message"
+        data-i18n-key="message.loading">
+      </p>
+    </div>
+  </div>
+</div>

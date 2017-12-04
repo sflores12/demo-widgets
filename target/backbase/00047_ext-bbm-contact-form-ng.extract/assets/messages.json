@@ -1,0 +1,14 @@
+{
+  "en-US": {
+    "form.label.name": "Name",
+    "form.label.accountNumber": "Account Number",
+    "form.label.saveChanges": "Save",
+
+    "form.placeholder.name": "Name Surname",
+    "form.placeholder.accountNumber": "NL01 IBAN 0123 4567 89",
+
+    "errors.requiredName": "Please input a name",
+    "errors.requiredAccountIBAN": "Please input an IBAN",
+    "errors.invalidAccountIBAN": "Please input a valid IBAN"
+  }
+}

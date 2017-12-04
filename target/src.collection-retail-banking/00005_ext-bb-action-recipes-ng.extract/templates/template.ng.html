@@ -1,0 +1,213 @@
+<div class="ext-bb-action-recipes-ng" data-ng-controller="ActionRecipesController as $ctrl"
+  data-ng-init="views = $ctrl.static.View">
+  <ui-bb-loading-indicator-ng data-is-loading="$ctrl.state.loading"
+    data-loading-text="{{ 'label.loading' | i18n }}">
+    <ui-bb-substitute-error-ng data-message="$ctrl.state.error | i18n">
+      <div data-ng-include="'templates/' + $ctrl.currentView() + '.html'"></div>
+    </ui-bb-substitute-error-ng>
+  </ui-bb-loading-indicator-ng>
+</div>
+
+<!-- Recipe view -->
+<script type="text/ng-template" id="templates/create-recipe.html">
+  <div class="page-header">
+    <h3 data-i18n-key="label.recipe.new-action"></h3>
+  </div>
+  <div class="panel panel-default" data-ng-if="$ctrl.state.newAction">
+    <div class="panel-heading">
+      <span class="panel-title">{{:: $ctrl.state.newAction.specification.type | i18n}}</span>
+      <button type="button"
+        class="close push-right"
+        aria-label="{{:: 'label.recipe.new-action.close.aria-label' | i18n}}"
+        data-ng-click="$ctrl.onCreateDismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="panel-body">
+      <div data-ng-include="'templates/recipe/' + $ctrl.state.newAction.filter.templateId + '.html'"></div>
+      <div data-ng-include="'templates/recipe/channels.html'"></div>
+    </div>
+    <div class="panel-footer">
+      <button class="btn btn-primary"
+        data-ng-disabled="!ext.helpers.isValid($ctrl.state.newAction)"
+        data-ng-click="$ctrl.onSave($ctrl.state.newAction)"
+        data-i18n-key="label.recipe.saveAndEnable">
+      </button>
+    </div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="templates/edit-recipe.html">
+  <div class="page-header">
+    <h3 data-i18n-key="label.recipe.edit-action"></h3>
+  </div>
+  <div class="panel panel-default" data-ng-if="$ctrl.state.newAction">
+    <div class="panel-heading">
+      <span class="panel-title">{{:: $ctrl.state.newAction.specification.type | i18n}}</span>
+      <button type="button"
+        class="close push-right"
+        aria-label="{{:: 'label.recipe.edit-action.close.aria-label' | i18n}}"
+        data-ng-click="$ctrl.onCreateDismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="panel-body">
+      <div data-ng-include="'templates/recipe/' + $ctrl.state.newAction.filter.templateId + '.html'"></div>
+      <div data-ng-include="'templates/recipe/channels.html'"></div>
+    </div>
+    <div class="panel-footer">
+      <button class="btn btn-primary"
+        data-ng-disabled="!ext.helpers.isValid($ctrl.state.newAction)"
+        data-ng-click="$ctrl.onSave($ctrl.state.newAction)"
+        data-i18n-key="label.recipe.save">
+      </button>
+      <button class="btn btn-danger"
+        data-ng-click="ext.deleteConfirmOpened = true"
+        data-i18n-key="label.edit.delete">
+      </button>
+    </div>
+  </div>
+
+  <ui-bb-confirm
+    data-is-open="ext.deleteConfirmOpened"
+    data-labels="{
+      heading: ('label.recipe.confirm.remove-header' | i18n),
+      bodyText: ('label.recipe.confirm.remove-text' | i18n),
+      confirm: ('label.recipe.confirm.remove-btn' | i18n),
+      cancel: ( 'label.recipe.confirm.cancel-btn' | i18n)
+    }"
+    data-on-confirm="$ctrl.onRemove($ctrl.state.newAction)">
+  </ui-bb-confirm>
+</script>
+
+<script type="text/ng-template" id="templates/recipe/credit-transaction.html">
+  <div data-ng-include="'templates/recipe/account.html'"></div>
+
+  <div class="row recipe-amount-select">
+    <div class="col-xs-12 col-sm-6 form-group">
+      <label data-i18n-key="label.recipe.newTransaction.gte"></label>
+    </div>
+    <div class="col-xs-12 col-sm-6 form-group">
+      <div class="col-xs-12 input-group">
+        <ui-bb-currency-input-ng
+          data-max-length="6"
+          placeholder="0"
+          data-ng-model="$ctrl.state.newAction.filter.amount"
+          data-messages="{
+            'label.currency': ('ui-bb-currency-input-ng.label.currency' | i18n),
+            'label.amount': ('ui-bb-currency-input-ng.label.amount' | i18n),
+            'label.decimals': ('ui-bb-currency-input-ng.label.decimals' | i18n),
+          }">
+        </ui-bb-currency-input-ng>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="templates/recipe/account.html">
+  <div class="form-group recipe-acount-select">
+    <ui-bb-account-selector
+      data-ng-model="$ctrl.state.newAction.filter.account"
+      data-accounts="$ctrl.state.accounts"
+      data-ng-change="$ctrl.state.newAction.filter.changeAccount($item)"
+      aria-label="{{:: 'label.recipe.select-account' | i18n }}"
+      required>
+    </ui-bb-account-selector>
+  </div>
+</script>
+
+<!-- New recipe: Channel -->
+<script type="text/ng-template" id="templates/recipe/channels.html">
+  <div class="row recipe-channel-select">
+    <div class="col-xs-12">
+      <div class="form-inline">
+        <div class="form-group">
+          <label>{{ 'label.recipe.notify-me' | i18n }}</label>
+          <label class="checkbox-inline" data-ng-if="$ctrl.state.newAction.actions.browser">
+            <input type="checkbox" data-ng-model="$ctrl.state.newAction.actions.browser.value">{{ 'label.recipe.notify.browser' | i18n }}
+          </label>
+          <label class="checkbox-inline" data-ng-if="$ctrl.state.newAction.actions.sms">
+            <input type="checkbox" data-ng-model="$ctrl.state.newAction.actions.sms.value">{{ 'label.recipe.notify.sms' | i18n }}
+          </label>
+          <label class="checkbox-inline" data-ng-if="$ctrl.state.newAction.actions.email">
+            <input type="checkbox" data-ng-model="$ctrl.state.newAction.actions.email.value">{{ 'label.recipe.notify.email' | i18n }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<!-- New action: Specification selection -->
+<script type="text/ng-template" id="templates/select-specification.html">
+  <div class="page-header">
+    <span class="h3" data-i18n-key="label.recipe.choose-action"></span>
+    <button type="button"
+      class="btn btn-default pull-right"
+      data-i18n-key="label.recipe.cancel"
+      data-ng-click="$ctrl.navigateTo(views.LIST)">
+    </button>
+  </div>
+  <div class="list-group specification-list">
+    <a href="#" class="list-group-item specification"
+      data-ng-repeat="specification in $ctrl.state.specifications track by specification.id"
+      data-ng-click="$ctrl.onCreate(specification)">
+      <span class="specification-name" data-i18n-key="{{ specification.type }}"></span>
+    </a>
+  </div>
+</script>
+
+<!-- Action list -->
+<script type="text/ng-template" id="templates/list.html">
+  <div class="page-header">
+    <span class="h3" data-i18n-key="label.title"></span>
+    <button type="button"
+      class="btn btn-primary text-right pull-right"
+      data-i18n-key="label.new-action"
+      aria-label="{{:: 'label.new-action' | i18n }}"
+      data-ng-click="$ctrl.navigateTo(views.SPECIFICATIONS)">
+    </button>
+  </div>
+  <div class="text-center" data-ng-if="$ctrl.state.recipes.length === 0">
+    <div class="h4" data-i18n-key="label.list.empty"></div>
+  </div>
+  <div class="list-group recipe-list" data-ng-if="$ctrl.state.recipes.length > 0">
+    <a href="#" class="list-group-item recipe"
+      data-ng-repeat="recipe in $ctrl.state.recipes track by recipe.id"
+      data-ng-click="$ctrl.onEdit(recipe)">
+      <div class="row">
+        <div class="col-xs-10">
+          <div data-ng-include="'templates/list-item/' + recipe.filter.templateId + '.html'"></div>
+        </div>
+        <div class="col-xs-2">
+          <ui-bb-switcher-ng class="pull-right"
+            data-ng-click="recipe.active ? $ctrl.onActivate(recipe) : $ctrl.onDeactivate(recipe); $event.stopPropagation();"
+            data-switcher="recipe.active"
+            data-size="small"
+            data-ng-disabled="recipe.changingStatus"
+            aria-label="{{:: 'label.recipe.activation.aria-label' | i18n }}">
+          </ui-bb-switcher-ng>
+        </div>
+      </div>
+    </a>
+  </div>
+</script>
+
+<script type="text/ng-template" id="templates/list-item/credit-transaction.html">
+  <div>
+    <span data-i18n-key="label.notify-me"></span>
+    <span class="specification-name"><b>{{ 'label.list.recipe.type.newTransaction' | i18n }}</b></span>
+    <span class="trigger-condition">{{ $ctrl.static.labels.condition[recipe.filter.condition] | i18n }}</span>
+    <span class="trigger-value">
+      <b>
+        <ui-bb-format-amount
+          data-amount="recipe.filter.amount.value"
+          data-currency="recipe.filter.account.currency">
+        </ui-bb-format-amount>
+      </b>
+    </span>
+  </div>
+  <div>
+    <span class="text-muted account-number">{{ recipe.filter.account.kind | i18n }} - {{ recipe.filter.account.IBAN || recipe.filter.account.name }}</span>
+  </div>
+</script>

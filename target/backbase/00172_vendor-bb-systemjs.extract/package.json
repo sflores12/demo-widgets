@@ -1,0 +1,73 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-systemjs@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-systemjs",
+        "name": "vendor-bb-systemjs",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-systemjs@0.19.38-bb.1",
+  "_id": "vendor-bb-systemjs@0.19.38-bb.1",
+  "_inCache": true,
+  "_location": "/vendor-bb-systemjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-systemjs@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-systemjs",
+    "name": "vendor-bb-systemjs",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/lib-bb-start",
+    "/widget-bb-action-recipes-ng",
+    "/widget-bb-budget-ng",
+    "/widget-bb-contact-ng",
+    "/widget-bb-income-spending-analysis-category-ng",
+    "/widget-bb-initiate-payment-ng",
+    "/widget-bb-login-ng",
+    "/widget-bb-manage-payment-orders-ng",
+    "/widget-bb-manage-products-ng",
+    "/widget-bb-messages-ng",
+    "/widget-bb-notification-badge-ng",
+    "/widget-bb-notification-center-ng",
+    "/widget-bb-notification-popups-ng",
+    "/widget-bb-personal-profile-ng",
+    "/widget-bb-places-ng",
+    "/widget-bb-product-summary-ng",
+    "/widget-bb-transaction-categories-ng",
+    "/widget-bb-transactions-ng",
+    "/widget-bb-turnovers-ng",
+    "/widget-bb-user-menu-ng",
+    "/widget-bbm-initiate-payment-ng",
+    "/widget-bbm-notification-center-ng",
+    "/widget-bbm-personal-profile-ng",
+    "/widget-bbm-product-details-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+  "_shasum": "c58f1805be2dbfa37934c42643a6df0d6964f6db",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-systemjs@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38-bb.1.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {},
+  "description": "Universal dynamic module loader - loads ES6 modules, AMD, CommonJS and global scripts in the browser and NodeJS.",
+  "devDependencies": {},
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "scripts/vendor-bb-systemjs.js",
+  "name": "vendor-bb-systemjs",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-systemjs\n\nUniversal dynamic module loader - loads ES6 modules, AMD, CommonJS and global scripts in the browser and NodeJS.\n\nhttps://github.com/systemjs/systemjs/blob/master/README.md\n",
+  "readmeFilename": "README.md",
+  "version": "0.19.38-bb.1"
+}

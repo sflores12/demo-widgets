@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <widget>
+        <name>widget-bb-notification-center-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="TemplateName">
+                <value type="string">Standard_Widget</value>
+            </property>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Widget Notification Center</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/assets/icon.png</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
+            </property>
+            <property name="extension" label="Extension name" viewHint="text-input,admin">
+                <value type="string">ext-bb-notification-center-ng</value>
+            </property>
+            <property label="Number of notifications per page" name="bb.notification.pageSize" viewHint="text-input,admin">
+                <value type="long">10</value>
+            </property>
+            <property label="Number of notifications per page (DEPRECATED)" name="itemsPerPage" viewHint="text-input,admin">
+                <value type="long">0</value>
+            </property>
+            <property label="Max. number of navigation pages" name="bb.notification.maxNavPages" viewHint="text-input,admin">
+                <value type="long">3</value>
+            </property>
+            <property label="Pagination type (pagination, load-more)" name="bb.notification.paginationType" viewHint="text-input,admin">
+                <value type="string">pagination</value>
+            </property>
+            <property label="Dismiss message time" name="dismissMessageTime" viewHint="checkbox,admin">
+                <value type="long">5</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="text-input,admin,designModeOnly">
+                <value type="string">1.5.61</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

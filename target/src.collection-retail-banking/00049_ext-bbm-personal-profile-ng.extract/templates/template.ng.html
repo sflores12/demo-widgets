@@ -1,0 +1,245 @@
+<div
+  class="ext-bbm-personal-profile-ng"
+  data-ng-controller="DetailsController as $ctrl">
+  <div class="bbm-layout bbm-layout-scroll">
+    <div
+      class="bbm-user-card"
+      data-ng-if="$ctrl.state.user.data">
+      <div class="bbm-user-card-avatar">
+        <ui-bb-avatar
+          class="bbm-avatar bbm-avatar-lg img-circle"
+          name="$ctrl.state.user.data.firstName + ' ' + $ctrl.state.user.data.lastName">
+        </ui-bb-avatar>
+      </div>
+      <h2 class="bbm-user-card-title">
+        <span
+          data-role="user-first-name"
+          data-ng-bind="$ctrl.state.user.data.firstName">
+        </span>
+        <span
+          data-role="user-last-name"
+          data-ng-bind="$ctrl.state.user.data.lastName">
+        </span>
+      </h2>
+    </div>
+
+    <div
+      class="bbm-form-view"
+      data-ng-if="$ctrl.state.user.data">
+      <!-- General information -->
+      <div class="bbm-form-view-group">
+        <ul class="bbm-form-view-group-items">
+          <li class="bbm-form-view-item" data-ng-if="$ctrl.state.user.data.dateOfBirth">
+            <div class="bbm-data">
+              <div class="bbm-data-content">
+                <div
+                  class="bbm-data-label"
+                  data-i18n-key="label.birthDate">
+                </div>
+                <div class="bbm-data-value">
+                  <span
+                    data-role="user-date-of-birth"
+                    data-ng-bind="$ctrl.state.user.data.dateOfBirth">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="bbm-form-view-item" data-ng-if="$ctrl.state.user.data.street">
+            <div class="bbm-data">
+              <div class="bbm-data-content">
+                <div
+                  class="bbm-data-label"
+                  data-i18n-key="label.address">
+                </div>
+                <div class="bbm-data-value">
+                  <span
+                    class="prevent-ios-click"
+                    data-role="user-street"
+                    data-ng-bind="$ctrl.state.user.data.street">
+                  </span>
+                  <span
+                    class="prevent-ios-click"
+                    data-role="user-house-number"
+                    data-ng-bind="$ctrl.state.user.data.houseNumber">
+                  </span>
+                </div>
+                <div class="bbm-data-value">
+                  <span
+                    data-role="user-postal-code"
+                    class="prevent-ios-click"
+                    data-ng-bind="$ctrl.state.user.data.postalCode">
+                  </span>
+                  <span
+                    data-role="user-city"
+                    class="prevent-ios-click"
+                    data-ng-bind="$ctrl.state.user.data.city">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Phones -->
+      <div class="bbm-form-view-group">
+        <div class="bbm-form-view-group-header">
+          <h2
+            class="bbm-form-view-group-title"
+            data-i18n-key="label.phoneNumbers">
+          </h2>
+        </div>
+        <ul class="bbm-form-view-group-items">
+          <li
+            class="bbm-form-view-item"
+            data-ng-if="$ctrl.state.user.data.phones.length > 0"
+            data-ng-repeat="phone in $ctrl.state.user.data.phones track by $index">
+            <div class="bbm-data">
+              <div class="bbm-data-content">
+                <div
+                  class="bbm-data-label"
+                  data-ng-if="phone.primary"
+                  data-i18n-key="label.primaryPhone">
+                </div>
+                <div
+                  class="bbm-data-label"
+                  data-ng-if="!phone.primary"
+                  data-i18n-key="label.additionalPhone">
+                </div>
+                <div class="bbm-data-value">
+                  <span
+                    class="prevent-ios-click"
+                    data-role="user-phone"
+                    data-ng-bind="phone.value">
+                  </span>
+                </div>
+              </div>
+              <div class="bbm-data-actions">
+                <div class="bbm-data-action bbm-data-action-edit">
+                  <button
+                    class="btn btn-icon"
+                    data-ng-click="$ctrl.showEditPhoneForm($index)">
+                    <span
+                      class="bbm-icon bbm-icon-edit fa fa-pencil"
+                      aria-hidden="true">
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="bbm-form-view-item">
+            <div class="bbm-data">
+              <div class="bbm-data-actions">
+                <div class="bbm-data-action bbm-data-action-add">
+                  <a
+                    class="btn btn-link"
+                    data-i18n-key="label.addPhone"
+                    data-ng-click="$ctrl.showAddPhoneForm()"
+                    role="button"
+                    tabindex="0">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bbm-form-view-group">
+        <div class="bbm-form-view-group-header">
+          <h2
+            class="bbm-form-view-group-title"
+            data-i18n-key="label.emailAddresses">
+          </h2>
+        </div>
+        <ul class="bbm-form-view-group-items">
+          <li
+            class="bbm-form-view-item"
+            data-ng-if="$ctrl.state.user.data.emails.length > 0"
+            data-ng-repeat="email in $ctrl.state.user.data.emails track by $index">
+            <div class="bbm-data">
+              <div class="bbm-data-content">
+                <div
+                  class="bbm-data-label"
+                  data-ng-if="email.primary"
+                  data-i18n-key="label.primaryEmail">
+                </div>
+                <div
+                  class="bbm-data-label"
+                  data-ng-if="!email.primary"
+                  data-i18n-key="label.additionalEmail">
+                </div>
+                <div class="bbm-data-value">
+                  <span
+                    class="prevent-ios-click"
+                    data-role="user-email"
+                    data-ng-bind="email.value">
+                  </span>
+                </div>
+              </div>
+              <div class="bbm-data-actions">
+                <div class="bbm-data-action bbm-data-action-edit">
+                  <button
+                    class="btn btn-icon"
+                    data-ng-click="$ctrl.showEditEmailForm($index)">
+                    <span
+                      class="bbm-icon bbm-icon-edit fa fa-pencil"
+                      aria-hidden="true">
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="bbm-form-view-item">
+            <div class="bbm-data">
+              <div class="bbm-data-actions">
+                <div class="bbm-data-action bbm-data-action-add">
+                  <a
+                    class="btn btn-link"
+                    data-i18n-key="label.addEmail"
+                    data-ng-click="$ctrl.showAddEmailForm()"
+                    role="button"
+                    tabindex="0">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Error state -->
+    <div
+      class="bbm-error-state"
+      data-ng-if="ext.helpers.showErrorState($ctrl)">
+      <div class="bbm-error-state-icon">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      </div>
+      <h2
+        class="bbm-error-state-title"
+        data-i18n-key="message.loading.failed.title">
+      </h2>
+      <p
+        class="bbm-error-state-message"
+        data-i18n-key="message.loading.failed.body">
+      </p>
+    </div>
+
+    <!-- Loading state -->
+    <div
+      class="bbm-loading-state"
+      data-ng-if="ext.helpers.showLoadingState($ctrl)">
+      <div class="bbm-loading-state-spinner">
+      </div>
+      <p
+        class="bbm-loading-state-message"
+        data-i18n-key="message.loading">
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>ext-bb-notification-center-ng</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property label="Title" name="title" viewHint="text-input,admin">
+                <value type="string">Notification Center Extension</value>
+            </property>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">2.1.60</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/ext-bb-notification-center-ng.js</value>
+            </property>
+            <property name="feature.vendor-bb-angular-ng-aria" label="Feature Vendor Bb Angular Ng Aria" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-ng-aria</value>
+            </property>
+            <property name="feature.ui-bb-i18n-ng" label="Feature Ui Bb I 18 N Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-i18n-ng</value>
+            </property>
+            <property name="feature.ui-bb-date-label-filter-ng" label="Feature Ui Bb Date Label Filter Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-date-label-filter-ng</value>
+            </property>
+            <property name="feature.ui-bb-message-ng" label="Feature Ui Bb Message Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-message-ng</value>
+            </property>
+            <property name="feature.ui-bb-load-more-ng" label="Feature Ui Bb Load More Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-load-more-ng</value>
+            </property>
+            <property name="feature.ui-bb-substitute-error-ng" label="Feature Ui Bb Substitute Error Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-substitute-error-ng</value>
+            </property>
+            <property name="feature.ui-bb-loading-overlay-ng" label="Feature Ui Bb Loading Overlay Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-loading-overlay-ng</value>
+            </property>
+            <property name="feature.ui-bb-confirm-ng" label="Feature Ui Bb Confirm Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-confirm-ng</value>
+            </property>
+            <property name="feature.vendor-bb-uib-tooltip" label="Feature Vendor Bb Uib Tooltip" readonly="true" viewHint="">
+                <value type="string">vendor-bb-uib-tooltip</value>
+            </property>
+            <property name="feature.vendor-bb-angular-sanitize" label="Feature Vendor Bb Angular Sanitize" readonly="true" viewHint="">
+                <value type="string">vendor-bb-angular-sanitize</value>
+            </property>
+            <property name="feature.ui-bb-notification-stripe-ng" label="Feature Ui Bb Notification Stripe Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-notification-stripe-ng</value>
+            </property>
+            <property name="feature.ui-bb-paginator-ng" label="Feature Ui Bb Paginator Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-paginator-ng</value>
+            </property>
+            <property name="feature.ui-bb-notifications-filter-ng" label="Feature Ui Bb Notifications Filter Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-notifications-filter-ng</value>
+            </property>
+            <property name="feature.ui-bb-ellipsis-tooltip-ng" label="Feature Ui Bb Ellipsis Tooltip Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-ellipsis-tooltip-ng</value>
+            </property>
+            <property name="feature.ui-bb-empty-state-ng" label="Feature Ui Bb Empty State Ng" readonly="true" viewHint="">
+                <value type="string">ui-bb-empty-state-ng</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

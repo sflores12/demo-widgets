@@ -1,0 +1,12 @@
+{
+  "options":{
+    "analysisIndicator":[{
+        "value": "DBIT",
+        "label": "Spending"
+    },
+    {
+        "value": "CRDT",
+        "label": "Income"
+    }]
+  }
+}

@@ -1,0 +1,26 @@
+<catalog>
+  <widget>
+    <name>widget-training-detalles-modal-ng</name>
+    <contextItemName>[BBHOST]</contextItemName>
+    <properties>
+      <property name="TemplateName">
+        <value type="string">Standard_Widget</value>
+      </property>
+      <property label="Title" name="title" viewHint="text-input,admin">
+        <value type="string">Detalles Modal</value>
+      </property>
+      <property name="src">
+        <value type="string">$(itemRoot)/index.html</value>
+      </property>
+      <property name="thumbnailUrl">
+        <value type="string">$(itemRoot)/assets/icon.png</value>
+      </property>
+      <property name="extension" viewHint="text-input,admin">
+        <value type="string">ext-training-detalles-modal-ng</value>
+      </property>
+      <property label="Version" name="version" viewHint="text-input,admin,designModeOnly">
+          <value type="string">0.1.0-alpha.0</value>
+      </property>
+    </properties>
+  </widget>
+</catalog>

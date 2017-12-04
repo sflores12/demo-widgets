@@ -1,0 +1,51 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-uib-is-class@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-uib-is-class",
+        "name": "vendor-bb-uib-is-class",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-uib-is-class@1.3.3-bb.3",
+  "_id": "vendor-bb-uib-is-class@1.3.3-bb.3",
+  "_inCache": true,
+  "_location": "/vendor-bb-uib-is-class",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-uib-is-class@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-uib-is-class",
+    "name": "vendor-bb-uib-is-class",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/vendor-bb-uib-datepicker"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+  "_shasum": "f5d9898221487a41804039d3a991d0e9c3d9d913",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-uib-is-class@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-is-class/-/vendor-bb-uib-is-class-1.3.3-bb.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "^1.5.8-bb.1"
+  },
+  "description": "Angular UI Bootstrap isClass component written in pure AngularJS  based on Bootstrap's markup and CSS.",
+  "devDependencies": {},
+  "main": "scripts/vendor-bb-uib-is-class.js",
+  "name": "vendor-bb-uib-is-class",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-uib-is-class\n\nAngular UI Bootstrap isClass component written in pure AngularJS  based on Bootstrap's markup and CSS.\n\nThis component has been split from the complete\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/\">Angular UI\nBootstrap v1.3.3</a> and wrapped in a UMD block.\n\n## Imports\n\n* vendor-bb-angular\n\n\n---\n\n## Exports\n\n### *default*\n\nThe angular module name\n\n**Type:** *string*\n\n---\n\n## Usage in Extensions\n\nUI Components must be declared as dependencies of extensions before they can be used:\n\n```javascript\n// extension scripts/index.js\nimport uibIsClassKey from 'vendor-bb-uib-is-class';\n\nexport const dependencyKeys = [\n  uibIsClassKey,\n];\n```\n\n## Directive Usage\n\n<usage>\n\n---\n\n## Demo\n\nTo see all docs and a working demo, please refer to the\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/#/isClass\" target=\"_blank\">official\ndocumentation</a> for this component.\n",
+  "readmeFilename": "README.md",
+  "version": "1.3.3-bb.3"
+}

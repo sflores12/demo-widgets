@@ -1,0 +1,48 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bb-product-select-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+        "scope": null,
+        "escapedName": "ext-bb-product-select-ng",
+        "name": "ext-bb-product-select-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bb-product-select-ng@>=1.0.135 <2.0.0",
+  "_id": "ext-bb-product-select-ng@1.0.135",
+  "_inCache": true,
+  "_location": "/ext-bb-product-select-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bb-product-select-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+    "scope": null,
+    "escapedName": "ext-bb-product-select-ng",
+    "name": "ext-bb-product-select-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+  "_shasum": "712257ffdb47de6caa285979175bb569e6ec9d83",
+  "_shrinkwrap": null,
+  "_spec": "ext-bb-product-select-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-product-select-ng/-/ext-bb-product-select-ng-1.0.135.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "ui-bb-account-selector": "^1.8.4",
+    "vendor-bb-angular-ng-aria": "1.5.8-bb.3"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bb-product-select-ng.js",
+  "name": "ext-bb-product-select-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.135"
+}

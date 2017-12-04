@@ -1,0 +1,189 @@
+<div
+  class="ext-bbm-initiate-payment-form-ng"
+  data-ng-controller="FormController as $ctrl">
+  <form
+    name="paymentForm"
+    data-role="payment-form"
+    data-ng-submit="ext.helpers.onPaymentFormSubmit($ctrl, paymentForm)">
+
+    <div class="bbm-layout bbm-layout-with-sticky-footer">
+
+      <!-- Layout body -->
+      <div class="bbm-layout-body">
+
+        <!-- Debit account -->
+        <div class="form-group form-group-lg">
+          <div
+            class="bbm-account-select bbm-form-control"
+            data-ng-click="$ctrl.selectDebitAccount()"
+            data-role="payment-from-account-select-button">
+            <div class="bbm-account-select-content">
+              <div
+                class="bbm-account-select-placeholder"
+                data-ng-if="!$ctrl.state.payment.data.debitAccount"
+                data-i18n-key="form.placeholder.selectDebitAccount">
+              </div>
+
+              <div
+                class="bbm-account bbm-account-compact"
+                data-ng-if="$ctrl.state.payment.data.debitAccount">
+                <div class="bbm-account-compact-primary-information">
+                  <h3
+                    class="bbm-account-compact-name"
+                    data-ng-bind="$ctrl.state.payment.data.debitAccount.name">
+                  </h3>
+                  <div class="bbm-account-compact-primary-amount">
+                    <ui-bb-format-amount
+                      data-amount="ext.helpers.getAccountDisplayAmount($ctrl.state.payment.data.debitAccount)"
+                      data-currency="$ctrl.state.payment.data.debitAccount.currency"
+                      data-wrap>
+                    </ui-bb-format-amount>
+                  </div>
+                </div>
+                <div class="bbm-account-compact-secondary-information">
+                  <div class="bbm-account-compact-identifier">
+                    <span
+                      class="prevent-ios-click"
+                      data-role="product-id"
+                      data-ng-bind="$ctrl.state.payment.data.debitAccount.identifier">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bbm-account-select-icon">
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Amount and currency -->
+        <div class="form-group form-group-md">
+          <ui-bbm-amount-field-ng
+            name="amount"
+            max-length="6"
+            decimal-max-length="2"
+            data-ng-model="$ctrl.state.payment.data.amount"
+            required="true">
+          </ui-bbm-amount-field-ng>
+        </div>
+
+        <!-- Beneficiary -->
+        <ui-bbm-beneficiary-select-ng
+          name="beneficiary"
+          data-ng-model="$ctrl.state.payment.data.beneficiary"
+          data-allow-create="ext.helpers.isCreateBeneficiaryAllowed($ctrl.state.payment.data)"
+          data-accounts="$ctrl.state.beneficiaries.data.all"
+          data-debit-account="$ctrl.state.payment.data.debitAccount"
+          data-on-button-click="$ctrl.selectBeneficiary()"
+          data-messages="{
+            identifierLabel: ('form.label.beneficiaryIdentifier' | i18n),
+            identifierPlaceholder: ('form.placeholder.beneficiaryIdentifier' | i18n),
+            nameLabel: ('form.label.beneficiaryName' | i18n),
+            namePlaceholder: ('form.placeholder.beneficiaryName' | i18n),
+          }"
+          data-required>
+        </ui-bbm-beneficiary-select-ng>
+
+        <!-- Save contact -->
+        <div class="form-group form-group-md" data-ng-if="ext.helpers.checkSaveContactVisibility($ctrl, paymentForm)">
+          <div class="bbm-form-control bbm-form-control-switch">
+            <div
+              class="bbm-form-control-label"
+              data-i18n-key="form.label.saveContact">
+            </div>
+
+            <div class="bbm-form-control-value">
+              <ui-bbm-switch-ng
+                title="{{ 'form.label.saveContact' | i18n }}"
+                name="save-contact"
+                data-ng-model="$ctrl.state.saveContact">
+              </ui-bbm-switch-ng>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group form-group-md">
+          <ui-bbm-textfield-ng
+            type="text"
+            name="description"
+            label="{{ 'form.label.description' | i18n }}"
+            placeholder="{{ 'form.placeholder.description' | i18n }}"
+            role="payment-description-field"
+            data-ng-model="$ctrl.state.payment.data.description"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            clear-button="true">
+          </ui-bbm-textfield-ng>
+        </div>
+
+        <!-- Schedule -->
+        <div class="form-group form-group-md" data-ng-click="$ctrl.selectSchedule()">
+          <div class="bbm-form-control">
+            <div
+              class="bbm-form-control-label"
+              data-i18n-key="form.label.schedule">
+            </div>
+            <div class="bbm-form-control-value">
+              <span
+                class="prevent-ios-click"
+                data-ng-bind="ext.helpers.getScheduleSummary($ctrl.state.payment.data.schedule)">
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Urgent payment -->
+        <div
+          class="form-group"
+          data-ng-if="ext.helpers.isUrgentVisible($ctrl.state.payment.data, $ctrl)">
+          <div class="bbm-form-control bbm-form-control-switch">
+            <div
+              class="bbm-form-control-label"
+              data-i18n-key="form.label.urgentPayment">
+            </div>
+
+            <div class="bbm-form-control-icon">
+              <button
+                class="bbm-icon bbm-icon-md bbm-icon-interactive bbm-icon-info-circle"
+                type="button"
+                data-ng-click="ext.helpers.onUrgentPaymentInfoClick()"
+                data-role="urgent-payment-icon">
+                <i
+                  class="fa fa-info-circle"
+                  aria-hidden="true">
+                </i>
+              </button>
+            </div>
+
+            <div class="bbm-form-control-value">
+              <ui-bbm-switch-ng
+                title="{{ 'form.label.urgentPayment' | i18n }}"
+                name="urgent"
+                data-ng-model="$ctrl.state.payment.data.urgent">
+              </ui-bbm-switch-ng>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bbm-layout-footer">
+
+        <!-- Submit -->
+        <button
+          class="btn btn-primary btn-block"
+          type="submit"
+          data-role="payment-form-continue-button"
+          data-i18n-key="form.label.continue"
+          data-ng-disabled="!ext.helpers.isPaymentFormValid($ctrl.state.payment.data, paymentForm)">
+        </button>
+
+      </div>
+
+    </div>
+  </form>
+</div>

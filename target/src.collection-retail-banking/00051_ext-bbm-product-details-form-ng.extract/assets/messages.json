@@ -1,0 +1,10 @@
+{
+  "en-US": {
+    "message.productDetails.alias.edit.start": "Editing product alias",
+    "message.productDetails.alias.edit.done": "Product alias successfully edited",
+    "message.productDetails.alias.edit.failed": "Unable to edit the product alias, please try again",
+
+    "form.label.productName": "Product Name",
+    "form.label.saveChanges": "Save"
+  }
+}

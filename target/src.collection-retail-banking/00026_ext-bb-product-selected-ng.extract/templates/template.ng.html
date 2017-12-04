@@ -1,0 +1,16 @@
+<div data-ng-controller="ProductSummaryController as $ctrl">
+  <ui-bb-loading-indicator-ng data-is-loading="$ctrl.isProductLoading" data-loading-text="{{ 'message.loading' | i18n }}">
+  <div class="ext-bb-product-selected-ng" data-ng-if="$ctrl.productSelected">
+    <ui-bb-product-summary-ng
+      class="amount-regular-color"
+      data-product-name="$ctrl.productSelected.name"
+      data-role="product-selected-name"
+      data-product-identifier="$ctrl.productSelected.identifier"
+      data-primary-value="$ctrl.productSelected.primaryValue"
+      data-secondary-value="$ctrl.productSelected.secondaryValue"
+      data-secondary-label="$ctrl.productSelected.secondaryLabel | i18n"
+      data-currency="$ctrl.productSelected.currency">
+    </ui-bb-product-summary-ng>
+  </div>
+  </ui-bb-loading-indicator-ng>
+</div>

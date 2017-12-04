@@ -1,0 +1,53 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "vendor-bb-uib-alert@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+        "scope": null,
+        "escapedName": "vendor-bb-uib-alert",
+        "name": "vendor-bb-uib-alert",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "vendor-bb-uib-alert@1.3.3-bb.3",
+  "_id": "vendor-bb-uib-alert@1.3.3-bb.3",
+  "_inCache": true,
+  "_location": "/vendor-bb-uib-alert",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vendor-bb-uib-alert@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+    "scope": null,
+    "escapedName": "vendor-bb-uib-alert",
+    "name": "vendor-bb-uib-alert",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/collection-bb-blocks",
+    "/ext-bb-initiate-payment-ng",
+    "/ext-bb-notification-popups-ng",
+    "/ext-bb-transactions-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+  "_shasum": "c39b15be64048ce3482e958458cc30046cdfc6f4",
+  "_shrinkwrap": null,
+  "_spec": "vendor-bb-uib-alert@https://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-uib-alert/-/vendor-bb-uib-alert-1.3.3-bb.3.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "vendor-bb-angular": "^1.5.8-bb.1"
+  },
+  "description": "Angular UI Bootstrap alert component written in pure AngularJS  based on Bootstrap's markup and CSS.",
+  "devDependencies": {},
+  "main": "scripts/vendor-bb-uib-alert.js",
+  "name": "vendor-bb-uib-alert",
+  "optionalDependencies": {},
+  "readme": "# vendor-bb-uib-alert\n\nAngular UI Bootstrap alert component written in pure AngularJS  based on Bootstrap's markup and CSS.\n\nThis component has been split from the complete\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/\">Angular UI\nBootstrap v1.3.3</a> and wrapped in a UMD block.\n\n## Imports\n\n* vendor-bb-angular\n\n\n---\n\n## Exports\n\n### *default*\n\nThe angular module name\n\n**Type:** *string*\n\n---\n\n## Usage in Extensions\n\nUI Components must be declared as dependencies of extensions before they can be used:\n\n```javascript\n// extension scripts/index.js\nimport uibAlertKey from 'vendor-bb-uib-alert';\n\nexport const dependencyKeys = [\n  uibAlertKey,\n];\n```\n\n## Directive Usage\n\n<usage>\nThis directive can be used both to generate alerts from static and dynamic model data (using the `ng-repeat` directive).\n\n### uib-alert settings\n\n* `close()`\n  <small class=\"badge\">$</small> -\n  A callback function that gets fired when an `alert` is closed. If the attribute exists, a close button is displayed as well.\n  \n* `dismiss-on-timeout`\n  _(Default: `none`)_ -\n  Takes the number of milliseconds that specify the timeout duration, after which the alert will be closed. This attribute requires the presence of the `close` attribute.\n  \n* `template-url`\n  _(Default: `uib/template/alert/alert.html`)_ -\n  Add the ability to override the template used in the component.\n  \n* `type`\n  _(Default: `warning`)_ -\n  Defines the type of the alert. Go to [bootstrap page](http://getbootstrap.com/components/#alerts) to see the type of alerts available.\n\n---\n\n## Demo\n\nTo see all docs and a working demo, please refer to the\n<a href=\"http://angular-ui.github.io/bootstrap/versioned-docs/1.3.3/#/alert\" target=\"_blank\">official\ndocumentation</a> for this component.\n",
+  "readmeFilename": "README.md",
+  "version": "1.3.3-bb.3"
+}

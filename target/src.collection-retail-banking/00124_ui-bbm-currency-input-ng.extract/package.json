@@ -1,0 +1,49 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "src.ui-bbm-currency-input-ng@1.0.288",
+        "scope": null,
+        "escapedName": "src.ui-bbm-currency-input-ng",
+        "name": "src.ui-bbm-currency-input-ng",
+        "rawSpec": "1.0.288",
+        "spec": "1.0.288",
+        "type": "version"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src"
+    ]
+  ],
+  "_from": "src.ui-bbm-currency-input-ng@1.0.288",
+  "_id": "src.ui-bbm-currency-input-ng@1.0.288",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/src.ui-bbm-currency-input-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "src.ui-bbm-currency-input-ng@1.0.288",
+    "scope": null,
+    "escapedName": "src.ui-bbm-currency-input-ng",
+    "name": "src.ui-bbm-currency-input-ng",
+    "rawSpec": "1.0.288",
+    "spec": "1.0.288",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bbm-currency-input-ng/-/src.ui-bbm-currency-input-ng-1.0.288.tgz",
+  "_shasum": "14339146d4fdb799c19eaa6324504cd6183db994",
+  "_shrinkwrap": null,
+  "_spec": "src.ui-bbm-currency-input-ng@1.0.288",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/src",
+  "dependencies": {},
+  "devDependencies": {},
+  "dist": {
+    "tarball": "https://artifacts.backbase.com/api/npm/npm-backbase/src.ui-bbm-currency-input-ng/-/src.ui-bbm-currency-input-ng-1.0.288.tgz",
+    "shasum": "14339146d4fdb799c19eaa6324504cd6183db994"
+  },
+  "name": "src.ui-bbm-currency-input-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.288"
+}

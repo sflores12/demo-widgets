@@ -1,0 +1,62 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ext-bb-notification-center-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+        "scope": null,
+        "escapedName": "ext-bb-notification-center-ng",
+        "name": "ext-bb-notification-center-ng",
+        "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+        "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+        "type": "remote"
+      },
+      "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist"
+    ]
+  ],
+  "_from": "ext-bb-notification-center-ng@>=2.1.60 <3.0.0",
+  "_id": "ext-bb-notification-center-ng@2.1.60",
+  "_inCache": true,
+  "_location": "/ext-bb-notification-center-ng",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ext-bb-notification-center-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+    "scope": null,
+    "escapedName": "ext-bb-notification-center-ng",
+    "name": "ext-bb-notification-center-ng",
+    "rawSpec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+    "spec": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+    "type": "remote"
+  },
+  "_requiredBy": [
+    "/",
+    "/widget-bb-notification-center-ng"
+  ],
+  "_resolved": "https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+  "_shasum": "6fc95f8621e90c01e4ca8bfa9cc2291576944409",
+  "_shrinkwrap": null,
+  "_spec": "ext-bb-notification-center-ng@https://artifacts.backbase.com/api/npm/npm-backbase/ext-bb-notification-center-ng/-/ext-bb-notification-center-ng-2.1.60.tgz",
+  "_where": "/opt/jobs/collection-retail-banking-release-pipeline/workspace/dist",
+  "dependencies": {
+    "ui-bb-confirm-ng": "^2.0.72",
+    "ui-bb-date-label-filter-ng": "^1.1.6",
+    "ui-bb-ellipsis-tooltip-ng": "^1.0.64",
+    "ui-bb-empty-state-ng": "^1.0.130",
+    "ui-bb-i18n-ng": "^1.0.33",
+    "ui-bb-load-more-ng": "^1.0.174",
+    "ui-bb-loading-overlay-ng": "^1.0.98",
+    "ui-bb-message-ng": "^1.1.66",
+    "ui-bb-notification-stripe-ng": "^1.1.58",
+    "ui-bb-notifications-filter-ng": "^1.1.60",
+    "ui-bb-paginator-ng": "^1.1.82",
+    "ui-bb-substitute-error-ng": "^1.0.23",
+    "vendor-bb-angular-ng-aria": "1.5.8-bb.3",
+    "vendor-bb-angular-sanitize": "1.5.8-bb.1",
+    "vendor-bb-uib-tooltip": "1.3.3-bb.3"
+  },
+  "devDependencies": {},
+  "main": "scripts/ext-bb-notification-center-ng.js",
+  "name": "ext-bb-notification-center-ng",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "2.1.60"
+}
