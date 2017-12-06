@@ -60,3 +60,6 @@ typings/
 # BB specifics
 package.zip
 node
+
+#template commit git
+.git-commit-template.txt
