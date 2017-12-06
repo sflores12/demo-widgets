@@ -1,24 +1,28 @@
 {
-    "scripts": {
-        "provision-package": "bb-package project",
-        "statics-package": "bb-package cxp-statics",
-        "start": "cross-env LOG_LEVEL=verbose COLOR=true NODE_ENV=development bb-serve project",
-        "package-ng": "bb-package collection-myportal/src --prebuilt=collection-myportal/prebuilt -b sass --exclude-defaults",
-        "import-ng": "bb-import --portal-context=/ package package.zip",
-        "docs": "jsdoc -c jsdoc.json",
-        "docs-with-bug": "bb-doc js ./collection-myportal/src -o ./docs"
-    },
-    "devDependencies": {
-        "@backbase/eslint-config-backbase": "^2.4.0",
-        "@bb-cli/bb-build-plugin-font": "^1.0.1",
-        "@bb-cli/bb-build-plugin-sass": "^1.2.1",
-        "@bb-cli/bb-build-plugin-uglify": "^1.0.1",
-        "@bb-cli/bb-customize": "^2.1.0",
-        "@bb-cli/bb-doc": "^2.0.1-pr.15",
-        "@bb-cli/bb-package": "^2.5.1",
-        "@bb-cli/bb-serve": "^2.6.1",
-        "cross-env": "^5.1.1",
-        "fs-extra": "^4.0.2",
-        "webpack": "^1.15.0"
-    }
+  "scripts": {
+    "provision-package": "bb-package project",
+    "statics-package": "bb-package cxp-statics",
+    "start": "cross-env LOG_LEVEL=verbose COLOR=true NODE_ENV=development bb-serve project",
+    "package-ng": "bb-package collection-myportal/src --prebuilt=collection-myportal/prebuilt -b sass --exclude-defaults",
+    "import-ng": "bb-import --portal-context=/ package package.zip",
+    "docs": "jsdoc -c jsdoc.json",
+    "docs-with-bug": "bb-doc js ./collection-myportal/src -o ./docs"
+  },
+  "devDependencies": {
+    "@backbase/eslint-config-backbase": "^2.4.0",
+    "@bb-cli/bb-build-plugin-font": "^1.0.1",
+    "@bb-cli/bb-build-plugin-sass": "^1.2.0",
+    "@bb-cli/bb-build-plugin-uglify": "^1.0.1",
+    "@bb-cli/bb-customize": "^2.1.0",
+    "@bb-cli/bb-doc": "^2.0.1-pr.15",
+    "@bb-cli/bb-package": "^2.5.1",
+    "@bb-cli/bb-serve": "^2.6.0",
+    "@bb-cli/bb-test": "^2.3.1",
+    "@bb-cli/bb-test-plugin-ngmock": "^1.0.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "cross-env": "^5.1.1",
+    "fs-extra": "^4.0.2",
+    "webpack": "^1.15.0"
+  }
 }
