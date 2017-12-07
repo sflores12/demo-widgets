@@ -50,12 +50,12 @@ _**Nota:** Install zip, para tener la master page_
 	--? collection-retail-banking: 2.8.0
 		
 # Aceder al proyecto de widget creado
-		cd bb-widgets
-		mvn clean package
+        cd bb-widgets
+        mvn clean package
 
 # Paquetes locales: instalarlos despues de crear el proyecto de widget
 	
-    @bb-cli/bb-config
+        @bb-cli/bb-config
 	@bb-cli/bb-serve
 	@bb-cli/bb-package
 	@bb-cli/bb-build-plugin-uglify
@@ -103,26 +103,49 @@ _**Nota:** Install zip, para tener la master page_
 
 # Instalacion para general Themes:
 
-		npm install -g @bb-cli/bb-build-plugin-sass@1.2.0 @bb-cli/bb-customize
-		bb-customize item theme-bb-retail collection-myportal/src --new-name theme-myportal-default
-			*bb-customize theme-bb-default --new-name theme-custom-mytheme collection-myportal/src
-		bb-package collection-myportal/src --prebuilt=collection-myportal/prebuilt -b sass --exclude-defaults
-	
+* **Instalacion de la dependencia**
+
+                npm install -g @bb-cli/bb-build-plugin-sass@1.2.0 @bb-cli/bb-customize
+
+* **Crear un nuevo theme**
+
+                bb-customize theme-bb-default --new-name theme-custom-mytheme collection-myportal/src
+
+* **Clonar un theme existente**        
+
+                bb-customize item theme-bb-retail collection-myportal/src --new-name theme-myportal-default
+               
 # Genera un nuevo widget:
 
-		bb-generate widget ng
+	bb-generate widget ng
 
 # Importar package al CXP Manager
 
-    	bb-import --portal-context=/ package package.zip
+* **Para exportar al CXP-Manager ejecutar en consola los siguientes comandos:**
+
+>**Para empaquetar a zip:**
+
+        npm run package-ng
+
+>**Para importar**
+
+        npm run import-ng
+
+_**Nota:** en el archivo **package.json** agregar estos atajos con las instrucciones correspondientes._ y en su contenido agregar las instrucciones correspondientes:
+
+```javascript
+package-ng:'bb-package collection-myportal/src --prebuilt=collection-myportal/prebuilt -b sass --exclude-defaults',
+import-ng:'bb-import --portal-context=/ package package.zip'
+```
+        
 
 > Descomprimir el archivo:BB-Training.zip dentro trae otra zip:raml.zip, descomprimirla y dejarla en raiz en la carpeta del proyecto de widget
 
 * **Comvertir el raml a codigo javascript para los modulos de angular y consumirlos**
 
-    bb-convert raml raml/advisors/advisors.raml --template mock-ng --output collection-myportal/src -y
-    bb-convert raml raml/appointments/appointments.raml --template mock-ng --output collection-myportal/src -y
-    bb-convert raml raml/customers/customers.raml --template mock-ng --output collection-myportal/src -y
+        bb-convert raml raml/advisors/advisors.raml --template mock-ng --output collection-myportal/src -y
+        bb-convert raml raml/appointments/appointments.raml --template mock-ng --output collection-myportal/src -y
+        bb-convert raml raml/customers/customers.raml --template mock-ng --output collection-myportal/src -y
 
 # RAML a MOCKUP
 
@@ -158,6 +181,7 @@ _**Nota:** en el modelo si se importa los key del mock o data es necesario los m
 ```
 
 * **y reeemplazar por**
+
 ```javascript
 const portal = window.b$ && window.b$.portal;
 //const serverRoot = "http://192.168.10.223:7777";//si el servidor de las API se encuentra en otro servidor.
@@ -300,15 +324,4 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 
 _**Nota:** Estas dependencias se agregaron porque si intentan borrar algunas carpetas no se borran porque tienen un nombre muy largo._
 
-# Para exportar al CXP-Manager ejecutar en consola los siguientes comandos:
-
->**Para empaquetar a zip:**
-
-        npm run package-ng
-
->**Para importar**
-
-        npm run import-ng
-
-_**Nota:** en el archivo **package.json** agregar estos atajos con las instrucciones correspondientes._
 
