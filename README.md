@@ -1,9 +1,9 @@
 # BACKBASE: create the Widgets
-# CXP Manager:
+### CXP Manager:
 _**Nota:** Install zip, para tener la master page_
 
 
-# _Instalar los Paquetes globales_
+### _Instalar los Paquetes globales_
 	
     npm install --global @bb-cli/bb-package@2.5.1 @bb-cli/bb-import@2.2.1 @bb-cli/bb-generate@2.3.1 @bb-cli/bb-config@2.0.1
     
@@ -13,7 +13,7 @@ _**Nota:** Install zip, para tener la master page_
 
 	npm install --global babel-core@6.26.0 babel-loader@6.4.1
 
-# _Paquetes adicionales:NodeJS_
+### _Paquetes adicionales:NodeJS_
 * **JSDoc**
 
         npm i -D jsdoc tui-jsdoc-template
@@ -41,7 +41,7 @@ _**Nota:** Install zip, para tener la master page_
 	
 	    npm install --save fs.extra
 	
-# _Crear la carpeta contenedora de widget_
+### _Crear la carpeta contenedora de widget_
 * **create carpeta contenedora de widget**
 
 > --Depends on the collection: collection-retail-banking select
@@ -49,11 +49,11 @@ _**Nota:** Install zip, para tener la master page_
 	bb-generate project-statics
 	--? collection-retail-banking: 2.8.0
 		
-# Aceder al proyecto de widget creado
+### Aceder al proyecto de widget creado
         cd bb-widgets
         mvn clean package
 
-# Paquetes locales: instalarlos despues de crear el proyecto de widget
+### Paquetes locales: instalarlos despues de crear el proyecto de widget
 	
         @bb-cli/bb-config
 	@bb-cli/bb-serve
@@ -101,7 +101,7 @@ _**Nota:** Install zip, para tener la master page_
 
 			npm install --save-dev @bb-cli/bb-test-plugin-ngmock@1.0.1
 
-# Instalacion para general Themes:
+### Instalacion para general Themes:
 
 * **Instalacion de la dependencia**
 
@@ -115,11 +115,11 @@ _**Nota:** Install zip, para tener la master page_
 
                 bb-customize item theme-bb-retail collection-myportal/src --new-name theme-myportal-default
                
-# Genera un nuevo widget:
+### Genera un nuevo widget:
 
 	bb-generate widget ng
 
-# Importar package al CXP Manager
+### Importar package al CXP Manager
 
 * **Para exportar al CXP-Manager ejecutar en consola los siguientes comandos:**
 
@@ -147,7 +147,7 @@ import-ng:'bb-import --portal-context=/ package package.zip'
         bb-convert raml raml/appointments/appointments.raml --template mock-ng --output collection-myportal/src -y
         bb-convert raml raml/customers/customers.raml --template mock-ng --output collection-myportal/src -y
 
-# RAML a MOCKUP
+### RAML a MOCKUP
 
     bb-convert raml raml_Login/login.raml --template mock-ng --output collection-myportal/src -y
 
@@ -158,7 +158,7 @@ import-ng:'bb-import --portal-context=/ package package.zip'
 
     bb-convert raml accitrade-api/api.raml --template mock-ng --output collection-myportal/src -y
 
-# RAML a Model Services
+### RAML a Model Services
 
     bb-convert raml DemoLogin-RAML-API/login.raml --output collection-myportal/src -y
 
@@ -167,7 +167,7 @@ import-ng:'bb-import --portal-context=/ package package.zip'
 
 _**Nota:** en el modelo si se importa los key del mock o data es necesario los mismos nombre de las variables._
 
-#Configuraciones extras:
+###Configuraciones extras:
 
  * **Localizar en el archivo:**
 
@@ -194,14 +194,14 @@ const config = {
 
 * **Despues en el:Backbase\cxp-demo\backbase\backbase.properties add las siguientes lineas: al principio del archivo**
 
-        demologin-host=192.168.10.223 # localhost
-        demologin-port=3000 # puerto del raml run
+        demologin-host=192.168.10.223 ### localhost
+        demologin-port=3000 ### puerto del raml run
         demologin-context=        
 
 _**Nota:** el localhost y el puerto deven ser el mismo para el .ddconfig de los widgets para que se pueda importar y funcionen sincronizados._
 
 
-# Test de los servicios del war
+### Test de los servicios del war
 
 * Instalacion de raml-mockup
 
@@ -211,7 +211,7 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 
         raml-1-mockup login.raml -p 3000
 
-# Comandos primordiales para el repositorio de GIT
+### Comandos primordiales para el repositorio de GIT
 
 * **Agregar un repositorio existente:**
         
@@ -310,9 +310,9 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 
 * Agregar template al proyecto para el commit:
         
-        https://gist.github.com/adeekshith/cd4c95a064977cdc6c50#file-git-commit-template-txt
+        https://gist.github.com/adeekshith/cd4c95a064977cdc6c50###file-git-commit-template-txt
 
-# Dependencias extras que podrian agregar
+### Dependencias extras que podrian agregar
 
 * **Delte folder**
 

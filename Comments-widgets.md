@@ -1,14 +1,17 @@
-# Codigo original del template:
+# Codigo originales que podrian servir en el futuro
+
+### Codigo original del template:
+
 * **AcciTrade\accitrade-widgets\collection-accitrademobile\src\ext-accitrademobile-stock-trade-ng\templates\template.ng.html**
 
 ```html
 <div class="animate-switch-container" ng-switch on="$ctrl.selection">
 <div class="animate-switch" ng-switch-when="sell">
-````
+```
 
 > **Nota:**El cambio fue unicamente quitarle a los **div** _**ng-switch on and ng-switch-when**_ para que no hiciera el cambio del contenido del **Tab** ya que unicamente habia un **form** asignado a un tab y el otro estaba vacio y no deveria mostrar vacio.
 
-# Para saber el tamaño de items en caso que sea un array
+### Para saber el tamaño de items en caso que sea un array
 
 * **Ejemplo: el siguiente componente: AcciTrade\accitrade-widgets\collection-accitrademobile\src\ui-accitrademobile-tabs-ng\scripts\component.js**
 
