@@ -203,14 +203,12 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
         
         git add .
 
-* **Url del archivo para copiar un _.gitignore:_**
+**Nota:** Url del archivo para copiar un** _.gitignore:_** [Node.gitignore](https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore) y generar el archivo en raíz del proyecto
 
-        https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
+**Comentario:** para agregar un emmotion al mensaje del commit copiarlos de la siguiente url:[gitmoji](https://gitmoji.carloscuesta.me/) y unicamente copiar por ejemplo _**:sparkles:**_
 
-* **Se puede agregar un emmotion al mensaje:**
-        
-        https://gitmoji.carloscuesta.me/  :sparkles:
-    
+* **realizar el commit**
+
         git commit
 
         git push -u origin master
