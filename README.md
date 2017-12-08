@@ -11,7 +11,8 @@ _**Nota:** Install zip, para tener la master page_
 
 > Occional en caso de errores	
 
-	npm install --global babel-core@6.26.0 babel-loader@6.4.1
+	npm install --global babel-core@6.0.0 babel-loader@6.4.1
+        npm install babel-runtime@6.0.2 --global
 
 ### _Paquetes adicionales:NodeJS_
 * **JSDoc**

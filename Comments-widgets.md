@@ -39,3 +39,15 @@ export default component;
 
 ```
 > **Nota:** _**parseInt()**_ me marca un error por eso se utilizo _**Number**_
+
+### Para agregar un spinner(gif loading) a los input
+
+* **lanzar spinner**
+
+```javascript
+bus.publish('spinner', { data: true });
+```
+* **detener spinner**
+```javascript
+bus.publish('spinner', { data: false });
+```
