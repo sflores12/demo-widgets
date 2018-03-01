@@ -4,12 +4,12 @@ _**Nota:** Install zip, para tener la master page_
 
 
 ### _Instalar los Paquetes globales_
-	
+
     npm install --global @bb-cli/bb-package@2.5.1 @bb-cli/bb-import@2.2.1 @bb-cli/bb-generate@2.3.1 @bb-cli/bb-config@2.0.1
-    
+
     npm install --global @backbase/generator-project-statics@1.4.0 @backbase/generator-model-ng@2.1.0 @backbase/generator-widget@2.4.1 @backbase/generator-ui-ng@2.0.3 @backbase/generator-ext-ng@2.1.0
 
-> Occional en caso de errores	
+> Occional en caso de errores
 
 	npm install --global babel-core@6.0.0 babel-loader@6.4.1
         npm install babel-runtime@6.0.2 --global
@@ -22,26 +22,26 @@ _**Nota:** Install zip, para tener la master page_
             > jsdoc -c jsdoc.json
 
 * **ESLint**
-	
+
         npm install eslint --save-dev
         npm i -D eslint@3.0.1 eslint-plugin-import@1.10.3 @backbase/eslint-config-backbase
         npm run lint
             > eslint . --fix
 
 * **Node Security Platform**
-	
+
         npm install -g nsp
             npm install -g nsp nsp-reporter-checkstyle
                 nsp check --reporter checkstyle
 
 * **cross-env**
-	
+
     	npm install --save-dev cross-env
 
 * **fs-extra**
-	
+
 	    npm install --save fs.extra
-	
+
 ### _Crear la carpeta contenedora de widget_
 * **create carpeta contenedora de widget**
 
@@ -49,25 +49,25 @@ _**Nota:** Install zip, para tener la master page_
 
 	bb-generate project-statics
 	--? collection-retail-banking: 2.8.0
-		
+
 ### Aceder al proyecto de widget creado
         cd bb-widgets
         mvn clean package
 
 ### Paquetes locales: instalarlos despues de crear el proyecto de widget
-	
+
         @bb-cli/bb-config
 	@bb-cli/bb-serve
 	@bb-cli/bb-package
 	@bb-cli/bb-build-plugin-uglify
 	@bb-cli/bb-test
-	
+
 * **Resumen**
-		
+
         npm install --save-dev webpack@1.15.0
-            
+
         npm install --save-dev @bb-cli/bb-build-plugin-font@1.0.1 @bb-cli/bb-build-plugin-sass@1.2.0 @bb-cli/bb-build-plugin-uglify@1.0.1 @bb-cli/bb-doc@2.0.1-pr.15 @bb-cli/bb-package@2.5.1 @bb-cli/bb-serve@2.6.0 @bb-cli/bb-test@2.3.1 @bb-cli/bb-test-plugin-ngmock@1.0.1
-	
+
 * **Detalles**
 
     * **Plugins:**
@@ -75,7 +75,7 @@ _**Nota:** Install zip, para tener la master page_
             npm install --save-dev @bb-cli/bb-build-plugin-font@1.0.1 @bb-cli/bb-build-plugin-sass@1.2.0 @bb-cli/bb-build-plugin-uglify@1.0.1
 
         > En caso de error de sass
-		
+
         * **webpack:**
 
                 npm install --global webpack
@@ -89,15 +89,15 @@ _**Nota:** Install zip, para tener la master page_
 	* **Generación de paquetes para importar al CXP y a mobile:**
 
 			npm install --save-dev @bb-cli/bb-package@2.5.1
-	
+
     * **Servidor para el desarrollo de Widgets(WebpackDevServer):**
 
 			npm install --save-dev @bb-cli/bb-serve@2.6.0
-	
+
     * **Pruebas unitarias y Lint:**
 
 			npm install --save-dev @bb-cli/bb-test@2.3.1
-	
+
     * **Angular mocks:**
 
 			npm install --save-dev @bb-cli/bb-test-plugin-ngmock@1.0.1
@@ -112,10 +112,10 @@ _**Nota:** Install zip, para tener la master page_
 
                 bb-customize theme-bb-default --new-name theme-custom-mytheme collection-myportal/src
 
-* **Clonar un theme existente**        
+* **Clonar un theme existente**
 
                 bb-customize item theme-bb-retail collection-myportal/src --new-name theme-myportal-default
-               
+
 ### Genera un nuevo widget:
 
 	bb-generate widget ng
@@ -138,7 +138,7 @@ _**Nota:** en el archivo **package.json** agregar estos atajos con las instrucci
 package-ng:'bb-package collection-myportal/src --prebuilt=collection-myportal/prebuilt -b sass --exclude-defaults',
 import-ng:'bb-import --portal-context=/ package package.zip'
 ```
-        
+
 
 > Descomprimir el archivo:BB-Training.zip dentro trae otra zip:raml.zip, descomprimirla y dejarla en raiz en la carpeta del proyecto de widget
 
@@ -197,7 +197,7 @@ const config = {
 
         demologin-host=192.168.10.223 ### localhost
         demologin-port=3000 ### puerto del raml run
-        demologin-context=        
+        demologin-context=
 
 _**Nota:** el localhost y el puerto deven ser el mismo para el .ddconfig de los widgets para que se pueda importar y funcionen sincronizados._
 
@@ -215,7 +215,7 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 ### Comandos primordiales para el repositorio de GIT
 
 * **Agregar un repositorio existente:**
-        
+
         git init
         git remote add origin https://github.com/sflores12/widget-demo.git
 
@@ -225,7 +225,7 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 
 
 * **Agregar todo. antes de add configurar el archivo _.gitignore_**
-        
+
         git add .
 
 **Nota:** Url del archivo para copiar un** _.gitignore:_** [Node.gitignore](https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore) y generar el archivo en raíz del proyecto
@@ -243,15 +243,15 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 
 
 * **Actualizar la carpeta local con el repositorio**
-        
+
         git pull origin develop
 
 * **clonar repositorio accitrade-android**
-        
+
         git clone -b develop https://github.com/anzen/accitrade-android.git
 
 * **clonar repositorio accitrade-widgets**
-    
+
     git clone -b https://github.com/anzen/accitrade-widgets.git
 
 * **Para importar los widgets a proyect de androin y despues al telefono**
@@ -269,7 +269,7 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
         git checkout develop
 
 * **actualizar branch**
-    
+
     git pull
 
 * **si existe cambios sin commit agregarlos a la pila.**
@@ -285,16 +285,16 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
     * **sacar de la pila el cambio**
 
             git stash pop
-            
+
             git status
 
 
 * **actualizar el branch con lo ultimo**
-    
+
         git rebase develop
 
 * **todo se puede hacer desde la misma linea:**
-    
+
         git pull --rebase develop
 
 * **crear un branch y acceder a el**
@@ -309,9 +309,18 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 
         git brach -D <name-branch>
 
-* Agregar template al proyecto para el commit:
-        
+* **Agregar template al proyecto para el commit:**
+
         https://gist.github.com/adeekshith/cd4c95a064977cdc6c50###file-git-commit-template-txt
+
+        Para aplicar la plantilla,
+        Guarde el archivo anterior en su máquina local y use
+
+                git config --global commit.template <.git-commit-template.txt file path>
+
+        Por ejemplo, si lo guardó en su carpeta de inicio, intente:
+
+                git config --global commit.template ~/.git-commit-template.txt
 
 ### Dependencias extras que podrian agregar
 
