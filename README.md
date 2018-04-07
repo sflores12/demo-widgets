@@ -327,11 +327,13 @@ _**Nota:** en la carpeta del raml de la api ejecutar en consola la siguientes in
 * **Delte folder**
 
 	 npm install -g rimraf
+	 
          rimraf <directorio>
 
 * **add folder**
 
 	npm install -g mkdirp
+	
         rmkdirp <folder>
 
 _**Nota:** Estas dependencias se agregaron porque si intentan borrar algunas carpetas no se borran porque tienen un nombre muy largo._
