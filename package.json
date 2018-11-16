@@ -8,28 +8,29 @@
     "docs": "jsdoc -c jsdoc.json",
     "docs-with-bug": "bb-doc js ./collection-myportal/src -o ./docs",
     "create-widget": "bb-generate widget ng -o collection-myportal/src",
-    "create-component": "bb-generate ui-ng -o collection-myportal/src"
-
+    "create-component": "bb-generate ui-ng -o collection-myportal/src",
+    "start-raml": "raml-1-mockup ./DemoLogin-RAML-API/login.raml -p 3000"
   },
   "devDependencies": {
     "@backbase/eslint-config-backbase": "^2.4.0",
+    "@backbase/generator-ext-ng": "2.1.0",
+    "@backbase/generator-ui-ng": "2.0.3",
+    "@backbase/generator-widget": "2.4.1",
     "@bb-cli/bb-build-plugin-font": "^1.0.1",
     "@bb-cli/bb-build-plugin-sass": "^1.2.0",
     "@bb-cli/bb-build-plugin-uglify": "^1.0.1",
     "@bb-cli/bb-customize": "^2.1.0",
     "@bb-cli/bb-doc": "^2.0.1-pr.15",
+    "@bb-cli/bb-generate": "~2.3.0",
+    "@bb-cli/bb-import": "^2.2.1",
     "@bb-cli/bb-package": "^2.5.1",
     "@bb-cli/bb-serve": "^2.6.0",
     "@bb-cli/bb-test": "^2.3.1",
     "@bb-cli/bb-test-plugin-ngmock": "^1.0.1",
-    "@backbase/generator-ext-ng": "2.1.0",
-    "@backbase/generator-ui-ng": "2.0.3",
-    "@backbase/generator-widget": "2.4.1",
-    "@bb-cli/bb-generate": "~2.3.0",
-    "@bb-cli/bb-import": "^2.2.1",
     "cross-env": "^5.1.1",
+    "extract-zip": "^1.6.5",
     "fs-extra": "^4.0.2",
-    "webpack": "^1.15.0",
-    "extract-zip": "^1.6.5"
+    "raml-1-mockup": "^0.5.0",
+    "webpack": "^1.15.0"
   }
 }

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "5849736c45dd6cb090e6bfc3",
+    "date": "2019-01-31T13:26:29.417Z",
+    "urgent": false,
+    "guests": [
+      {
+        "id": "5849736c0270436610a94fc1",
+        "role": "customer",
+        "finantialData": {
+          "balance": 226065.69,
+          "currency": "EUR",
+          "sharesStock": [
+            {
+              "id": "5849736c2e79f97415bb3f67",
+              "company": "Dragbot",
+              "investedAmount": 1065.88,
+              "currency": "EUR",
+              "expires": "2016-12-08T14:51:24.707Z",
+              "returnPercentage": -0.5
+            },
+            {
+              "id": "5849736cbc24a2c882c21ca9",
+              "company": "Singavera",
+              "investedAmount": 2795.46,
+              "currency": "EUR",
+              "expires": "2016-12-08T14:51:24.707Z",
+              "returnPercentage": 1.16
+            }
+          ]
+        },
+        "personalData": {
+          "firstname": "Cline",
+          "surname": "Glass",
+          "fullname": "Cline Glass",
+          "gender": "male",
+          "email": "clineglass@singavera.com"
+        }
+      },
+      {
+        "id": "5849736ccfe74afd819a09cf",
+        "role": "advisor",
+        "personalData": {
+          "firstname": "Savannah",
+          "surname": "Briggs",
+          "fullname": "Savannah Briggs",
+          "gender": "female",
+          "email": "savannahbriggs@singavera.com"
+        }
+      },
+      {
+        "id": "5849736cd07a7076044609a6",
+        "role": "advisor",
+        "personalData": {
+          "firstname": "Franks",
+          "surname": "Frank",
+          "fullname": "Franks Frank",
+          "gender": "male",
+          "email": "franksfrank@singavera.com"
+        }
+      }
+    ],
+    "subject": "Meeting with Mr.Glass"
+  },
+  {
+    "id": "5849736c9d778b65093149f2",
+    "date": "2017-03-17T06:43:10.504Z",
+    "urgent": true,
+    "guests": [
+      {
+        "id": "5849736c3aed0212c495b2b1",
+        "role": "customer",
+        "finantialData": {
+          "balance": 150677.82,
+          "currency": "EUR",
+          "sharesStock": [
+            {
+              "id": "5849736c14d4af8c0061eafe",
+              "company": "Imperium",
+              "investedAmount": 6156.84,
+              "currency": "EUR",
+              "expires": "2016-12-08T14:51:24.708Z",
+              "returnPercentage": -0.31
+            }
+          ]
+        },
+        "personalData": {
+          "firstname": "Shawn",
+          "surname": "Cooley",
+          "fullname": "Shawn Cooley",
+          "gender": "female",
+          "email": "shawncooley@imperium.com"
+        }
+      },
+      {
+        "id": "5849736cfddf84a6e3c5dbb2",
+        "role": "advisor",
+        "personalData": {
+          "firstname": "Crystal",
+          "surname": "Mccoy",
+          "fullname": "Crystal Mccoy",
+          "gender": "female",
+          "email": "crystalmccoy@imperium.com"
+        }
+      }
+    ],
+    "subject": "Urgent - Meeting with Ms.Cooley"
+  },
+  {
+    "id": "5849736c11ba4b1342a6a097",
+    "date": "2017-11-19T12:50:51.251Z",
+    "urgent": false,
+    "guests": [
+      {
+        "id": "5849736c532de1b6833a2e44",
+        "role": "customer",
+        "finantialData": {
+          "balance": 195207.66,
+          "currency": "EUR",
+          "sharesStock": [
+            {
+              "id": "5849736cbb3458b1aa3839fd",
+              "company": "Aquoavo",
+              "investedAmount": 5219.35,
+              "currency": "EUR",
+              "expires": "2016-12-08T14:51:24.708Z",
+              "returnPercentage": -0.84
+            },
+            {
+              "id": "5849736c01a421b3f35eae01",
+              "company": "Zentry",
+              "investedAmount": 1639.35,
+              "currency": "EUR",
+              "expires": "2016-12-08T14:51:24.708Z",
+              "returnPercentage": 0.28
+            }
+          ]
+        },
+        "personalData": {
+          "firstname": "Miriam",
+          "surname": "Sims",
+          "fullname": "Miriam Sims",
+          "gender": "female",
+          "email": "miriamsims@zentry.com"
+        }
+      },
+      {
+        "id": "5849736c5ee66a3551043314",
+        "role": "advisor",
+        "personalData": {
+          "firstname": "Drake",
+          "surname": "Whitley",
+          "fullname": "Drake Whitley",
+          "gender": "male",
+          "email": "drakewhitley@zentry.com"
+        }
+      },
+      {
+        "id": "5849736ca941aaccb552b255",
+        "role": "advisor",
+        "personalData": {
+          "firstname": "Whitfield",
+          "surname": "Ballard",
+          "fullname": "Whitfield Ballard",
+          "gender": "male",
+          "email": "whitfieldballard@zentry.com"
+        }
+      }
+    ],
+    "subject": "Meeting with Ms.Sims"
+  },
+]

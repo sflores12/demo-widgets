@@ -1,0 +1,69 @@
+// http://www.json-generator.com/
+[
+  '{{repeat(5, 7)}}',
+  {
+    id: '{{objectId()}}',
+    date: '{{date(new Date(), new Date(2020, 12, 31, 23, 59, 59, 999))}}',
+    urgent: '{{bool()}}',
+    guests: function (tags, index) {
+      var appointment = this;
+      appointment.subject = '';
+      if(appointment.urgent === true) {
+        appointment.subject += 'Urgent - ';
+      }
+      this.subject += 'Meeting with ';
+      var array = [];
+      var guestsLength = Math.ceil(Math.random() * 3);
+      var sharesStockLength = Math.ceil(Math.random() * 4);
+      var products;
+      var firstname;
+      var surname;
+      var guest;
+      var gender;
+      var i = 0;
+      var j = 0;
+      for(i = 0; i < guestsLength; i++) {
+        firstname = tags.firstName();
+        surname = tags.surname();
+        gender = tags.gender();
+        guest = {
+          id: tags.objectId()
+        };
+
+        if(i === 0) {
+          guest.role = 'customer';
+          guest.finantialData = {
+            balance: tags.floating(10000, 4000000, 2),
+            currency: 'EUR',
+            sharesStock: []
+          };
+          for(j = 0; j < sharesStockLength; j++) {
+            guest.finantialData.sharesStock.push({
+              id: tags.objectId(),
+              company: tags.company(),
+              investedAmount: tags.floating(1000, 7000, 2),
+              currency: 'EUR',
+              expires: tags.date(new Date()),
+              returnPercentage: tags.floating(-1, 2, 2)
+            });
+          }
+          appointment.subject += (gender === 'female' ? 'Ms.' : 'Mr.') + surname;
+        } else {
+          guest.role = 'advisor';
+        }
+        guest.personalData = {
+          firstname: firstname,
+          surname: surname,
+          fullname: firstname + ' ' + surname,
+          gender: gender,
+          email: tags.email()
+        };
+
+
+
+        array.push(guest);
+      }
+      return array;
+    }
+  }
+]

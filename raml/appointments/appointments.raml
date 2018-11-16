@@ -1,0 +1,45 @@
+#%RAML 1.0
+title: Advisor_Appointments
+version: v1
+baseUri: "/{version}"
+
+# --------------------------------------
+#   My Accounts
+# --------------------------------------
+
+/advisorAppointments:
+  displayName: All appointments for all the advisors
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              !include allAppointments.json
+  /customer/{customerId}:
+    displayName: All appointments by advisor and customer
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                !include allCustomerAppointments.json
+  /advisor/{advisorId}:
+    displayName: All appointments by advisor
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                !include appointmentsByAdvisor.json
+    /customer/{customerId}:
+      displayName: All appointments by advisor and customer
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                example:
+                  !include appointmentsByAdvisorAndCustomer.json

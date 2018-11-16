@@ -1,0 +1,21 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"description": "Response con lista de cuentas",
+	"properties": {
+		"code": {
+			"type": "string",
+			"minLength": 3,
+			"maxLength": 3
+		},
+		"data": {
+			"type": "array",
+			"items": {
+				"$ref": "Account.json"
+			}
+		}
+	},
+	"required": [
+		"code"
+	]
+}
