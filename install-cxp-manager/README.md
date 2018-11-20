@@ -102,10 +102,7 @@ si el directorio y el archivo no existen, crealos. Dentro debe ir el siguiente c
 </settings>
 ```
 
-En el campo de **user_name** y **password** reemplazar con los datos siguientes:
-
- * citibanamex_portal_p5
- * citibanamex1035
+En el campo de **user_name** y **password** reemplazar con los datos correspondientes.
 
 #### Paso 6:
 

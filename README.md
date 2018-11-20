@@ -1,18 +1,19 @@
-# BACKBASE: create the Widgets
+# 
+![qownnotes-media-CU7976](./assets/images/markdown/logo.png)
+
+BACKBASE: create the Widgets
+
 ### CXP Manager:
 _**Nota:** Install zip, para tener la master page_
 
-
 ### _Instalar los Paquetes globales_
 
-    npm install --global @bb-cli/bb-package@2.5.1 @bb-cli/bb-import@2.2.1 @bb-cli/bb-generate@2.3.1 @bb-cli/bb-config@2.0.1
+> Las versiones de los paquetes corresponden a la version de nodeJS 6.13.1
 
-    npm install --global @backbase/generator-project-statics@1.4.0 @backbase/generator-model-ng@2.1.0 @backbase/generator-widget@2.4.1 @backbase/generator-ui-ng@2.0.3 @backbase/generator-ext-ng@2.1.0
+    npm install --global @bb-cli/bb-package@2.8.0 @bb-cli/bb-import@2.3.4 @bb-cli/bb-generate@2.5.1 @bb-cli/bb-config@2.0.1
 
-> Occional en caso de errores
+    npm install --global @backbase/generator-project-statics@1.5.2 @backbase/generator-model-ng@2.1.0 @backbase/generator-widget@3.1.0 @backbase/generator-ui-ng@2.0.3 @backbase/generator-ext-ng@3.0.0
 
-	npm install --global babel-core@6.0.0 babel-loader@6.4.1
-        npm install babel-runtime@6.0.2 --global
 
 ### _Paquetes adicionales:NodeJS_
 * **JSDoc**
