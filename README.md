@@ -1,5 +1,5 @@
 # 
-![qownnotes-media-CU7976](./assets/images/markdown/logo.png)
+![qownnotes-media-CU7976](./assets/images/logo.png)
 
 BACKBASE: create the Widgets
 
